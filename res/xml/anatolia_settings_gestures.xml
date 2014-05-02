@@ -17,5 +17,15 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/gestures_title">
+        <com.android.settings.AnimationScalePreference
+            android:key="window_animation_scale"
+            android:title="@string/window_animation_scale_title"
+            android:entries="@array/window_animation_scale_entries"
+            android:entryValues="@array/window_animation_scale_values" />
 
+        <com.android.settings.AnimationScalePreference
+            android:key="transition_animation_scale"
+            android:title="@string/transition_animation_scale_title"
+            android:entries="@array/transition_animation_scale_entries"
+            android:entryValues="@array/transition_animation_scale_values" />
 </PreferenceScreen>
