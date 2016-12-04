@@ -78,14 +78,17 @@ public class DataSaverBackend {
         loadAllowlist();
     }
 
-    public void setIsAllowlisted(int uid, String packageName, boolean allowlisted) {
-        final int policy = allowlisted ? POLICY_ALLOW_METERED_BACKGROUND : POLICY_NONE;
-        mPolicyManager.setUidPolicy(uid, policy);
+    public void setIsWhitelisted(int uid, String packageName, boolean whitelisted) {
+        final int policy = whitelisted ? POLICY_ALLOW_METERED_BACKGROUND : POLICY_NONE;
         mUidPolicies.put(uid, policy);
-        if (allowlisted) {
+        if (whitelisted) {
+            mPolicyManager.addUidPolicy(uid, POLICY_ALLOW_METERED_BACKGROUND);
             mMetricsFeatureProvider.action(
                     mContext, SettingsEnums.ACTION_DATA_SAVER_WHITELIST, packageName);
+        } else {
+            mPolicyManager.removeUidPolicy(uid, POLICY_ALLOW_METERED_BACKGROUND);
         }
+        mPolicyManager.removeUidPolicy(uid, POLICY_REJECT_METERED_BACKGROUND);
     }
 
     public boolean isAllowlisted(int uid) {
@@ -108,14 +111,17 @@ public class DataSaverBackend {
         loadDenylist();
     }
 
-    public void setIsDenylisted(int uid, String packageName, boolean denylisted) {
-        final int policy = denylisted ? POLICY_REJECT_METERED_BACKGROUND : POLICY_NONE;
-        mPolicyManager.setUidPolicy(uid, policy);
+    public void setIsBlacklisted(int uid, String packageName, boolean blacklisted) {
+        final int policy = blacklisted ? POLICY_REJECT_METERED_BACKGROUND : POLICY_NONE;
         mUidPolicies.put(uid, policy);
-        if (denylisted) {
+        if (blacklisted) {
+            mPolicyManager.addUidPolicy(uid, POLICY_REJECT_METERED_BACKGROUND);
             mMetricsFeatureProvider.action(
                     mContext, SettingsEnums.ACTION_DATA_SAVER_BLACKLIST, packageName);
+        } else {
+            mPolicyManager.removeUidPolicy(uid, POLICY_REJECT_METERED_BACKGROUND);
         }
+        mPolicyManager.removeUidPolicy(uid, POLICY_ALLOW_METERED_BACKGROUND);
     }
 
     public boolean isDenylisted(int uid) {
@@ -154,6 +160,9 @@ public class DataSaverBackend {
     private void handleUidPoliciesChanged(int uid, int newPolicy) {
         loadAllowlist();
         loadDenylist();
+
+        // We only care about allow/reject metered background policy here.
+        newPolicy &= POLICY_ALLOW_METERED_BACKGROUND | POLICY_REJECT_METERED_BACKGROUND;
 
         final int oldPolicy = mUidPolicies.get(uid, POLICY_NONE);
         if (newPolicy == POLICY_NONE) {
