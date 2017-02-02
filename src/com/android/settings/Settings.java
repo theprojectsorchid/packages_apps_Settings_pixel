@@ -458,4 +458,9 @@ public class Settings extends SettingsActivity {
      * Activity for SkylineUI Workstation
      */
     public static class StartLabActivity extends SettingsActivity {}
+
+    /**
+     * running service
+     */
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }
