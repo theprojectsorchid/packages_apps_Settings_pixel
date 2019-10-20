@@ -17,71 +17,110 @@
 
 <!-- Based off preference_two_target.xml with Material ripple moved to parent for full ripple. -->
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:background="@drawable/custom_preference_background"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:minHeight="?android:attr/listPreferredItemHeightSmall"
-    android:gravity="center_vertical"
-    android:background="?android:attr/selectableItemBackground"
-    android:clipToPadding="false">
+    android:layout_marginStart="@dimen/card_margin_start_aqua"
+    android:layout_marginEnd="@dimen/card_margin_end_aqua"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:paddingEnd="6dp"
+    android:paddingStart="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="start|center_vertical"
-        android:clipToPadding="false"
-        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
-
-        <LinearLayout
-            android:id="@+id/icon_frame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="start|center_vertical"
-            android:minWidth="56dp"
-            android:orientation="horizontal"
-            android:clipToPadding="false"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp">
-            <androidx.preference.internal.PreferenceImageView
-                android:id="@android:id/icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                settings:maxWidth="48dp"
-                settings:maxHeight="48dp" />
-        </LinearLayout>
+        android:gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_marginVertical="6dp"
+        android:layout_height="wrap_content">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0.0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp">
-
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.0"
+            android:layout_marginEnd="10dp">
             <TextView
+                android:ellipsize="marquee"
                 android:id="@android:id/title"
+                android:fadingEdge="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textAppearance="?android:attr/textAppearanceListItem"
-                android:ellipsize="marquee" />
+                android:textColor="@color/mtx_text_color_primary"
+                style="@style/mtx_text_style_h6" />
 
             <TextView
                 android:id="@android:id/summary"
-                android:layout_width="wrap_content"
+                style="@style/mtx_text_style_body1"
+                android:layout_width="@dimen/top_level_preference_summary_max_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@android:id/title"
                 android:layout_alignStart="@android:id/title"
-                android:textAppearance="?android:attr/textAppearanceListItemSecondary"
-                android:textColor="?android:attr/textColorSecondary"
-                android:hyphenationFrequency="normalFast"
-                android:lineBreakWordStyle="phrase"
-                android:maxLines="10" />
+                android:layout_alignLeft="@android:id/title"
+                android:layout_marginTop="2.0dip"
+                android:maxLines="4"
+                android:textColor="@color/mtx_text_color_secondary" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@*android:id/seekbar"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="0dp"
+                android:paddingEnd="12dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <TextView
+                android:id="@+id/suppression_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:textAlignment="viewStart"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:visibility="gone"
+                android:textAppearance="@*android:style/TextAppearance.DeviceDefault.Body1"
+                android:textColor="?android:attr/textColorSecondary"/>
+
+        </LinearLayout>
         </RelativeLayout>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:layout_alignParentEnd="true"
+            app:cardBackgroundColor="#00000000"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:id="@id/icon_frame"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
+
+                <androidx.preference.internal.PreferenceImageView
+                    android:id="@android:id/icon"
+                    android:padding="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_surface_color"
+                    android:tint="?android:attr/colorAccent"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
     <include layout="@layout/preference_two_target_divider" />
