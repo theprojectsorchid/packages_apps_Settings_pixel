@@ -84,4 +84,9 @@
     <string name="volume_steps_system_title">System</string>
     <string name="volume_steps_voice_call_title">Voice Call</string>
     <string name="volume_steps_reset">Reset</string>
+
+    
+    <!-- Android debugging as root -->
+    <string name="adb_enable_root">Rooted debugging</string>
+    <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
 </resources>
