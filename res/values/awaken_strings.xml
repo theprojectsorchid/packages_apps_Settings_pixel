@@ -15,6 +15,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+    
+        <!-- About phone screen,  setting option name  [CHAR LIMIT=40] -->
+
+    <string name="about_device_name">Device</string>
     <!-- Connected devices screen, setting option name to change bluetooth timeout -->
     <string name="bluetooth_timeout">Bluetooth timeout</string>
 
