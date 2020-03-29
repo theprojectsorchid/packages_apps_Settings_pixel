@@ -119,4 +119,14 @@
             settings:requiresAction="org.lineageos.settings.device.GESTURE_SETTINGS">
         <intent android:action="org.lineageos.settings.device.GESTURE_SETTINGS" />
     </com.android.settings.custom.preference.RemotePreference>
+         
+    <Preference
+        android:key="display_customization"
+        android:title="@string/display_customization"
+        android:fragment="com.android.settings.awaken.fragments.DisplayCustomizations"
+        android:summary="@string/display_customization"/>   
+         
+
+      
+
 </PreferenceScreen>
