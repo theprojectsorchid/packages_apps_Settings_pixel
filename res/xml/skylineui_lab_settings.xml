@@ -40,7 +40,12 @@
         android:title="@string/display_customization"
         android:fragment="com.afterlife.afterlab.CustomizeDashboard2"
         android:summary="@string/display_customization"/>   
-            
+           <SwitchPreference
+            android:key="battery_light_enabled"
+            android:title="@string/battery_light_title"
+            android:summary="@string/battery_light_summary"
+            settings:controller="com.android.settings.notification.BatteryLightPreferenceController"/>
+    
    <Preference
         android:key="display_customization"
         android:title="@string/display_customization"

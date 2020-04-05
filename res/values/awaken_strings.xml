@@ -42,5 +42,8 @@
     <string name="battery_full_light_enabled">Battery light when full charged</string>
     <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
     <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
+    <!-- Battery light -->
+    <string name="battery_light_title">Battery light</string>
+    <string name="battery_light_summary">Turn on the light while charging and blink when battery is low</string>
 
 </resources>
