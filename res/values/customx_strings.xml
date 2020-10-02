@@ -326,4 +326,13 @@
     <string name="adaptive_playback_timeout_10_min">10 minutes</string>
     <string name="adaptive_playback_timeout_10_min_summary">On (10 minutes)</string>
 
+    <!-- Back gesture height -->
+    <string name="userinfo_bubble_setting_description">Full</string>
+    <string name="multiuser_settings_title">Bottom</string>
+    <string name="accounts_settings_title">Options</string>
+    <string name="emergency_settings_title">Edge touch area</string>
+    <!-- Back gesture height -->
+    <string name="system_black_theme_title">Full</string>
+    <string name="system_black_theme_summary">Bottom</string>
+       <string name="bluetooth_show_files_received_via_bluetooth">Full</string>
 </resources>
