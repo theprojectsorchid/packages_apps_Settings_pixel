@@ -41,4 +41,7 @@
         <item name="android:background">@drawable/dot_pref_bottom</item>
         <item name="android:clipToPadding">false</item>
     </style>
+    <declare-styleable name="DeviceCardView">
+        <attr name="extra_title" format="string"/>
+    </declare-styleable>
 </resources>  
