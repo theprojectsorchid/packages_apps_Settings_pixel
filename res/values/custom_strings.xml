@@ -135,4 +135,8 @@
     <string name="xd_build_unmaintained_summary">This build is maintained officially</string>
     <string name="xd_summary_placeholder">CERTIFIED</string>
 
+    <!-- Immersive Navigation -->
+    <string name="gesture_navbar_category_title">Navigation bar</string>
+    <string name="immersive_navigation_title">Immersive Navigation</string>
+    <string name="immersive_navigation_summary">Hide the gesture pill and navigation bar padding.</string>
 </resources>

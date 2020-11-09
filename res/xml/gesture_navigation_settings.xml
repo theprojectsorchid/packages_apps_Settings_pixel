@@ -51,6 +51,12 @@
 
     </PreferenceCategory>
 
+  
+        <com.android.settings.custom.preference.SecureSettingSwitchPreference     
+                   android:key="immersive_navigation"
+            android:title="@string/immersive_navigation_title"
+            android:summary="@string/immersive_navigation_summary" />
+
     <PreferenceCategory
         android:key="back_sensitivity_category"
         android:persistent="false"
@@ -85,5 +91,6 @@
         android:title="@string/back_sensitivity_dialog_message"
         android:selectable="false"
         settings:searchable="false"/>
+
 </PreferenceScreen>
 
