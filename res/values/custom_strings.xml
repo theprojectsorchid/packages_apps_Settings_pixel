@@ -128,4 +128,15 @@
          <!-- Arcane Idle Manager -->
     <string name="arcane_idle_manager_title">Arcana Idle Manager</string>
     <string name="arcane_idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
+
+    <!-- xd. Build card -->
+    <string name="xd_build_status">Your device officially supported!</string>
+    <string name="xd_build_maintained_summary">Maintained by %s</string>
+    <string name="xd_build_unmaintained_summary">This build is maintained officially</string>
+    <string name="xd_summary_placeholder">CERTIFIED</string>
+
+    <!-- Immersive Navigation -->
+    <string name="gesture_navbar_category_title">Navigation bar</string>
+    <string name="immersive_navigation_title">Immersive Navigation</string>
+    <string name="immersive_navigation_summary">Hide the gesture pill and navigation bar padding.</string>
 </resources>
