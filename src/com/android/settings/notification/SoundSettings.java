@@ -234,6 +234,7 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
         actionBar.setElevation(0);
         ActionBarShadowController.attachToView(getActivity(), getSettingsLifecycle(), getListView());
     }
+  
 
     // === Volumes ===
 

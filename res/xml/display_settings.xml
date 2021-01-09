@@ -53,6 +53,7 @@
         <Preference
             android:key="lockscreen_from_display_settings"
             android:title="@string/lockscreen_settings_title"
+            android:layout="@layout/dot_preference_top_card"
             android:fragment="com.android.settings.security.LockscreenDashboardFragment"
             settings:keywords="@string/keywords_ambient_display_screen"
             settings:controller="com.android.settings.security.screenlock.LockScreenPreferenceController"/>
@@ -60,6 +61,7 @@
         <com.android.settingslib.RestrictedPreference
             android:key="screen_timeout"
             android:title="@string/screen_timeout"
+            android:layout="@layout/dot_preference_top_card"
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.display.ScreenTimeoutSettings"
             settings:controller="com.android.settings.display.ScreenTimeoutPreferenceController"/>
@@ -81,6 +83,7 @@
             android:fragment="com.android.settings.accessibility.TextReadingPreferenceFragment"
             android:key="text_reading_options"
             android:persistent="false"
+            android:layout="@layout/dot_preference_top_card"
             android:title="@string/accessibility_text_reading_options_title"
             settings:controller="com.android.settings.accessibility.TextReadingFragmentForDisplaySettingsController"/>
     </PreferenceCategory>
