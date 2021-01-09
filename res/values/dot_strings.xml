@@ -30,4 +30,7 @@
 
     <string name="dot_about_device_info">Legal &amp; Information</string>
     <string name="dot_about_device_private">Private Details</string>
+
+    <!-- BatteryInfo Cards -->
+    <string name="binfo_stats">Stats</string>
 </resources>
