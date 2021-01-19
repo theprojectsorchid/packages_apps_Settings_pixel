@@ -641,20 +641,9 @@ public class SettingsHomepageActivity extends FragmentActivity implements
             return referrer;
         }
 
-        String initialReferrer = getIntent().getStringExtra(EXTRA_INITIAL_REFERRER);
-        return TextUtils.isEmpty(initialReferrer) ? referrer : initialReferrer;
+        final int paddingTop = getResources().getDimensionPixelSize(R.dimen.dot_settings_bar_height);
+        view.setPadding(0 /* left */, paddingTop, 0 /* right */, 0 /* bottom */);
     }
-
-    @VisibleForTesting
-    String getCurrentReferrer() {
-        Intent intent = getIntent();
-        // Clear extras to get the real referrer
-        intent.removeExtra(Intent.EXTRA_REFERRER);
-        intent.removeExtra(Intent.EXTRA_REFERRER_NAME);
-        Uri referrer = getReferrer();
-        return referrer != null ? referrer.getHost() : null;
-    }
-
     @VisibleForTesting
     boolean isCallingAppPermitted(String permission, int callerUid) {
         return TextUtils.isEmpty(permission)
