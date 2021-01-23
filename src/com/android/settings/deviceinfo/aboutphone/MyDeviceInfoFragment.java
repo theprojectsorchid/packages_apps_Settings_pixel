@@ -49,6 +49,7 @@ import com.android.settings.widget.EntityHeaderController;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.widget.ActionBarShadowController;
 import com.android.settingslib.widget.LayoutPreference;
 
 import java.util.ArrayList;
@@ -173,7 +174,11 @@ public class MyDeviceInfoFragment extends DashboardFragment
         if (actionBar == null) {
             return;
         }
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setBackgroundDrawable(
+                new ColorDrawable(
+                        Utils.getColorAttrDefaultColor(getActivity(), android.R.attr.colorPrimaryDark)));
+        actionBar.setElevation(0);
+        ActionBarShadowController.attachToView(getActivity(), getSettingsLifecycle(), getListView());
     }
 
     @Override
