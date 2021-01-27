@@ -235,6 +235,24 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
         ActionBarShadowController.attachToView(getActivity(), getSettingsLifecycle(), getListView());
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        initActionbar();
+    }
+
+    private void initActionbar() {
+        final ActionBar actionBar = getActivity().getActionBar();
+        if (actionBar == null) {
+            return;
+        }
+        actionBar.setBackgroundDrawable(
+                new ColorDrawable(
+                        Utils.getColorAttrDefaultColor(getActivity(), android.R.attr.colorPrimaryDark)));
+        actionBar.setElevation(0);
+        ActionBarShadowController.attachToView(getActivity(), getSettingsLifecycle(), getListView());
+    }
+
     // === Volumes ===
 
     final class VolumePreferenceCallback implements VolumeSeekBarPreference.Callback {
