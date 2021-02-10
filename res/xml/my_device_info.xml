@@ -182,6 +182,7 @@
             android:summary="@string/summary_placeholder"
             android:selectable="false"/>
 
+
         <!-- Manual -->
         <Preference
             android:key="manual"

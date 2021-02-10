@@ -25,6 +25,13 @@
             android:persistent="false"
             android:summary="@string/smart_5g_summary"
             settings:controller="com.android.settings.network.telephony.Smart5gPreferenceController"/>
+        <!-- Device deep sleep time -->
+        <Preference
+            android:key="sleep_time"
+            android:order="49"
+            android:title="@string/status_sleep_time3"
+            android:summary="@string/summary_placeholder"
+            android:selectable="false"/>
 
 
         <Preference
