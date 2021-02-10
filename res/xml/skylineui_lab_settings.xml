@@ -18,15 +18,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title=" ">
-
-<SwitchPreference
+        <com.android.settings.preferences.ui.AdaptivePreference
+        android:key="sleep_time"
+        android:enabled="false"
+        android:shouldDisableView="false"
+        android:title="@string/status_sleep_time"
+        android:summary="@string/summary_placeholder"
+        android:persistent="false" />
+        <com.android.settings.preferences.ui.AdaptiveSwitchPreference
             android:key="smart_5g"
             android:title="@string/smart_5g_title"
             android:persistent="false"
             android:summary="@string/smart_5g_summary"
             settings:controller="com.android.settings.network.telephony.Smart5gPreferenceController"/>
 
-        <Preference
+        <com.android.settings.preferences.ui.AdaptivePreference
             android:key="hidden_apps"
             android:title="@string/hidden_apps_title"
             android:summary="@string/hidden_apps_summary"
@@ -34,7 +40,7 @@
             android:fragment="com.android.settings.display.HiddenAppSettingsFragment" />
 
             
-        <SwitchPreference
+        <com.android.settings.preferences.ui.AdaptiveSwitchPreference
             android:key="pocket_mode"
             android:title="@string/pocket_mode_title"
             android:summary="@string/pocket_mode_summary"
