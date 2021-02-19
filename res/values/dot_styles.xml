@@ -44,4 +44,10 @@
     <declare-styleable name="DeviceCardView">
         <attr name="extra_title" format="string|reference"/>
     </declare-styleable>
+
+    <style name="ToolbarText.Collapsed" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"/>
+
+    <style name="ToolbarText.Expanded" parent="ToolbarText.Collapsed">
+        <item name="android:textSize">34sp</item>
+    </style>
 </resources>  
