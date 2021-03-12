@@ -84,11 +84,20 @@
         android:title="@string/mic_toggle_title"
         android:summary="@string/mic_toggle_description"
         settings:controller="com.android.settings.privacy.MicToggleController"/>
+   
    <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
+
+        
+    <Preference
+        android:key="sensor_block_settings"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:fragment="com.android.settings.applications.sensors.SensorBlock"/>
+
     <!-- Show passwords -->
     <SwitchPreference
         android:key="show_password"
