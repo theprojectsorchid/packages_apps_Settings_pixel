@@ -31,6 +31,9 @@
     <string name="dot_about_device_info">Legal &amp; Information</string>
     <string name="dot_about_device_private">Private Details</string>
 
+    <string name="dot_lightMode">Light Theme</string>
+    <string name="dot_darkMode">Dark Theme</string>
+
 
     <!-- Per-app data restrictions -->
     <string name="data_usage_app_restrict_all">Allow network access</string>
