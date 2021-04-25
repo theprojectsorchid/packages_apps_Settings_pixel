@@ -34,7 +34,7 @@
         android:key="main_toggle_wifi"
         android:title="@string/wifi_settings"
         android:summary="@string/summary_placeholder"
-        android:icon="@drawable/ic_settings_wireless"
+        android:icon="@drawable/ic_wifi_signal_4"
         android:order="-30"
         settings:allowDividerAbove="true">
         <intent
