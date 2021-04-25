@@ -50,7 +50,9 @@
     <style name="PreferenceTheme.SetupWizard" parent="@style/SettingsPreferenceTheme">
         <item name="preferenceFragmentCompatStyle">@style/SetupWizardPreferenceFragmentStyle</item>
     </style>
-
+    <style name="SettingsCategoryPreference" parent="Preference.Category.Material">
+        <item name="android:layout">@layout/dot_preference_category</item>
+    </style>
     <style name="DialogPreference" parent="@style/Preference.DialogPreference.Material">
         <item name="android:layout">@layout/dot_preference</item>
         <item name="android:iconSpaceReserved">false</item>
