@@ -48,6 +48,7 @@ public class DarkModeActivationPreferenceController extends BasePreferenceContro
 
     public DarkModeActivationPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
+        mPowerManager = context.getSystemService(PowerManager.class);
         mUiModeManager = context.getSystemService(UiModeManager.class);
         mFormat = new TimeFormatter(context);
         mMetricsFeatureProvider = FeatureFactory.getFactory(context).getMetricsFeatureProvider();
