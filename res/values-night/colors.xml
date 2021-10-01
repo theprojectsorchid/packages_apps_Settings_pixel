@@ -77,5 +77,8 @@
     <!-- Icon tint color for battery usage system icon -->
     <color name="card_bg">@android:color/system_neutral1_800</color>
 
+    <!-- Custom preference cardView -->
+    <color name="card_view_bg">#1B1B1B</color>
+    <color name="black">#FAFAFA</color>
+    <color name="off_black">#90FAFAFA</color>
 </resources>
-
