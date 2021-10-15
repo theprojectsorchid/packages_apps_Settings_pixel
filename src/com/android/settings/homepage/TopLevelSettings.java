@@ -203,7 +203,14 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             if (icon != null) {
                 icon.setTint(tintColor);
             }
-        });
+
+    	    String key = preference.getKey().toString();
+	    if (key.equals("category")){
+		preference.setLayoutResource(R.layout.homepage_category);
+	    } else {
+		preference.setLayoutResource(R.layout.card_view_pref);
+	    }
+        }
     }
 
     @Override
