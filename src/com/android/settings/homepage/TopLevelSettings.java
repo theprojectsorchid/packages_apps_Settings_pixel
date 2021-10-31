@@ -29,14 +29,19 @@ import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.content.pm.UserInfo;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.provider.Settings;
-import android.view.View;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.view.View;
+import android.widget.ImageView;
 
 import android.widget.TextView;
 
@@ -63,6 +68,12 @@ import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 import com.android.settings.widget.EntityHeaderController;
+
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Random;
 
 @SearchIndexable(forTarget = MOBILE)
 public class TopLevelSettings extends DashboardFragment implements SplitLayoutListener,
@@ -210,11 +221,37 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
+        final LayoutPreference bannerPreference =
+                        (LayoutPreference) getPreferenceScreen().findPreference("top_level_homepage_banner_view");
+        final LayoutPreference widgetPreference =
+                        (LayoutPreference) getPreferenceScreen().findPreference("top_level_homepage_widgets");
+        final LayoutPreference searchWidgetPreference =
+                        (LayoutPreference) getPreferenceScreen().findPreference("top_level_search_widget");
+        final boolean enableHomepageWidgets = Settings.System.getIntForUser(getContext().getContentResolver(),
+                "settings_homepage_widgets", 0, UserHandle.USER_CURRENT) != 0;
+        if (!enableHomepageWidgets) {
+            if (widgetPreference != null) {
+                getPreferenceScreen().removePreference(widgetPreference);
+            }
+            if (bannerPreference != null) {
+                getPreferenceScreen().removePreference(bannerPreference);
+            }
+        } else {
+            if (searchWidgetPreference != null) {
+                getPreferenceScreen().removePreference(searchWidgetPreference);
+            }
+        }
         int tintColor = Utils.getHomepageIconColor(getContext());
         iteratePreferences(preference -> {
             Drawable icon = preference.getIcon();
             if (icon != null) {
                 icon.setTint(tintColor);
+            }
+            String preferenceKey = preference.getKey();
+            if (preferenceKey != null && !("top_level_homepage_widgets".equals(preferenceKey) ||
+                                           "top_level_homepage_banner_view".equals(preferenceKey)|| 
+                                           "top_level_search_widget".equals(preferenceKey))) {
+                setUpPreferenceLayout(preference);
             }
         });
         onSetPrefCard();
