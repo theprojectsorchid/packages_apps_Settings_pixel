@@ -28,19 +28,12 @@
         android:layout_marginTop="@dimen/homepage_title_margin_top"
         android:orientation="horizontal">
 
-       <TextView
+
+        <TextView
         android:id="@+id/homepage_title"
         android:text="@string/dashboard_random4"
         style="@style/custom_toolbar.Expanded"/>
 
-        <ImageView
-            android:id="@+id/account_avatar"
-            android:layout_width="@dimen/avatar_length"
-            android:layout_height="@dimen/avatar_length"
-            android:layout_marginEnd="@dimen/avatar_margin_end"
-            android:visibility="gone"
-            android:accessibilityTraversalAfter="@id/homepage_title"
-            android:contentDescription="@string/search_bar_account_avatar_content_description" />
     </LinearLayout>
 
     <FrameLayout
