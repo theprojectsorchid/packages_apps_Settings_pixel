@@ -19,6 +19,34 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/skylineui_lab_title">
 
+
+    <PreferenceCategory
+        android:title="@string/status_bar_icons_title">
+        <Preference
+            android:key="status_bar_icons"
+            android:title="@string/status_bar_system_icons_title"
+            android:summary="@string/status_bar_system_icons_summary">
+            <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
+        </Preference>
+
+        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="statusbar_colored_icons"
+            android:title="@string/statusbar_colored_icons_title"
+            android:summary="@string/statusbar_colored_icons_summary"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/qs_title">
+        <com.android.settings.custom.preference.SystemSettingListPreference
+            android:key="qs_quick_pulldown"
+            android:title="@string/status_bar_quick_qs_pulldown_title"
+            android:entries="@array/status_bar_quick_qs_pulldown_entries"
+            android:entryValues="@array/status_bar_quick_qs_pulldown_values"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/skylineui_lab_footer"
         android:selectable="false"
