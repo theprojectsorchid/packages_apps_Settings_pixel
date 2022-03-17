@@ -17,36 +17,69 @@
  */
 
 package com.epic.fragments;
-
+import android.app.ActivityManagerNative;
 import android.content.ContentResolver;
-import android.content.res.Resources;
 import android.content.Context;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.os.UserHandle;
-import android.os.Vibrator;
+import android.provider.Settings;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.IWindowManager;
+import android.view.View;
+import android.view.WindowManagerGlobal;
+
 import androidx.preference.ListPreference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
-
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.Utils;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
+import android.os.Vibrator;
+
+import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import com.android.settings.custom.preference.CustomSeekBarPreference;
+import com.android.settings.custom.preference.SystemSettingSwitchPreference;
+import com.android.settings.custom.preference.SystemSettingSeekBarPreference;
+import com.android.settings.custom.preference.SystemSettingListPreference;
+import com.android.internal.util.arcana.ArcanaUtils;
 
 public class ButtonSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+            private static final String SETTINGS_DASHBOARD_GMS = "settings_dashboard_gms";
+
+            private SystemSettingListPreference mSettingsDashBoardGms;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.anatolia_settings_buttons);
+        addPreferencesFromResource(R.xml.grimoire_interfaces);
 
-        final PreferenceScreen prefScreen = getPreferenceScreen();
+        final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefSet = getPreferenceScreen();
+        final Context mContext = getActivity().getApplicationContext();
+        final Resources res = mContext.getResources();
+
+        mSettingsDashBoardGms = (SystemSettingListPreference) findPreference(SETTINGS_DASHBOARD_GMS);
+        mSettingsDashBoardGms.setOnPreferenceChangeListener(this);
+    
     }
 
     @Override

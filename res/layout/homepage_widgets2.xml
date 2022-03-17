@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/battery_widget"
+        android:layout_width="0dp"
+        android:layout_height="164dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:background="@drawable/custom_preference_background">
+
+        <RelativeLayout
+            android:id="@+id/battery_widget_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/battery_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/mtx_text_style_h6"
+                android:textColor="@color/mtx_text_color_primary"
+                android:text="@string/homepage_widget_battery_title"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentTop="true" />
+
+            <com.android.settings.preferences.ui.BatteryProgressBar
+                android:id="@+id/battery_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="100"
+                android:scaleY="1"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginHorizontal="20dp"
+                android:indeterminate="false"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/battery_title" />
+
+            <com.android.settings.preferences.ui.ChargingPercentTextView
+                android:id="@+id/battery_percent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/battery_progress"
+                android:layout_marginTop="18dp"
+                style="@style/mtx_text_style_body1"
+                android:textColor="@color/mtx_text_color_primary"/>
+                
+            <com.android.settings.preferences.ui.ChargingStatusTextView
+                android:id="@+id/battery_status"
+                style="@style/mtx_text_style_body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="13sp"
+                android:textColor="@color/mtx_text_color_secondary"
+                android:layout_below="@+id/battery_percent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="9dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
