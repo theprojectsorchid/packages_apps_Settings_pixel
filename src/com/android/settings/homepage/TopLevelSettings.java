@@ -39,6 +39,9 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+import android.text.TextUtils;
+import android.util.Log;
+import android.os.UserHandle;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
@@ -72,6 +75,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     private static final String SAVED_HIGHLIGHT_MIXIN = "highlight_mixin";
     private static final String PREF_KEY_SUPPORT = "top_level_support";
     private static final String KEY_USER_CARD = "top_level_usercard";
+    private int mDashBoardStyle;
 
     private boolean mIsEmbeddingActivityEnabled;
     private TopLevelHighlightMixin mHighlightMixin;
@@ -89,7 +93,18 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.top_level_settings;
+        switch (mDashBoardStyle) {
+           case 0:
+               return R.xml.top_level_settings;
+           case 1:
+               return R.xml.top_level_settings_wave;
+           case 2:
+               return R.xml.top_level_settings;
+           case 3:
+               return R.xml.top_level_settings;
+           default:
+               return R.xml.top_level_settings;
+        }
     }
 
     @Override
@@ -107,6 +122,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         super.onAttach(context);
         HighlightableMenu.fromXml(context, getPreferenceScreenResId());
         use(SupportPreferenceController.class).setActivity(getActivity());
+        setDashboardStyle(context);
     }
 
     @Override
@@ -210,9 +226,17 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
-        int tintColor = Utils.getHomepageIconColor(getContext());
-        iteratePreferences(preference -> {
-            Drawable icon = preference.getIcon();
+        final PreferenceScreen screen = getPreferenceScreen();
+        if (screen == null) {
+            return;
+        }
+        final int count = screen.getPreferenceCount();
+        for (int i = 0; i < count; i++) {
+            final Preference preference = screen.getPreference(i);
+            if (preference == null) {
+                break;
+            }
+            final Drawable icon = preference.getIcon();
             if (icon != null) {
                 icon.setTint(tintColor);
             }
@@ -226,10 +250,92 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         for (int i = 0; i < count; i++) {
             final Preference preference = screen.getPreference(i);
 
-            String key = preference.getKey();
-            preference.setLayoutResource(R.layout.top_level_preference_solo_card);
-	    if (key.equals("top_level_about_device")) {
-                preference.setLayoutResource(R.layout.top_level_about);
+ 	    String key = preference.getKey();
+         if (mDashBoardStyle == 0) {
+	        if (key.equals("top_level_network")){
+	        preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+	        }
+            if (key.equals("top_level_connected_devices")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_accounts")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_octavi_lab")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_wallpaper")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_battery")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_display")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_sound")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_apps")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_storage")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_notifications")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_location")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_accessibility")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_security")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_privacy")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_emergency")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_system")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_about_device")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_usercard")){
+                preference.setLayoutResource(R.layout.usercard);
+            }
+            } else if (mDashBoardStyle == 1) {
+            if (key.equals("top_level_accounts")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            } else if (mDashBoardStyle == 2) {
+            if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+	    if (key.equals("top_level_google")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+	    if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.home.TopLevelSettingsActivity")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+	    if (key.equals("top_level_wellbeing")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            if (key.equals("top_level_accounts")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
+            } else if (mDashBoardStyle == 3) {
+            if (key.equals("top_level_accounts")){
+                preference.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
             }
 	}
     }
@@ -401,4 +507,9 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                     return false;
                 }
             };
+            
+    private void setDashboardStyle(Context context) {
+        mDashBoardStyle = Settings.System.getIntForUser(context.getContentResolver(),
+                    Settings.System.SETTINGS_DASHBOARD_STYLE, 0, UserHandle.USER_CURRENT);
+    }
 }
