@@ -236,7 +236,12 @@
         android:title="@string/emergency_tone_title"
         android:summary="%s"
         android:order="-10"/>
-
+    <!-- Live Volume Steps -->
+    <Preference
+        android:key="vol_steps"
+        android:title="@string/volume_steps_fragment_title"
+        android:summary="@string/volume_steps_summary"
+        android:fragment="com.android.settings.sound.VolumeStepsFragment" />
     <Preference
         android:key="sound_work_settings"
         android:title="@string/sound_work_settings"
