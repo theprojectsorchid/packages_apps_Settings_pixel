@@ -19,6 +19,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings">
+   <com.android.settings.widget.HomepagePreference
+        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
+        android:icon="@drawable/ic_phone_info"
+        android:key="top_level_about_device"
+        android:order="-170"
+        android:title="@string/about_settings"
+        android:summary="@string/summary_placeholder"
+        settings:highlightableMenuKey="@string/menu_key_about_device"
+        settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
 
    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
@@ -30,15 +39,6 @@
         settings:highlightableMenuKey="@string/menu_key_network"
         settings:controller="com.android.settings.network.TopLevelNetworkEntryPreferenceController"/>
 
-    <com.android.settings.widget.HomepagePreference
-        android:fragment="com.android.settings.communal.CommunalDashboardFragment"
-        android:icon="@drawable/ia_settings_communal"
-        android:key="top_level_communal"
-        android:order="-145"
-        android:title="@string/communal_settings_title"
-        android:summary="@string/communal_settings_summary"
-        settings:highlightableMenuKey="@string/menu_key_communal"
-        settings:controller="com.android.settings.communal.CommunalPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.connecteddevice.ConnectedDeviceDashboardFragment"
@@ -207,16 +207,6 @@
         android:title="@string/header_category_system"
         android:summary="@string/system_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_system"/>
-
-    <com.android.settings.widget.HomepagePreference
-        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
-        android:icon="@drawable/ic_settings_about_device"
-        android:key="top_level_about_device"
-        android:order="20"
-        android:title="@string/about_settings"
-        android:summary="@string/summary_placeholder"
-        settings:highlightableMenuKey="@string/menu_key_about_device"
-        settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_help"

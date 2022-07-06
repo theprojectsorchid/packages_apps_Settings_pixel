@@ -14,4 +14,12 @@
     <dimen name="rdnt_cardview_margin_list">16dip</dimen>
     <dimen name="rdnt_pref_vert">5.5dp</dimen>
     <dimen name="rdnt_card_radius">22dp</dimen>
+    <dimen name="card_margin_start">20dp</dimen>
+    <dimen name="card_margin_end">20dp</dimen>
+
+    <!-- Rounded corner theme radius -->
+    <dimen name="rounded_corner_theme_overlay_radius">24dp</dimen>
+
+    <!-- Dimensions for Contextual Card -->
+    <dimen name="contextual_card_content_padding">13dp</dimen>
 </resources>
