@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2021 Project Blaze
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    
+    
+    <!-- Dashboard messages -->
+    <string name="dashboard_morning1">buen día Ever!</string>
+    <string name="dashboard_morning2">The Sun is up!</string>
+    <string name="dashboard_morning3">A nice morning Ever..</string>
+    <string name="dashboard_morning4">Have a great day..</string>
+    <string name="dashboard_morning5">You are loved.</string>
+    <string name="dashboard_noon1">Good Afternoon Everlides</string>
+    <string name="dashboard_noon2">Enjoy the Sunset.</string>
+    <string name="dashboard_noon3">AllTheWayIn</string>
+    <string name="dashboard_noon4">Its afternoon</string>
+    <string name="dashboard_noon5">Welcome back..</string>
+    <string name="dashboard_early_night1">Good Evening..</string>
+    <string name="dashboard_early_night2">Relax and take notes</string>
+    <string name="dashboard_night3">Sweet Dreams Ever!</string>
+    <string name="dashboard_night4">Put Me Down</string>
+    <string name="dashboard_night5">Good Night Ever!</string>
+    <string name="dashboard_midnight1">Boss It\'s Late night already..</string>
+    <string name="dashboard_midnight2">Boss You need some help..</string>
+    <string name="dashboard_midnight3">Boss Get some sleep..</string>
+    <string name="dashboard_midnight4">Boss Take some rest already..</string>
+    <string name="dashboard_midnight5">Sleeping late is bad for you..</string>
+    <string name="dashboard_random1">thats what i like.</string>
+    <string name="dashboard_random2">coruna es la mejor</string>
+    <string name="dashboard_random3">poder colombiano</string>
+    <string name="dashboard_random4">poder colombiano</string>
+    <string name="dashboard_random5">galicia es mi vida</string>
+    <string name="dashboard_random6">What\'s up?</string>
+</resources>
