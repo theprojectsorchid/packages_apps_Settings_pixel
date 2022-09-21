@@ -273,4 +273,13 @@ s that internet users can use wisely.</string>
     <string name="about_user">Owner Info</string>
     <string name="userpref_summary">Personal Information about current user</string>
     <string name="user_title">User Info</string>
+
+      <string name="qs_brightness_haptic_feedback_title">Haptic feedback</string>
+    <string name="qs_brightness_haptic_feedback_summary">Haptic feedback when adjusting brightness (Requires touch feedback to be enabled)</string>
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">Smart 5G</string>
+    <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
+    
+    <string name="app_info_install_time">Installed: %1$s</string>
+    <string name="app_info_update_time">Updated: %1$s</string>
 </resources>
