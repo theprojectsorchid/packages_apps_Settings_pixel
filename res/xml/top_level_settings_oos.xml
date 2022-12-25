@@ -18,7 +18,6 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-<<<<<<< HEAD
     android:key="top_level_settings">
    <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_phone_info"
@@ -50,27 +49,6 @@
         android:selectable="false"
         android:order="-170" />
 
-=======
-    android:key="top_level_settings"
-    android:title="Settings">
-
-    <com.android.settings.widget.HomepagePreference
-        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
-        android:icon="@drawable/op_ic_homepage_about_settings"
-        android:key="top_level_about_device"
-        android:order="20"
-        android:title="@string/about_settings"
-        android:summary="@string/summary_placeholder"
-        settings:highlightableMenuKey="@string/menu_key_about_device"
-        settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
-
-    <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/usercard"
-        android:fragment="com.android.settings.users.UserSettings"
-        android:key="top_level_usercard"
-        android:order="-170" />
-        
->>>>>>> b73a41dc0de ([SQUASH]: Import settings changes and customizations)
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/op_ic_homepage_network_settings"
