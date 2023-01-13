@@ -436,6 +436,8 @@ public class Settings extends SettingsActivity {
      * Activity for MediaControlsSettings
      */
     public static class MediaControlsSettingsActivity extends SettingsActivity {}
+    // EpicROM-AOSP Additions.
+    public static class AnatoliaSettingsActivity extends SettingsActivity {}
 
     /**
      * Activity for AppDashboard.
@@ -452,4 +454,8 @@ public class Settings extends SettingsActivity {
     // LiveDisplay
     public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 
+    /**
+     * Activity for SkylineUI Workstation
+     */
+    public static class StartLabActivity extends SettingsActivity {}
 }

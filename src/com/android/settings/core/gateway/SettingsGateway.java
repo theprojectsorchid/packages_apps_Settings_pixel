@@ -22,6 +22,7 @@ import com.android.settings.IccLockSettings;
 import com.android.settings.MainClear;
 import com.android.settings.MainClearConfirm;
 import com.android.settings.Settings;
+import com.skylineui.settings.laboratory.LabSettings;
 import com.android.settings.TestingSettings;
 import com.android.settings.TetherSettings;
 import com.android.settings.TrustedCredentialsSettings;
@@ -182,6 +183,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 import com.android.settings.livedisplay.LiveDisplaySettings;
 
 import ink.kscope.settings.wifi.tether.WifiTetherClientManager;
+import com.epic.Anatolia;
 
 public class SettingsGateway {
 
@@ -350,8 +352,9 @@ public class SettingsGateway {
             AppLocaleDetails.class.getName(),
             TurnScreenOnSettings.class.getName(),
             TurnScreenOnDetails.class.getName(),
-            LiveDisplaySettings.class.getName(),
-            WifiTetherClientManager.class.getName()
+            LabSettings.class.getName(),            
+            // Anatolia Additions
+            Anatolia.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -394,5 +397,7 @@ public class SettingsGateway {
             Settings.MyDeviceInfoActivity.class.getName(),
             Settings.ModuleLicensesActivity.class.getName(),
             UserBackupSettingsActivity.class.getName(),
+            // Anatolia Additions
+            Settings.AnatoliaSettingsActivity.class.getName(),
     };
 }

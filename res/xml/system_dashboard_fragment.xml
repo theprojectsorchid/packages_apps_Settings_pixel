@@ -50,6 +50,13 @@
         android:icon="@drawable/ic_settings_statusbar"
         android:order="-248"
         android:fragment="com.android.settings.custom.statusbar.StatusBarSettings" />
+    <!-- Custom Advanced Settings -->
+    <Preference
+        android:key="advanced_settings"
+        android:title="@string/advanced_pref_title"
+        android:icon="@drawable/ic_advanced_settings"
+        android:order="-242"
+        android:fragment="com.android.settings.custom.advanced.AdvancedSettings"/>
 
     <Preference
         android:key="date_time_settings"
