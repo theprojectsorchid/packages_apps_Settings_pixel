@@ -19,4 +19,25 @@
     android:key="display_customizations3"
     android:title=" ">
 
+       <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="battery_light_enabled"
+            android:title="@string/battery_light_enable"
+            android:defaultValue="true"/>
+
+       <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="battery_full_light_enabled"
+            android:title="@string/battery_full_light_enabled"
+            android:defaultValue="true" />
+
+       <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="battery_light_allow_on_dnd"
+            android:title="@string/battery_light_allow_on_dnd_title"
+            android:dependency="battery_light_enabled"
+            android:defaultValue="false" />
+
+       <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="battery_light_low_blinking"
+            android:title="@string/battery_light_low_blinking_title"
+            android:dependency="battery_light_enabled"
+            android:defaultValue="false" />
 </PreferenceScreen>

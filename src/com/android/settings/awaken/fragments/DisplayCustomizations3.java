@@ -19,15 +19,35 @@ package com.android.settings.awaken.fragments;
 import android.os.Bundle;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
+import android.content.Context;
 
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 public class DisplayCustomizations3 extends SettingsPreferenceFragment {
 
     private static final String TAG = "Display Customizations3";
 
+    private static final String KEY_BATTERY_CHARGING_LIGHT = "battery_charging_light";
+    
+    Preference mBatteryLightPref;
+    PreferenceScreen prefSet;
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+
         addPreferencesFromResource(R.xml.display_customizations3);
+        
+        mBatteryLightPref = (Preference) findPreference(KEY_BATTERY_CHARGING_LIGHT);
+        prefSet = getPreferenceScreen();
+        if (!getResources()
+                .getBoolean(com.android.internal.R.bool.config_intrusiveBatteryLed))
+        {
+			if (mBatteryLightPref != null) {
+				prefSet.removePreference(mBatteryLightPref);
+			}
+        }
+
     }
 
     @Override
