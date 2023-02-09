@@ -399,5 +399,7 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             // Anatolia Additions
             Settings.AnatoliaSettingsActivity.class.getName(),
+            Settings.FirmwareVersionActivity.class.getName(),
+            Settings.WallpaperSettingsActivity.class.getName(),
     };
 }
