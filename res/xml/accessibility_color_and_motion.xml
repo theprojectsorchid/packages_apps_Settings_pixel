@@ -17,10 +17,17 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:key="accessibility_color_and_motion"
+    xmlns:app="http://schemas.android.com/apk/res-auto"   
+     android:key="accessibility_text_and_display"
     android:persistent="false"
-    android:title="@string/accessibility_color_and_motion_title">
-
+    android:title=" ">
+        <com.android.settingslib.widget.IllustrationPreference
+        android:key="captions_preview"
+        android:persistent="false"
+        android:order="-999"
+        android:selectable="false"
+        settings:lottie_rawRes="@raw/display_accessibility"
+        settings:searchable="false" />
     <Preference
         android:fragment="com.android.settings.accessibility.ToggleDaltonizerPreferenceFragment"
         android:icon="@drawable/ic_daltonizer"

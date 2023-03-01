@@ -17,7 +17,17 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/connected_device_connections_title">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title=" ">    
+    
+    
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="connected_pref_animation"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/connected_pref"/>
+
+    
 
     <Preference
         android:fragment="com.android.settings.connecteddevice.BluetoothDashboardFragment"

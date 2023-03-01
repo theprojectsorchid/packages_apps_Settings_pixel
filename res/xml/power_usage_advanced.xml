@@ -18,12 +18,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="power_usage_advanced_screen"
-    android:title="@string/advanced_battery_title"
+    android:title=" "
     settings:keywords="@string/keywords_battery_usage">
 
     <com.android.settings.fuelgauge.batteryusage.BatteryHistoryPreference
         android:key="battery_graph"/>
-
+ 
     <PreferenceCategory
         android:key="app_list"/>
 
