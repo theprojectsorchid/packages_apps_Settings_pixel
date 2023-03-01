@@ -18,14 +18,16 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/captioning_caption_appearance_title">
+    android:title=" ">
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="caption_preview"
         android:title="@string/summary_placeholder"
         android:layout="@layout/captioning_preview"
-        android:selectable="false"
+        android:selectable="false"        
+        android:order="-997"
         settings:searchable="false"/>
+
 
     <ListPreference
         android:entries="@array/captioning_font_size_selector_titles"
