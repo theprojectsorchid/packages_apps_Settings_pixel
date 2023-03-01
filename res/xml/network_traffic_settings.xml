@@ -17,7 +17,15 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/network_traffic_settings_title">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title=" " >
+
+
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="sim_animation"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/sim_animation"/>
 
     <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:key="network_traffic_enabled"
