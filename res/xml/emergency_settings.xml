@@ -17,9 +17,21 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"    
+      xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="safety_and_emergency_screen"
-    android:title="@string/emergency_settings_preference_title">
+    android:title=" ">
+
+    
+     <com.android.settingslib.widget.IllustrationPreference
+        android:key="emergency_preview"
+        android:persistent="false"
+        android:order="-999"
+        android:selectable="false"
+        settings:lottie_rawRes="@raw/display_accessibility"
+        settings:searchable="false" />
+ 
+
     <com.android.settingslib.widget.LayoutPreference
         android:key="more_emergency_settings"
         android:layout="@layout/more_settings_button"
