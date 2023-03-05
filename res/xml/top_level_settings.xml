@@ -27,7 +27,17 @@
         android:summary="@string/summary_placeholder"
         android:fragment="com.epic.fragments.StatusBarSettings"/>
 
-   <com.android.settings.widget.HomepagePreference
+ 
+
+    <Preference
+        android:fragment="com.android.settings.deviceinfo.UserInfoFragement"
+        android:icon="@drawable/ic_settings_wireless"
+        android:key="top_level_userinfo"
+        android:title="@string/network_dashboard_title"
+        android:order="-160" />
+
+
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_network"
