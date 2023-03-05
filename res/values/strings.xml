@@ -14549,4 +14549,11 @@
     <!-- Display Customizations Fragment 1 to 5 -->
     <string name="display_customization">custom page</string>
     
+  
+    
+    <!-- Display Customizations Fragment 1 to 5 -->
+    <string name="usercard_summary">custom page</string>
+    
+    <!-- usercard titles -->
+    <string name="wellbeing_title">Wellbeing</string>
 </resources>
