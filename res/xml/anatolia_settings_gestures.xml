@@ -14,8 +14,38 @@
      limitations under the License.
 -->
 <PreferenceScreen
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/gestures_title">
+	    android:title=" ">
+
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="about_ud"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/aboutus_settings"/>
+
+        <com.android.settingslib.widget.TopIntroPreference
+            android:key="aboutus_bubbles_desc"
+            android:order="-997"
+            android:title="@string/aboutus_bubble_setting_description"/>
+        
+ 
+    <Preference
+            android:title="@string/about_us_info"
+            android:summary="@string/about_us_info_summary" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/theorchidproject" />
+        </Preference>
+
+    <Preference
+        android:title="@string/aboutus_link_title"
+        android:summary="@string/aboutus_link_summary" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/orchidosdemo" />
+    </Preference>
+
 
 </PreferenceScreen>

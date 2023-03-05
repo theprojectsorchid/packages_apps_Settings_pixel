@@ -262,4 +262,15 @@ s that internet users can use wisely.</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
+
+     
+    <!-- Display Customizations Fragment 1 to 5 -->
+    <string name="usercard_summary">custom page</string>
+    
+    <!-- usercard titles -->
+    <string name="wellbeing_title">Wellbeing</string>
+    <!-- Owner info -->
+    <string name="about_user">Owner Info</string>
+    <string name="userpref_summary">Personal Information about current user</string>
+    <string name="user_title">User Info</string>
 </resources>
