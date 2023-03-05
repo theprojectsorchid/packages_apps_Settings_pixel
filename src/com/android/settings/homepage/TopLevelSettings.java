@@ -21,19 +21,23 @@ import static com.android.settingslib.search.SearchIndexable.MOBILE;
 
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.settings.SettingsEnums;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.LayoutInflater;
+import android.app.Activity;
+import android.app.settings.SettingsEnums;
+import android.content.Context;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.pm.UserInfo;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.UserManager;
+import android.provider.Settings;
 import android.view.View;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -67,6 +71,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     private static final String TAG = "TopLevelSettings";
     private static final String SAVED_HIGHLIGHT_MIXIN = "highlight_mixin";
     private static final String PREF_KEY_SUPPORT = "top_level_support";
+    private static final String KEY_USER_CARD = "top_level_usercard";
 
     private boolean mIsEmbeddingActivityEnabled;
     private TopLevelHighlightMixin mHighlightMixin;
