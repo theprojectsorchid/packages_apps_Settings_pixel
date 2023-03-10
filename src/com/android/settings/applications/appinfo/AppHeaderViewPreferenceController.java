@@ -86,6 +86,8 @@ public class AppHeaderViewPreferenceController extends BasePreferenceController
                 .setLabel(appEntry)
                 .setIcon(appEntry)
                 .setIsInstantApp(isInstantApp)
+                .setSummary(mPackageName)
+                .setSecondSummary(pkgInfo.versionName)
                 .done(activity, false /* rebindActions */);
     }
 }
