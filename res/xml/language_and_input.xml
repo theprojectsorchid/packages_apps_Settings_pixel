@@ -16,16 +16,31 @@
   -->
 
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/language_settings">
-    <PreferenceCategory
-        android:key="languages_category"
-        android:title="@string/locale_picker_category_title">
-        <Preference
-            android:key="phone_language"
-            android:title="@string/phone_language"
-            android:fragment="com.android.settings.localepicker.LocaleListEditor" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title=" " >
+
+
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="lang"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/language_settings"/>
+
+  
+   <!-- Header -->
+  <PreferenceCategory
+        android:title="Input features"
+        android:order="-997"
+        android:layout="@layout/settings_title_header">
+  </PreferenceCategory>
+
+    <Preference
+        android:key="phone_language"
+        android:title="@string/phone_language"
+        android:icon="@drawable/ic_translate_24dp"
+        android:fragment="com.android.settings.localepicker.LocaleListEditor" />
 
         <Preference
             android:key="apps_language"
@@ -37,8 +52,6 @@
                 android:name="classname"
                 android:value="com.android.settings.applications.appinfo.AppLocaleDetails" />
         </Preference>
-    </PreferenceCategory>
-
     <PreferenceCategory
         android:key="keyboards_category"
         android:title="@string/keyboard_and_input_methods_category">

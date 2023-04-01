@@ -19,8 +19,21 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="accessibility_color_and_motion"
     android:persistent="false"
-    android:title="@string/accessibility_color_and_motion_title">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"   
+    android:title=" ">
+        <com.android.settingslib.widget.IllustrationPreference
+        android:key="captions_preview"
+        android:persistent="false"
+        android:order="-999"
+        android:selectable="false"
+        settings:lottie_rawRes="@raw/display_accessibility"
+        settings:searchable="false" />
+    
+   <!-- Header -->
+  <PreferenceCategory
+        android:title="Display Extras"
+        android:layout="@layout/settings_title_header">
+  </PreferenceCategory>
     <Preference
         android:fragment="com.android.settings.accessibility.ToggleDaltonizerPreferenceFragment"
         android:icon="@drawable/ic_daltonizer"
