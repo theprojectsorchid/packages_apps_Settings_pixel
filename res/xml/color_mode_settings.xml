@@ -17,4 +17,12 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/color_mode_title" />
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+                  android:title=" ">
+
+   <!-- Header -->
+  <PreferenceCategory
+        android:title="Color mode"
+        android:order="-997"
+        android:layout="@layout/settings_title_header">
+  </PreferenceCategory>

@@ -18,16 +18,24 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/accelerometer_title" >
+    android:title=" " >
 
-    <com.android.settingslib.widget.TopIntroPreference
+ <com.android.settingslib.widget.LayoutPreference
+        android:key="rotate_animation"
+        android:layout="@layout/rotate_animation" />
+   <!-- Header -->
+  <PreferenceCategory
+        android:title="Auto rotate"
+        android:layout="@layout/settings_title_header">
+  </PreferenceCategory>
+
+      <com.android.settingslib.widget.TopIntroPreference
         android:title="@string/auto_rotate_screen_summary"/>
 
     <com.android.settingslib.widget.MainSwitchPreference
         android:key="auto_rotate_main_switch"
         android:title="@string/auto_rotate_settings_primary_switch_title"
         settings:controller="com.android.settings.display.AutoRotateSwitchBarController"/>
-
     <SwitchPreference
         android:key="auto_rotate_switch"
         android:title="@string/auto_rotate_settings_primary_switch_title"
