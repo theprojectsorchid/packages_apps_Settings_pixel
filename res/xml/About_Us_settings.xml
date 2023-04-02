@@ -17,8 +17,33 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title=" ">
+	   android:title=" ">
 
+ 
+
+        <com.android.settingslib.widget.TopIntroPreference
+            android:key="aboutus_bubbles_desc"
+            android:order="-997"
+            android:title="@string/aboutus_bubble_setting_description"/>
+        
+ 
+    <com.android.settings.preferences.ui.AdaptivePreference
+            android:title="@string/about_us_info"
+            settings:position="top"           
+            android:summary="@string/about_us_info_summary" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/theorchidproject" />
+        </Preference>
+
+    <com.android.settings.preferences.ui.AdaptivePreference
+        settings:position="bottom"           
+        android:title="@string/aboutus_link_title"
+        android:summary="@string/aboutus_link_summary" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/orchidosdemo" />
+    </Preference>
 
 
 </PreferenceScreen>
