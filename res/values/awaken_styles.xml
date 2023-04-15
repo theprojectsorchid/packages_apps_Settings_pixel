@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020-2023 The AwakenOS Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file only contains custom attribute and style definition for preferences -->
+<!-- Things unrelated to preference framework UI customization should go to other styles files -->
+<resources>
+    <style name="PreferenceTheme" parent="@style/PreferenceThemeOverlay.SettingsBase">
+        <item name="customPreferenceStyle">@style/CustomPreference</item>
+    </style>
+
+    <style name="CustomPreference" parent="Preference.Material">
+        <item name="allowDividerAbove">false</item>
+    </style>
+    
+    <style name="TextAppearance.AwakenInfoTitle">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">12sp</item> <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.AwakenInfoSummary"> 
+        <item name="android:textColor">?android:attr/textColorSecondary</item> 
+        <item name="android:textSize">12.5sp</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:fontFamily">sans-serif-book</item>
+    </style>
+    
+    <!-- xd. Action Bar -->
+    <style name="xd_toolbar.Expanded" parent="xd_toolbar.Collapsed">
+        <item name="android:textSize">35dp</item>
+        <item name="android:textColor">@color/settingslib_text_color_primary_device_default</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+    </style>
+
+    <!-- xd. ToolBar Collapsed -->
+    <style name="xd_toolbar.Collapsed" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+        <item name="android:fontFamily">@string/settingslib_config_headlineFontFamily</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/settingslib_text_color_primary_device_default</item>
+    </style>
+    
+    <!-- custom Action Bar -->
+    <style name="custom_toolbar.Expanded" parent="custom_toolbar.Collapsed">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">47dp</item>
+        <item name="android:layout_marginBottom">@dimen/homepage_title_margin_bottom</item>
+        <item name="android:layout_marginStart">@dimen/homepage_title_margin_horizontal</item>
+        <item name="android:layout_marginEnd">75dp</item>
+        <item name="android:textSize">35dp</item>
+        <item name="android:textColor">@color/settingslib_text_color_primary_device_default</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+    </style>
+    <style name="custom_toolbar.Collapsed" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+        <item name="android:fontFamily">@string/settingslib_config_headlineFontFamily</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/settingslib_text_color_primary_device_default</item>
+    </style>
+    
+    <style name="awakenDashboardPreferenceSingleAccent">
+        <item name="android:background">@drawable/awaken_preference_background_single_accent</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+    
+    <style name="text_style" parent="@style/text_style_base">
+        <item name="android:textSize">24.0sp</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+    </style>
+
+    <style name="text_style_base">
+        <item name="android:breakStrategy">simple</item>
+    </style>
+</resources>

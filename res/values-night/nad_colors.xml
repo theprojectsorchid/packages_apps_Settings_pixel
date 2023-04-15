@@ -15,4 +15,7 @@
 
     <color name="settings_panel_background_color">@*android:color/notification_material_background_color</color>
 
+    <color name="homepage_awaken_background">#FFCD00</color>
+    <color name="awaken_accent_ripple">@android:color/system_accent1_500</color>
+    <color name="abt_crd">@android:color/system_neutral1_0</color>
 </resources>
