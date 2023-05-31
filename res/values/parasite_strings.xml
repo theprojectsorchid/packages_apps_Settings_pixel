@@ -2,6 +2,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
    
 
+    <!-- Hide developer status -->
+    <string name="hide_developer_status_title">Hide developer status</string>
+    <string name="hide_developer_status_summary">Hide developer status from apps</string>
+
     <!-- Advanced Settings -->
     <string name="advanced_pref_title">Advanced Settings</string>
     <string name="advanced_backup_title">@string/privacy_settings_title</string>
