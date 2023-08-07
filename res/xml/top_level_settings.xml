@@ -19,33 +19,68 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings">
-   <com.android.settings.widget.HomepagePreference
+   
+<com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/preference_usercard"
+        android:fragment="com.android.settings.users.UserSettings"
+        android:key="top_level_usercard"
+        android:order="-225" />  
+
+<com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_phone_info"
         android:key="top_level_about_device"
-        android:order="-170"
+        android:order="-220"
         android:title="@string/about_settings"
         android:summary="@string/summary_placeholder"
         android:fragment="com.epic.fragments.StatusBarSettings"/>
 
- 
-
-    <Preference
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.deviceinfo.UserInfoFragement"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_userinfo"
-        android:title="@string/network_dashboard_title"
-        android:order="-160" />
-
+        settings:layout="@layout/afterlab_cardview_single_left"
+        android:order="-215"
+        android:title="@string/about_settings" />
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
-        android:key="top_level_network"
-        android:order="-150"
-        android:title="@string/network_dashboard_title"
+        android:title="Connectivity"
+        android:key="internet_settings"
         android:summary="@string/summary_placeholder"
-        settings:highlightableMenuKey="@string/menu_key_network"
-        settings:controller="com.android.settings.network.TopLevelNetworkEntryPreferenceController"/>
+        settings:layout="@layout/afterlab_cardview_single_right"
+        android:order="210"/>
+    
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/homepage_widgets2"
+        android:key="top_level_homepage_widgets"
+        android:selectable="true"
+        android:order="-195" />
+
+    <SwitchPreference
+        android:title="Airplane mode"
+        android:key="airplane_mode"
+        android:order="-180"
+        settings:controller="com.android.settings.network.AirplaneModePreferenceController"
+        settings:layout="@layout/afterlab_cardview_top_switch" />
+
+    <Preference
+        android:fragment="com.skylineui.settings.laboratory.LabSettings"
+        android:icon="@drawable/ic_skylineui_lab"
+        android:key="top_level_lab"
+        android:order="175"
+        android:title="@string/skylineui_lab_title"
+        android:summary="@string/skylineui_lab_summary"
+        settings:layout="@layout/afterlab_cardview_single_right"/>
+
+    <Preference
+        android:icon="@drawable/ic_devices_other"
+        android:title="Portable hotspot"
+        android:key="tether_settings"
+        android:summary="@string/summary_placeholder"
+        android:order="-170"
+        android:fragment="com.android.settings.TetherSettings"
+        settings:layout="@layout/afterlab_cardview_middle" />
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.communal.CommunalDashboardFragment"
@@ -73,33 +108,33 @@
         android:order="-135"
         android:title="@string/anatolia_settings_title" />	
 
+
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         android:icon="@drawable/ic_apps"
         android:key="top_level_apps"
         android:order="-130"
-        android:title="@string/apps_dashboard_title"
-        android:summary="@string/app_and_notification_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_apps"/>
+        android:fragment="com.android.settings.applications.AppDashboardFragment"
+        settings:highlightableMenuKey="@string/menu_key_apps"
+        settings:layout="@layout/afterlab_cardview_single_left" />
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
         android:icon="@drawable/ic_notifications"
         android:key="top_level_notifications"
         android:order="-120"
-        android:title="@string/configure_notification_settings"
-        android:summary="@string/notification_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_notifications"/>
+        android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
+        settings:highlightableMenuKey="@string/menu_key_notifications"
+        settings:layout="@layout/afterlab_cardview_single_right" />
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.fuelgauge.batteryusage.PowerUsageSummary"
         android:icon="@drawable/ic_settings_battery_white"
         android:key="top_level_battery"
         android:order="-110"
-        android:title="@string/power_usage_summary_title"
-        android:summary="@string/summary_placeholder"
-        settings:highlightableMenuKey="@string/menu_key_battery"
-        settings:controller="com.android.settings.fuelgauge.TopLevelBatteryPreferenceController"/>
+        android:fragment="com.android.settings.notification.SoundSettings"
+        settings:highlightableMenuKey="@string/menu_key_sound"
+        settings:layout="@layout/afterlab_cardview_top" />
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
@@ -128,9 +163,9 @@
         android:title="@string/display_settings"
         android:summary="@string/display_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_display"
-        settings:controller="com.android.settings.display.TopLevelDisplayPreferenceController"/>
-
-    <com.android.settings.widget.RestrictedHomepagePreference
+        settings:layout="@layout/afterlab_cardview_bottom" />
+	
+	<com.android.settings.widget.RestrictedHomepagePreference
         android:icon="@drawable/ic_settings_wallpaper_white"
         android:key="top_level_wallpaper"
         android:order="-70"

@@ -21,7 +21,19 @@ import static com.android.settingslib.search.SearchIndexable.MOBILE;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.Activity;
+import android.app.settings.SettingsEnums;
+import android.content.Context;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.pm.UserInfo;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.UserManager;
+import android.provider.Settings;
+import android.view.View;
+import android.widget.TextView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.app.Activity;
@@ -44,6 +56,7 @@ import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.window.embedding.ActivityEmbeddingController;
 
@@ -261,9 +274,22 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             Bundle savedInstanceState) {
         RecyclerView recyclerView = super.onCreateRecyclerView(inflater, parent,
                 savedInstanceState);
-        recyclerView.setPadding(mPaddingHorizontal, 0, mPaddingHorizontal, 0);
+        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
+		layoutManager.setSpanSizeLookup(new DeclanSpanSizeOP());
+		recyclerView.setLayoutManager(layoutManager);
         return recyclerView;
     }
+    
+    class DeclanSpanSizeOP extends GridLayoutManager.SpanSizeLookup {
+		@Override
+		public int getSpanSize(int position) {
+		    if (position == 1 || position == 2) {
+				return 1;
+			} else {
+				return 2;
+			}
+		}
+	}
 
     /** Sets the horizontal padding */
     public void setPaddingHorizontal(int padding) {
