@@ -34,18 +34,21 @@ import android.content.pm.UserInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Process;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.FeatureFlagUtils;
+import android.util.TypedValue;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toolbar;
 import android.widget.TextView;
 
@@ -81,9 +84,15 @@ import com.android.settings.safetycenter.SafetyCenterManagerWrapper;
 import com.android.settingslib.Utils;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 
+import com.google.android.setupcompat.util.WizardManagerHelper;
 import com.android.settingslib.drawable.CircleFramedDrawable;
 
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+
 import java.net.URISyntaxException;
+import java.util.Calendar;
+import java.util.Random;
 import java.util.Set;
 import java.util.*;
 import java.lang.*;
@@ -218,6 +227,15 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         updateHomepageAppBar();
         updateHomepageBackground();
         mLoadedListeners = new ArraySet<>();
+        
+        // Homepage redesign start
+        // initSearchBarView();
+        
+        AppBarLayout appBarLayout = findViewById(R.id.app_bar);
+        final ExtendedFloatingActionButton fabSearch = findViewById(R.id.fabSearch);
+        FeatureFactory.getFactory(this)
+                .getSearchFeatureProvider()
+                .initSearchToolbar(this /* activity */, (View) fabSearch, null, SettingsEnums.SETTINGS_HOMEPAGE);
 
         avatarView = findViewById(R.id.account_avatar);
 
@@ -376,15 +394,6 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         }
         mIsRegularLayout = !mIsRegularLayout;
 
-        // Update search title padding
-        View searchTitle = findViewById(R.id.search_bar_title);
-        if (searchTitle != null) {
-            int paddingStart = getResources().getDimensionPixelSize(
-                    mIsRegularLayout
-                            ? R.dimen.search_bar_title_padding_start_regular_two_pane
-                            : R.dimen.search_bar_title_padding_start);
-            searchTitle.setPaddingRelative(paddingStart, 0, 0, 0);
-        }
         // Notify fragments
         getSupportFragmentManager().getFragments().forEach(fragment -> {
             if (fragment instanceof SplitLayoutListener) {
@@ -407,18 +416,20 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                 });
     }
 
-    private void initSearchBarView() {
-        final Toolbar toolbar = findViewById(R.id.search_action_bar);
-        FeatureFactory.getFactory(this).getSearchFeatureProvider()
-                .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
+    // Homepage redesign start
+    //private void initSearchBarView() {
+        //final Toolbar toolbar = findViewById(R.id.search_action_bar);
+        //FeatureFactory.getFactory(this).getSearchFeatureProvider()
+           //     .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
 
-        if (mIsEmbeddingActivityEnabled) {
-            final Toolbar toolbarTwoPaneVersion = findViewById(R.id.search_action_bar_two_pane);
-            FeatureFactory.getFactory(this).getSearchFeatureProvider()
-                    .initSearchToolbar(this /* activity */, toolbarTwoPaneVersion,
-                            SettingsEnums.SETTINGS_HOMEPAGE);
-        }
-    }
+        //if (mIsEmbeddingActivityEnabled) {
+            //final Toolbar toolbarTwoPaneVersion = findViewById(R.id.search_action_bar_two_pane);
+          //  FeatureFactory.getFactory(this).getSearchFeatureProvider()
+               //     .initSearchToolbar(this /* activity */, toolbarTwoPaneVersion,
+                    //        SettingsEnums.SETTINGS_HOMEPAGE);
+        //}
+    //}
+    // Homepage redesign end
 
     private void updateHomepageBackground() {
         if (!mIsEmbeddingActivityEnabled) {
@@ -783,7 +794,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     }
     
     private Drawable getCircularUserIcon(Context context) {
-    	final UserManager mUserManager = getSystemService(UserManager.class);
+        final UserManager mUserManager = getSystemService(UserManager.class);
         Bitmap bitmapUserIcon = mUserManager.getUserIcon(UserHandle.myUserId());
 
         if (bitmapUserIcon == null) {
@@ -798,11 +809,10 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         return drawableUserIcon;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (avatarView != null) {
-          avatarView.setImageDrawable(getCircularUserIcon(getApplicationContext()));
-        }
+    private String getOwnerName(){
+        final UserManager mUserManager = getSystemService(UserManager.class);
+        final UserInfo userInfo = com.android.settings.Utils.getExistingUser(mUserManager,
+                    UserHandle.of(UserHandle.myUserId()));
+        return userInfo.name != null ? userInfo.name : getString(R.string.default_user);
     }
 }
