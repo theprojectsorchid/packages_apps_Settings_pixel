@@ -32,6 +32,8 @@ import android.text.TextUtils;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceGroup;
 
 import com.android.settings.R;
 import com.android.settings.RingtonePreference;
@@ -46,9 +48,13 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.UpdatableListPreferenceDialogFragment;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import com.android.settings.preferences.ui.PreferenceUtils;
 
 @SearchIndexable
 public class SoundSettings extends DashboardFragment implements OnActivityResultListener {
@@ -121,6 +127,7 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
+        Log.d("onPreferenceTreeClick", "Preference Key: " + preference.getKey());
         if (preference instanceof RingtonePreference) {
             writePreferenceClickMetric(preference);
             mRequestPreference = (RingtonePreference) preference;

@@ -404,5 +404,7 @@ public class SettingsGateway {
             Settings.AnatoliaSettingsActivity.class.getName(),
        
             Settings.DevRunningServicesActivity.class.getName(),
+            Settings.FirmwareVersionActivity.class.getName(),
+            Settings.WallpaperSettingsActivity.class.getName(),
     };
 }

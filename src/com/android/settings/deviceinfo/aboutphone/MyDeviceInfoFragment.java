@@ -31,12 +31,10 @@ import android.view.View;
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.dashboard.DashboardFragment;
-import com.android.settings.deviceinfo.BluetoothAddressPreferenceController;
 import com.android.settings.deviceinfo.BuildNumberPreferenceController;
 import com.android.settings.deviceinfo.DeviceNamePreferenceController;
 import com.android.settings.deviceinfo.FccEquipmentIdPreferenceController;
 import com.android.settings.deviceinfo.FeedbackPreferenceController;
-import com.android.settings.deviceinfo.IpAddressPreferenceController;
 import com.android.settings.deviceinfo.ManualPreferenceController;
 import com.android.settings.deviceinfo.RegulatoryInfoPreferenceController;
 import com.android.settings.deviceinfo.SafetyInfoPreferenceController;
@@ -59,6 +57,8 @@ import android.content.IntentFilter;
 
 import com.android.internal.telephony.IccCardConstants;
 import com.android.internal.telephony.TelephonyIntents;
+
+import com.android.settings.preferences.ui.riseInfoPreferenceController;
 
 @SearchIndexable
 public class MyDeviceInfoFragment extends DashboardFragment
@@ -103,30 +103,6 @@ public class MyDeviceInfoFragment extends DashboardFragment
     @Override
     public void onStart() {
         super.onStart();
-        initActionbar();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Context context = getContext();
-        if (context != null) {
-            context.unregisterReceiver(mSimStateReceiver);
-        } else {
-            Log.i(LOG_TAG, "context already null, not unregistering SimStateReceiver");
-        }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Context context = getContext();
-        if (context != null) {
-            context.registerReceiver(mSimStateReceiver,
-                    new IntentFilter(TelephonyIntents.ACTION_SIM_STATE_CHANGED));
-        } else {
-            Log.i(LOG_TAG, "context is null, not registering SimStateReceiver");
-        }
     }
 
     @Override
@@ -147,16 +123,53 @@ public class MyDeviceInfoFragment extends DashboardFragment
     private static List<AbstractPreferenceController> buildPreferenceControllers(
             Context context, MyDeviceInfoFragment fragment, Lifecycle lifecycle) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
-        controllers.add(new SimStatusPreferenceController(context, fragment));
-        controllers.add(new IpAddressPreferenceController(context, lifecycle));
+
+        final ExecutorService executor = (fragment == null) ? null :
+                Executors.newSingleThreadExecutor();
+        androidx.lifecycle.Lifecycle lifecycleObject = (fragment == null) ? null :
+                fragment.getLifecycle();
+        final SlotSimStatus slotSimStatus = new SlotSimStatus(context, executor, lifecycleObject);
+
         controllers.add(new WifiMacAddressPreferenceController(context, lifecycle));
-        controllers.add(new BluetoothAddressPreferenceController(context, lifecycle));
         controllers.add(new RegulatoryInfoPreferenceController(context));
         controllers.add(new SafetyInfoPreferenceController(context));
         controllers.add(new ManualPreferenceController(context));
         controllers.add(new FeedbackPreferenceController(fragment, context));
         controllers.add(new FccEquipmentIdPreferenceController(context));
         controllers.add(new UptimePreferenceController(context, lifecycle));
+        controllers.add(new riseInfoPreferenceController(context));
+
+        Consumer<String> imeiInfoList = imeiKey -> {
+            ImeiInfoPreferenceController imeiRecord =
+                    new ImeiInfoPreferenceController(context, imeiKey);
+            imeiRecord.init(fragment, slotSimStatus);
+            controllers.add(imeiRecord);
+        };
+
+        if (fragment != null) {
+            imeiInfoList.accept(ImeiInfoPreferenceController.DEFAULT_KEY);
+        }
+
+        for (int slotIndex = 0; slotIndex < slotSimStatus.size(); slotIndex ++) {
+            SimStatusPreferenceController slotRecord =
+                    new SimStatusPreferenceController(context,
+                    slotSimStatus.getPreferenceKey(slotIndex));
+            slotRecord.init(fragment, slotSimStatus);
+            controllers.add(slotRecord);
+
+            if (fragment != null) {
+                imeiInfoList.accept(ImeiInfoPreferenceController.DEFAULT_KEY + (1 + slotIndex));
+            }
+        }
+
+        EidStatus eidStatus = new EidStatus(slotSimStatus, context, executor);
+        SimEidPreferenceController simEid = new SimEidPreferenceController(context, KEY_EID_INFO);
+        simEid.init(slotSimStatus, eidStatus);
+        controllers.add(simEid);
+
+        if (executor != null) {
+            executor.shutdown();
+        }
         return controllers;
     }
 

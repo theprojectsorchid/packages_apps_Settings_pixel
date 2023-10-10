@@ -84,6 +84,23 @@ public class ImeiInfoPreferenceController extends BasePreferenceController {
             mPreferenceList.add(multiSimPreference);
             updatePreference(multiSimPreference, simSlotNumber);
         }
+        PreferenceCategory category = screen.findPreference(KEY_PREFERENCE_CATEGORY);
+
+        int imeiPreferenceOrder = preference.getOrder();
+        screen.removePreference(preference);
+        preference.setVisible(false);
+
+        // Add additional preferences for each imei slot in the device
+        for (int simSlotNumber = 0; simSlotNumber < mSlotSimStatus.size(); simSlotNumber++) {
+            Preference multiImeiPreference = createNewPreference(screen.getContext());
+            multiImeiPreference.setOrder(imeiPreferenceOrder + 1 + simSlotNumber);
+            multiImeiPreference.setKey(DEFAULT_KEY + (1 + simSlotNumber));
+            multiImeiPreference.setEnabled(true);
+            multiImeiPreference.setCopyingEnabled(true);
+            multiImeiPreference.setLayoutResource(R.layout.top_level_preference_middle_card);
+            multiImeiPreference.setIcon(R.drawable.ic_number);
+            category.addPreference(multiImeiPreference);
+       }
     }
 
     @Override
