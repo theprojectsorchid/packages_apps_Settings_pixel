@@ -22,4 +22,14 @@
         android:key="banana_logo"
         android:layout="@layout/banana_logo"
         android:selectable="false"/>
+
+
+        <com.android.settings.custom.preference.SystemPropertyListPreference
+        android:key="persist.sys.default_launcher"
+        android:title="@string/quickswitch_launcher_title"
+        android:entries="@array/quickswitch_launcher_entries"
+        android:entryValues="@array/quickswitch_launcher_values"
+        android:summary="%s"
+        />
+
 </PreferenceScreen>
