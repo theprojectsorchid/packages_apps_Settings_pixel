@@ -26,5 +26,19 @@
             android:summary="@string/smart_5g_summary"
             settings:controller="com.android.settings.network.telephony.Smart5gPreferenceController"/>
 
+        <Preference
+            android:key="hidden_apps"
+            android:title="@string/hidden_apps_title"
+            android:summary="@string/hidden_apps_summary"
+            android:persistent="false"
+            android:fragment="com.android.settings.display.HiddenAppSettingsFragment" />
+
+            
+        <SwitchPreference
+            android:key="pocket_mode"
+            android:title="@string/pocket_mode_title"
+            android:summary="@string/pocket_mode_summary"
+            settings:keywords="@string/keyword_pocket"
+            settings:controller="com.android.settings.display.PocketModeSettingsController"/>
 
 </PreferenceScreen>
