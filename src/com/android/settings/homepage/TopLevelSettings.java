@@ -88,6 +88,8 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     
     private boolean googleServicesAvailable;
     private int extraPreferenceOrder = -151;
+    private String chargingText;
+    private String dischargingText;
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
@@ -296,15 +298,9 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                     /* scrollNeeded= */ false);
         }
         super.onStart();
-        RecyclerView recyclerView = getListView();
-        if (recyclerView != null) {
-            recyclerView.post(new Runnable() {
-                @Override
-                public void run() {
-                    initHomepageWidgetsView();
-                }
-            });
-        }
+        chargingText = getContext().getResources().getString(R.string.homepage_widget_battery_charge);
+        dischargingText = getContext().getResources().getString(R.string.homepage_widget_battery_discharge);
+        initHomepageWidgetsView();
     }
 
     private boolean isOnlyOneActivityInTask() {
@@ -330,16 +326,17 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             if (icon != null) {
                 icon.setTint(tintColor);
             }
-            String preferenceKey = preference.getKey();
-            if (preferenceKey != null && !("top_level_homepage_widgets".equals(preferenceKey) ||
-                                           "top_level_homepage_banner_view".equals(preferenceKey))) {
-                setUpPreferenceLayout(preference);
-            }
+            setUpPreferenceLayout(preference);
         });
     }
 
     private void setUpPreferenceLayout(Preference preference) {
         String key = preference.getKey();
+
+        if ("top_level_homepage_widgets".equals(key)
+            || "top_level_homepage_banner_view".equals(key)) {
+            return;
+        }
 
         //Log.d("PreferenceLogging", "Setting up layout for preference key: " + key);
 
