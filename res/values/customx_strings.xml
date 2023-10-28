@@ -44,5 +44,5 @@
     <!-- Back gesture height -->
     <string name="system_black_theme_title">Full</string>
     <string name="system_black_theme_summary">Bottom</string>
-       <string name="bluetooth_show_files_received_via_bluetooth)">Full</string>
+       <string name="bluetooth_show_files_received_via_bluetooth">Full</string>
 </resources>
