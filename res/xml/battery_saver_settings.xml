@@ -41,6 +41,14 @@
         android:summary="@string/summary_placeholder"
         settings:keywords="@string/keywords_battery_saver_sticky"
         settings:controller="com.android.settings.fuelgauge.batterysaver.BatterySaverStickyPreferenceController"/>
+    
+    <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        android:key="arcane_idle_manager"
+        android:order="100"
+        android:title="@string/arcane_idle_manager_title"
+        android:summary="@string/arcane_idle_manager_summary"
+        android:defaultValue="false" />
+
 
     <com.android.settingslib.widget.FooterPreference
         android:order="100"
