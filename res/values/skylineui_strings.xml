@@ -38,19 +38,4 @@
     <!-- Smart 5G -->
     <string name="smart_5g_title">Smart 5G</string>
     <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
-  
-    <!-- bluetooth recieved -->
-    <string name="bluetooth_show_files_received_via_bluetooth">bluetooth recieved</string>
-    
-    
-    <!-- Display Customizations Fragment 1 to 5 -->
-    <string name="usercard_summary">custom page</string>
-    
-    <!-- usercard titles -->
-    <string name="wellbeing_title">Wellbeing</string>
-    <!-- Owner info -->
-    <string name="about_user">Owner Info</string>
-    <string name="userpref_summary">Personal Information about current user</string>
-    <string name="user_title">User Info</string>
-
 </resources>

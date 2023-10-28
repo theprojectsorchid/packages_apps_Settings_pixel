@@ -66,7 +66,7 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
 
     protected CategoryMixin mCategoryMixin;
     protected CollapsingToolbarLayout mCollapsingToolbarLayout;
-    public AppBarLayout mAppBarLayout;
+    protected AppBarLayout mAppBarLayout;
     private Toolbar mToolbar;
 
     @Override
