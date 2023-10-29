@@ -216,7 +216,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             }
 
 	    onSetPrefCard();
-
+            });
         }
     }
 
