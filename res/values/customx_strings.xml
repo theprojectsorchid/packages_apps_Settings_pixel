@@ -45,10 +45,4 @@
     <string name="system_black_theme_title">Black Theme</string>
     <string name="system_black_theme_summary">choose your theme</string>
        <string name="bluetooth_show_files_received_via_bluetooth">bluetooth show files received via bluetooth</string>
- 
-    <string name="sensor_block_title">sensor block</string>
-    <string name="sensor_block_summary">control more of your device</string>
-    
-    <string name="add_sensor_block_package_title">add to sensor block</string>
-    <string name="sensor_block_app_picker_title">control your apps</string>
 </resources>
