@@ -47,7 +47,7 @@
         settings:allowDividerBelow="false"
         settings:controller="com.android.settings.display.darkmode.DarkModeActivationPreferenceController"/>
     
-    <com.custom.preferences.SecureSettingSwitchPreference
+    <com.android.settings.custom.preference.SecureSettingSwitchPreference
         android:key="system_black_theme"
         android:title="@string/system_black_theme_title"
         android:summary="@string/system_black_theme_summary"
