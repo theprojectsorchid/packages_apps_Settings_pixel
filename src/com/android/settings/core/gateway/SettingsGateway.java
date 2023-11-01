@@ -180,6 +180,8 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
+import com.epic.Anatolia;
+
 public class SettingsGateway {
 
     /**
@@ -347,7 +349,9 @@ public class SettingsGateway {
             AppLocaleDetails.class.getName(),
             TurnScreenOnSettings.class.getName(),
             TurnScreenOnDetails.class.getName(),
-            LabSettings.class.getName()            
+            LabSettings.class.getName(),            
+            // Anatolia Additions
+            Anatolia.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -390,5 +394,7 @@ public class SettingsGateway {
             Settings.MyDeviceInfoActivity.class.getName(),
             Settings.ModuleLicensesActivity.class.getName(),
             UserBackupSettingsActivity.class.getName(),
+            // Anatolia Additions
+            Settings.AnatoliaSettingsActivity.class.getName(),
     };
 }
