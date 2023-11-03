@@ -28,6 +28,12 @@
 
 
         <Preference
+            android:key="icon_manager"
+            android:title="@string/icon_manager_title"
+            android:summary="@string/icon_manager_summary">
+            <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
+        </Preference>
+        <Preference
             android:key="hidden_apps"
             android:title="@string/hidden_apps_title"
             android:summary="@string/hidden_apps_summary"
