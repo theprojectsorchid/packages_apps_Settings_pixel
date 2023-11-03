@@ -31,6 +31,7 @@
     <string name="hidden_apps_title">Hidden apps</string>
     <string name="hidden_apps_summary">Applications that should be hidden from launcher. Requires a launcher restart for changes to take effect</string>
 
+<<<<<<< HEAD
     <!-- Fragment for hosting a selectable list of applications -->
     <string name="search">Search</string>
     <string name="search_apps">Search apps</string>
@@ -38,4 +39,6 @@
     <!-- Smart 5G -->
     <string name="smart_5g_title">Smart 5G</string>
     <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
+=======
+>>>>>>> 8842ce41fe (Settings: allow hiding apps from launcher [2/2])
 </resources>
