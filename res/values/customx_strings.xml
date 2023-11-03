@@ -28,7 +28,10 @@
     <!-- PIN scramble -->
     <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
     <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
-
+<string name="statusbar_icons">Icons</string>
+    <!-- Status bar Icon Manager -->
+    <string name="icon_manager_title">Status Bar Icons</string>
+    <string name="icon_manager_summary">Tune Statusbar Items</string>
 
     <!-- Back gesture height -->
     <string name="back_height_low_label">Full</string>
