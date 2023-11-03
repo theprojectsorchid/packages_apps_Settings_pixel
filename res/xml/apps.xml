@@ -102,7 +102,13 @@
             android:name="classname"
             android:value="com.android.settings.Settings$AppBatteryUsageActivity"/>
     </Preference>
-
+    <com.android.settings.preferences.SystemPropertyListPreference
+        android:key="persist.sys.default_launcher"
+        android:title="@string/quickswitch_launcher_title"
+        android:entries="@array/quickswitch_launcher_entries"
+        android:entryValues="@array/quickswitch_launcher_values"
+        android:summary="%s"
+        />
     <Preference
         android:key="special_access"
         android:fragment="com.android.settings.applications.specialaccess.SpecialAccessSettings"
