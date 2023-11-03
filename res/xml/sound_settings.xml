@@ -243,14 +243,23 @@
         android:key="boot_sounds"
         android:title="@string/boot_sounds_title"
         android:order="-15"/>
-
+    <Preference
+        android:key="gesture_adaptive_playback_summary"
+        android:title="@string/adaptive_playback_screen_title"
+        android:fragment="com.android.settings.gestures.AdaptivePlaybackGestureSettings"
+        settings:controller="com.android.settings.gestures.AdaptivePlaybackParentPreferenceController" />
     <!-- Emergency tone -->
     <DropDownPreference
         android:key="emergency_tone"
         android:title="@string/emergency_tone_title"
         android:summary="%s"
         android:order="-10"/>
-
+    <!-- Live Volume Steps -->
+    <Preference
+        android:key="vol_steps"
+        android:title="@string/volume_steps_fragment_title"
+        android:summary="@string/volume_steps_summary"
+        android:fragment="com.android.settings.sound.VolumeStepsFragment" />
     <Preference
         android:key="sound_work_settings"
         android:title="@string/sound_work_settings"

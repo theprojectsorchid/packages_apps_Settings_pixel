@@ -26,5 +26,35 @@
             android:summary="@string/smart_5g_summary"
             settings:controller="com.android.settings.network.telephony.Smart5gPreferenceController"/>
 
+        <Preference
+            android:key="android.theme.customization.fonts"
+            android:title="@string/theme_customization_font_title"
+            android:summary="@string/theme_customization_font_summary"
+            android:fragment="com.awaken.lab.fragments.FontsPicker"/>
 
+        <Preference
+            android:key="android.theme.customization.icon_pack"
+            android:title="@string/theme_customization_icon_pack_title"
+            android:summary="@string/theme_customization_icon_pack_summary"
+            android:fragment="com.awaken.lab.fragments.StatusbarIcons"/>
+
+        <Preference
+            android:key="android.theme.customization.adaptive_icon_shape"
+            android:title="@string/theme_customization_icon_shape_title"
+            android:summary="@string/theme_customization_icon_shape_summary"
+            android:fragment="com.awaken.lab.fragments.IconShapes"/>
+
+
+        <Preference
+            android:key="icon_manager"
+            android:title="@string/icon_manager_title"
+            android:summary="@string/icon_manager_summary">
+            <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
+        </Preference>
+        <Preference
+            android:key="hidden_apps"
+            android:title="@string/hidden_apps_title"
+            android:summary="@string/hidden_apps_summary"
+            android:persistent="false"
+            android:fragment="com.android.settings.display.HiddenAppSettingsFragment" />
 </PreferenceScreen>

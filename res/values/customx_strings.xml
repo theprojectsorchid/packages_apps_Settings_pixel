@@ -28,14 +28,20 @@
     <!-- PIN scramble -->
     <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
     <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
-
+<string name="statusbar_icons">Icons</string>
+    <!-- Status bar Icon Manager -->
+    <string name="icon_manager_title">Status Bar Icons</string>
+    <string name="icon_manager_summary">Tune Statusbar Items</string>
 
     <!-- Back gesture height -->
     <string name="back_height_low_label">Full</string>
     <string name="back_height_high_label">Bottom</string>
     <string name="back_options_dialog_title">Options</string>
     <string name="back_height">Edge touch area</string>
-
+    <!-- Title text for quickswitch feature. [CHAR LIMIT=60] -->
+    <string name="quickswitch_launcher_title">QuickSwitch</string>
+    <!-- Summary text for quickswitch feature.. [CHAR LIMIT=NONE] -->
+    <string name="quickswitch_launcher_summary">Set default homescreen application.</string>
     <!-- Back gesture height -->
     <string name="userinfo_bubble_setting_description">welcome to your user page below are options to gain access to your user information </string>
     <string name="multiuser_settings_title">Multi User Options</string>
