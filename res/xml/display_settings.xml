@@ -36,7 +36,14 @@
         android:order="-997"
         android:layout="@layout/settings_title_header">
   </PreferenceCategory>
- 
+           <!-- FlexoOS logo -->
+    <PreferenceScreen
+        android:key="flexo_lottie_animation"
+        android:layout="@layout/flexoos_card"
+        android:selectable="true"
+        settings:controller="com.android.settings.display.WallpaperPreferenceController"
+        android:order="-996" />
+
     <PreferenceCategory
         android:title="@string/category_name_brightness">
 
