@@ -18,13 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title=" ">
-    <!-- FlexoOS logo -->
-    <PreferenceScreen
-        android:key="toplevel_phoneheader"
-        android:layout="@layout/custom_dashboard_top"
-        android:selectable="true"
-        android:fragment="com.epic.Anatolia"
-        android:order="-190" />
+
 <SwitchPreference
             android:key="smart_5g"
             android:title="@string/smart_5g_title"
