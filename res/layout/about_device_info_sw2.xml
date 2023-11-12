@@ -47,7 +47,7 @@
                 android:textColor="@color/op_control_text_color_primary"
                 android:layout_below="@+id/security_patch_logo"
                 android:textSize="18sp"
-                android:text="@string/device_info_security_patch"
+                android:text="@string/regulatory_labels"
                 android:layout_marginStart="20dp" />
 
             <TextView

@@ -24,7 +24,6 @@
         android:title="@string/lockscreen_settings_what_to_show_category">
         <com.android.settings.preferences.ui.AdaptiveRestrictedListPreference
             android:key="security_setting_lock_screen_notif"
-            settings:position="top"
             android:title="@string/lock_screen_notifications_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_lock_screen_notif"/>
@@ -104,8 +103,6 @@
             android:key="ambient_display_always_on"
             android:title="@string/doze_always_on_title"
             android:summary="@string/doze_always_on_summary"
-
-            settings:position="top"
             settings:keywords="@string/keywords_always_show_time_info"
             settings:controller="com.android.settings.display.AmbientDisplayAlwaysOnPreferenceController"
             settings:userRestriction="no_ambient_display" />
@@ -142,7 +139,6 @@
             android:key="ambient_display_notification"
             android:title="@string/doze_title"
             android:summary="@string/doze_summary"
-            settings:position="bottom"
             settings:controller="com.android.settings.display.AmbientDisplayNotificationsPreferenceController" />
 
         <com.android.settings.custom.preference.RemotePreference
@@ -167,7 +163,6 @@
             android:key="security_setting_lock_screen_notif_work"
             android:title="@string/locked_work_profile_notification_title"
             android:summary="@string/summary_placeholder"
-            settings:position="solo"
             settings:searchable="false"/>
 
     </PreferenceCategory>

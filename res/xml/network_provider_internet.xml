@@ -21,13 +21,12 @@
     android:title="@string/network_dashboard_title">
 
     <PreferenceCategory 
-        android:title="@string/category_name_network">
+        android:title="@string/airplane_mode">
 
     <com.android.settings.preferences.ui.AdaptiveRestrictedSwitchPreference
         android:key="airplane_mode"
         android:title="@string/airplane_mode"
         android:order="-35"
-        settings:position="top" 
         settings:controller="com.android.settings.network.AirplaneModePreferenceController"
         settings:userRestriction="no_airplane_mode"/>
 
@@ -132,7 +131,6 @@
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_adaptive_connectivity"
         android:order="25"
-        settings:position="bottom" 
         settings:userRestriction="no_config_vpn"
         settings:useAdminDisabledSummary="true" />
 
