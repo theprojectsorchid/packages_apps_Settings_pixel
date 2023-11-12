@@ -133,7 +133,6 @@
         android:icon="@drawable/ic_adaptive_connectivity"
         android:order="25"
         settings:position="bottom" 
-        android:summary="@string/summary_placeholder"
         settings:userRestriction="no_config_vpn"
         settings:useAdminDisabledSummary="true" />
 
