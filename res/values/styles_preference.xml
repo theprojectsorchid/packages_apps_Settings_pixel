@@ -47,9 +47,8 @@
         <item name="android:layout">@layout/dot_preference_category</item>
     </style>
 
-    <style name="PreferenceTheme.SetupWizard">
+    <style name="PreferenceTheme.SetupWizard" parent="@style/SettingsPreferenceTheme">
         <item name="preferenceFragmentCompatStyle">@style/SetupWizardPreferenceFragmentStyle</item>
-        <item name="preferenceStyle">@style/SettingsPreference</item>
     </style>
 
     <style name="DialogPreference" parent="@style/Preference.DialogPreference.Material">
