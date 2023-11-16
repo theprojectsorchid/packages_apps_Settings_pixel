@@ -226,69 +226,7 @@ public abstract class ToggleFeaturePreferenceFragment extends SettingsPreference
             getView().post(this::showQuickSettingsTooltipIfNeeded);
         }
 
-        mToggleServiceDividerSwitchPreference = new DividerSwitchPreference(getPrefContext());
-        mToggleServiceDividerSwitchPreference.setKey(KEY_USE_SERVICE_PREFERENCE);
-        if (getArguments().containsKey(AccessibilitySettings.EXTRA_CHECKED)) {
-            final boolean enabled = getArguments().getBoolean(AccessibilitySettings.EXTRA_CHECKED);
-            mToggleServiceDividerSwitchPreference.setChecked(enabled);
-        }
-
-        preferenceScreen.addPreference(mToggleServiceDividerSwitchPreference);
-
-        updateToggleServiceTitle(mToggleServiceDividerSwitchPreference);
-
-        final PreferenceCategory groupCategory = new PreferenceCategory(getPrefContext());
-        groupCategory.setKey(KEY_GENERAL_CATEGORY);
-        groupCategory.setTitle(R.string.accessibility_screen_option);
-        preferenceScreen.addPreference(groupCategory);
-
-        initShortcutPreference(savedInstanceState);
-        groupCategory.addPreference(mShortcutPreference);
-
-        // Show the "Settings" menu as if it were a preference screen.
-        if (mSettingsTitle != null && mSettingsIntent != null) {
-            mSettingsPreference = new Preference(getPrefContext());
-            mSettingsPreference.setTitle(mSettingsTitle);
-            mSettingsPreference.setIconSpaceReserved(false);
-            mSettingsPreference.setIntent(mSettingsIntent);
-        }
-
-        // The downloaded app may not show Settings. The framework app has Settings.
-        if (mSettingsPreference != null) {
-            groupCategory.addPreference(mSettingsPreference);
-        }
-
-        if (!TextUtils.isEmpty(mHtmlDescription)) {
-            final PreferenceCategory introductionCategory = new PreferenceCategory(
-                    getPrefContext());
-            final CharSequence title = getString(R.string.accessibility_introduction_title,
-                    mPackageName);
-            introductionCategory.setKey(KEY_INTRODUCTION_CATEGORY);
-            introductionCategory.setTitle(title);
-            preferenceScreen.addPreference(introductionCategory);
-
-            final HtmlTextPreference htmlTextPreference = new HtmlTextPreference(getPrefContext());
-            htmlTextPreference.setSummary(mHtmlDescription);
-            htmlTextPreference.setImageGetter(mImageGetter);
-            htmlTextPreference.setSelectable(false);
-            introductionCategory.addPreference(htmlTextPreference);
-        }
-
-        if (!TextUtils.isEmpty(mDescription)) {
-            createFooterPreference(mDescription);
-        }
-
-        if (TextUtils.isEmpty(mHtmlDescription) && TextUtils.isEmpty(mDescription)) {
-            final CharSequence defaultDescription = getText(
-                    R.string.accessibility_service_default_description);
-            createFooterPreference(defaultDescription);
-        }
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        installActionBarToggleSwitch();
+        writeDefaultShortcutTargetServiceToSettingsIfNeeded(getPrefContext());
     }
 
     @Override
