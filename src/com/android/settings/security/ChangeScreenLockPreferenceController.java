@@ -79,7 +79,6 @@ public class ChangeScreenLockPreferenceController extends AbstractPreferenceCont
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
         mPreference = screen.findPreference(getPreferenceKey());
-	mPreference.setLayoutResource(R.layout.dot_preference_top_card);
     }
 
     @Override

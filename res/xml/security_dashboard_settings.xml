@@ -25,7 +25,6 @@
     <PreferenceCategory
         android:order="-10"
         android:key="security_status"
-	android:layout="@layout/dot_preference_category"
         android:title="@string/security_status_title" />
 
     <PreferenceCategory
@@ -36,26 +35,22 @@
     <PreferenceCategory
         android:order="10"
         android:key="security_category"
-	android:layout="@layout/dot_preference_category"
         android:title="@string/lock_settings_title">
 
         <com.android.settings.widget.GearPreference
             android:key="unlock_set_or_change"
-	    android:layout="@layout/dot_preference_top_card"
             android:title="@string/unlock_set_unlock_launch_picker_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_lockscreen" />
 
         <com.android.settingslib.RestrictedPreference
             android:key="fingerprint_settings"
-	    android:layout="@layout/dot_preference_middle_card"
             android:title="@string/security_settings_fingerprint_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_fingerprint_settings" />
 
         <com.android.settingslib.RestrictedPreference
             android:key="face_settings"
-	    android:layout="@layout/dot_preference_bottom_card"
             android:title="@string/security_settings_face_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_face_settings" />
