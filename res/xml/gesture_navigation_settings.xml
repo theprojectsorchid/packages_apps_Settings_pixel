@@ -19,6 +19,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="gesture_navigation_settings_page"
     android:title=" "
     settings:keywords="@string/keywords_gesture_navigation_settings">
@@ -29,13 +30,12 @@
         android:summary="@string/show_navbar_gesture_bar_summary"
         android:defaultValue="true" />
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="gesture_settings" 
-        android:order="-998"
-        android:layout="@layout/gesture_settings_animation"/>
-
-
-
+ 
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="sounds"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/sound"/> 
 
     <PreferenceCategory
         android:key="assistant_gesture_category"

@@ -18,15 +18,16 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="all_tether_prefs_screen"
     android:title=" "
     settings:searchable="false">
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="hotspot_anim" 
-        android:layout="@layout/hotspot_animation"
-        android:order="-999" />
-
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="sounds"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/display_accessibility"/> 
     <PreferenceCategory
         android:key="wifi_tether_settings_group"
         android:title="@string/wifi_hotspot_checkbox_text"
