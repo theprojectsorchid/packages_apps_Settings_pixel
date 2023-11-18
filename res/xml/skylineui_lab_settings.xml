@@ -23,12 +23,14 @@
             android:key="smart_5g"
             android:title="@string/smart_5g_title"
             android:persistent="false"
+                    android:layout="@layout/card_view_pref_top"
             android:summary="@string/smart_5g_summary"
             settings:controller="com.android.settings.network.telephony.Smart5gPreferenceController"/>
 
    <Preference
         android:key="display_customization"
         android:title="@string/display_customization"
+                android:layout="@layout/card_view_pref_top"
         android:fragment="com.android.settings.awaken.fragments.DisplayCustomizations"
         android:summary="@string/display_customization"/>   
          
