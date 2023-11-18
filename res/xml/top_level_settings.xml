@@ -36,6 +36,11 @@
         android:title="@string/network_dashboard_title"
         android:order="-160" />
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/homepage_search_widget"
+        android:key="top_level_search_widget"
+        android:selectable="false"
+        android:order="-169" />
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
