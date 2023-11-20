@@ -154,4 +154,9 @@
 
         <string name="show_clipboard_overlay_title1">show clipboard overlay</string>
 
+    <!-- Volume haptic feedback -->
+    <string name="volume_panel_haptic_feedback_title">Volume haptic feedback</string>
+    <string name="volume_panel_haptic_feedback_summary">Enable volume haptic feedback when adjust volume</string>
+
+
 </resources>
