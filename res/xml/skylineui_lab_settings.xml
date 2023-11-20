@@ -18,11 +18,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title=" ">
-        <com.android.settings.custom.preference.SystemSettingSwitchPreference
-            android:key="brightness_slider_haptic_feedback"
-            android:title="@string/qs_brightness_haptic_feedback_title"
-            android:summary="@string/qs_brightness_haptic_feedback_summary"
-            android:defaultValue="false" />
 <SwitchPreference
             android:key="smart_5g"
             android:title="@string/smart_5g_title"
@@ -43,13 +38,19 @@
             android:summary="@string/hidden_apps_summary"
             android:persistent="false"
             android:fragment="com.android.settings.display.HiddenAppSettingsFragment" />
-
-            
-        <com.android.settings.custom.preference.SecureSettingSwitchPreference
-            android:key="pocket_mode"
-            android:title="@string/pocket_mode_title"
-            android:summary="@string/pocket_mode_summary"
-            settings:keywords="@string/keyword_pocket"
-            settings:controller="com.android.settings.display.PocketModeSettingsController"/>
-
+    
+    <com.android.settings.custom.preference.SystemSettingSeekBarPreference
+        android:key="qs_transparency"
+        android:title="@string/qs_transparency_title"
+        android:summary="@string/qs_transparency_summary"
+        android:defaultValue="100"
+            settings:interval="1"
+            settings:units="%"
+            android:max="100"
+            android:min="1" />
+     <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="brightness_slider_haptic_feedback"
+            android:title="@string/qs_brightness_haptic_feedback_title"
+            android:summary="@string/qs_brightness_haptic_feedback_summary"
+            android:defaultValue="false" />
 </PreferenceScreen>
