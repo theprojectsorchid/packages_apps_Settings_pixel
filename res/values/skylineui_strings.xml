@@ -34,7 +34,8 @@
     <!-- Fragment for hosting a selectable list of applications -->
     <string name="search">Search</string>
     <string name="search_apps">Search apps</string>
-
+  <string name="qs_brightness_haptic_feedback_title">Haptic feedback</string>
+    <string name="qs_brightness_haptic_feedback_summary">Haptic feedback when adjusting brightness (Requires touch feedback to be enabled)</string>
     <!-- Smart 5G -->
     <string name="smart_5g_title">Smart 5G</string>
     <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
