@@ -41,7 +41,16 @@
             android:summary="@string/hidden_apps_summary"
             android:persistent="false"
             android:fragment="com.android.settings.display.HiddenAppSettingsFragment" />
-
+    
+    <com.android.settings.custom.preference.SystemSettingSeekBarPreference
+        android:key="qs_transparency"
+        android:title="@string/qs_transparency_title"
+        android:summary="@string/qs_transparency_summary"
+        android:defaultValue="100"
+        settings:interval="1"
+        settings:units="%"
+        android:max="100"
+        settings:min="1" />
             
         <com.android.settings.custom.preference.SecureSettingSwitchPreference
             android:key="pocket_mode"
