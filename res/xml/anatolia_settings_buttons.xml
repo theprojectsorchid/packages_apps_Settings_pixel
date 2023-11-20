@@ -16,12 +16,51 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/buttons_title">
-   <com.android.settingslib.widget.LayoutPreference
+	   android:title=" ">
+     
+     
+     <com.android.settingslib.widget.LayoutPreference
         android:key="my_device_info_header"
         android:order="-500"
         android:layout="@layout/device_info"
         android:selectable="false"
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:isPreferenceVisible="true"/>
+
+        <Preference
+            android:key="screensaver"
+            android:title="@string/screensaver_settings_title"
+            android:fragment="com.android.settings.dream.DreamSettings"
+            settings:keywords="@string/keywords_screensaver"
+            settings:controller="com.android.settings.display.ScreenSaverPreferenceController"/>
+
+        <Preference
+            android:key="lockscreen_from_display_settings"
+            android:title="@string/lockscreen_settings_title"
+            android:fragment="com.android.settings.security.LockscreenDashboardFragment"
+            settings:keywords="@string/keywords_ambient_display_screen"
+            settings:controller="com.android.settings.security.screenlock.LockScreenPreferenceController"/>
+
+        <com.android.settingslib.RestrictedPreference
+            android:key="screen_timeout"
+            android:title="@string/screen_timeout"
+            android:summary="@string/summary_placeholder"
+            android:fragment="com.android.settings.display.ScreenTimeoutSettings"
+            settings:controller="com.android.settings.display.ScreenTimeoutPreferenceController"/>
+
+        
+        <com.android.settings.custom.preference.SecureSettingSwitchPreference
+           android:key="spoof_storage_encryption_status"
+           android:title="@string/spoof_storage_encryption_status_title"
+           android:summary="@string/spoof_storage_encryption_status_summary"
+           android:defaultValue="false"/>   
+        
+        
+        <com.android.settings.custom.preference.SecureSettingSwitchPreference
+            android:key="pocket_mode"
+            android:title="@string/pocket_mode_title"
+            android:summary="@string/pocket_mode_summary"
+            settings:keywords="@string/keyword_pocket"
+            settings:controller="com.android.settings.display.PocketModeSettingsController"/>
+
 </PreferenceScreen>

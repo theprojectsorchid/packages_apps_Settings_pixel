@@ -40,10 +40,6 @@
         android:key="dashboard_tile_placeholder" />
 
     <!-- security section -->
-    <PreferenceCategory
-        android:order="10"
-        android:key="security_category"
-        android:title="@string/lock_settings_title">
 
         <com.android.settings.widget.GearPreference
             android:key="unlock_set_or_change"
@@ -68,8 +64,13 @@
             android:title="@string/security_settings_biometric_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_biometric_settings" />
-    </PreferenceCategory>
-
+    
+    <Preference
+            android:key="buttonsettings_category"
+            android:title="@string/screensecurity_title"
+            android:summary="@string/screensecurity_summary"
+            android:fragment="com.epic.fragments.ButtonSettings" />
+            
     <Preference
         android:order="100"
         android:key="security_advanced_settings"
