@@ -125,9 +125,9 @@
 
     <!-- Search bar -->
     <dimen name="search_bar_margin">16dp</dimen>
-    <dimen name="search_bar_height">52dp</dimen>
-    <dimen name="search_bar_text_size">20sp</dimen>
-    <dimen name="search_bar_corner_radius">28dp</dimen>
+    <dimen name="search_bar_height">60dp</dimen>
+    <dimen name="search_bar_text_size">18sp</dimen>
+    <dimen name="search_bar_corner_radius">26dp</dimen>
     <dimen name="search_bar_content_inset">56dp</dimen>
     <dimen name="search_bar_padding_start">4dp</dimen>
     <dimen name="search_bar_padding_start_two_pane">8dp</dimen>
@@ -145,13 +145,13 @@
 
     <!-- Homepage -->
     <dimen name="homepage_title_margin_bottom">8dp</dimen>
-    <dimen name="homepage_title_margin_horizontal">24dp</dimen>
+    <dimen name="homepage_title_margin_horizontal">34dp</dimen>
     <dimen name="homepage_padding_horizontal_two_pane">24dp</dimen>
-    <dimen name="homepage_preference_corner_radius">28dp</dimen>
+    <dimen name="homepage_preference_corner_radius">24dp</dimen>
     <dimen name="homepage_preference_min_height">88sp</dimen>
     <dimen name="homepage_preference_icon_padding_start">32dp</dimen>
     <dimen name="homepage_preference_icon_padding_start_two_pane">8dp</dimen>
-    <dimen name="homepage_preference_text_padding_start">16dp</dimen>
+    <dimen name="homepage_preference_text_padding_start">14dp</dimen>
     <dimen name="homepage_preference_text_padding_start_two_pane">24dp</dimen>
     <dimen name="homepage_app_bar_corner_radius">32dp</dimen>
     <dimen name="homepage_app_bar_padding_two_pane">6dp</dimen>
@@ -412,7 +412,7 @@
     <dimen name="abc_slice_large_height">1800dp</dimen>
 
     <!-- System navigation settings illustration height -->
-    <dimen name="system_navigation_illustration_height">320dp</dimen>
+    <dimen name="system_navigation_illustration_height">300dp</dimen>
 
     <dimen name="back_gesture_indicator_width">60dp</dimen>
 
