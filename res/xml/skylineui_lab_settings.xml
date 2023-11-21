@@ -43,11 +43,5 @@
             android:summary="@string/hidden_apps_summary"
             android:persistent="false"
             android:fragment="com.android.settings.display.HiddenAppSettingsFragment" />
-    
-    <com.android.settings.custom.preference.SystemSettingSeekBarPreference
-        android:key="qs_transparency"
-        android:title="@string/qs_transparency_title"
-        android:summary="@string/qs_transparency_summary"
- />
-      
+   
 </PreferenceScreen>
