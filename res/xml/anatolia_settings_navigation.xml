@@ -16,9 +16,19 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/navbar_title">
+	android:title=" ">
  <com.android.settings.custom.preference.SecureSettingSwitchPreference
         android:key="show_clipboard_overlay"
         android:title="@string/show_clipboard_overlay_title1"
         android:defaultValue="true" />
+ <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        android:key="volume_panel_haptic_feedback"
+        android:title="@string/volume_panel_haptic_feedback_title"
+        android:summary="@string/volume_panel_haptic_feedback_summary"
+        android:defaultValue="true" />
+   <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        android:key="volume_panel_haptic_feedback"
+        android:title="@string/volume_panel_haptic_feedback_title"
+        android:summary="@string/volume_panel_haptic_feedback_summary"
+        android:defaultValue="true" />     
 </PreferenceScreen>

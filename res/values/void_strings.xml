@@ -4,7 +4,14 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    
+        <string name="search_button_text_title">Reduce refresh rate</string>
+        <string name="homepage_widget_storage_title">Reduce refresh rate</string>
+        <string name="homepage_widget_battery_title ">Reduce refresh rate</string>
+        <string name="device_info_security_patch">Reduce refresh rate</string>
+        <string name="firmware_name_text">Reduce refresh rate</string>
+        <string name="firmware_build_summary_title">Reduce refresh rate</string>
+        <string name="flash_notifications_title">Reduce refresh rate</string>
+
     <!-- 60hz Battery Saver Toggle -->
     <string name="battery_saver_refresh_rate_title">Reduce refresh rate</string>
     <string name="battery_saver_refresh_rate_summary">Use 60 Hz screen refresh rate to save power when Battery Saver is on</string>

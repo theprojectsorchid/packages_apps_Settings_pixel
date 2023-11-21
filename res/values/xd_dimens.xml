@@ -16,8 +16,11 @@
 -->
 <resources>
 
+     <dimen name="homepage_avatar_margin_top">24dp</dimen>
+     <dimen name="homepage_banner_margin_top">24dp</dimen>
+     <dimen name="top_level_preference_summary_max_width">24dp</dimen>
+
      <!-- xd. Preference Card -->
      <dimen name="xd_pref_card_radius">24dp</dimen>
      <dimen name="xd_pref_card_radius-outer">5dp</dimen>
-
 </resources>
