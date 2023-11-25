@@ -30,10 +30,10 @@
 
         
     <!-- security_settings_status.xml -->
-    <PreferenceCategory
+     <!-- <PreferenceCategory
         android:order="-10"
         android:key="security_status"
-        android:title="@string/security_status_title" />
+        android:title="@string/security_status_title" /> -->
 
     <PreferenceCategory
         android:order="1"
@@ -47,32 +47,36 @@
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_lockscreen" />
 
-        <com.android.settingslib.RestrictedPreference
+    <com.android.settings.preferences.AdaptiveRestrictedPreference
             android:key="fingerprint_settings"
+            settings:position="top"
             android:title="@string/security_settings_fingerprint_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_fingerprint_settings" />
 
-        <com.android.settingslib.RestrictedPreference
+    <com.android.settings.preferences.AdaptiveRestrictedPreference
             android:key="face_settings"
+            settings:position="middle"
             android:title="@string/security_settings_face_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_face_settings" />
 
-        <com.android.settingslib.RestrictedPreference
+    <com.android.settings.preferences.AdaptiveRestrictedPreference
             android:key="biometric_settings"
+            settings:position="middle"
             android:title="@string/security_settings_biometric_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_biometric_settings" />
     
-    <Preference
+    <com.android.settings.preferences.AdaptivePreference
             android:key="buttonsettings_category"
+            settings:position="middle"         
             android:title="@string/screensecurity_title"
-            android:summary="@string/screensecurity_summary"
             android:fragment="com.epic.fragments.ButtonSettings" />
             
-    <Preference
+    <com.android.settings.preferences.AdaptivePreference
         android:order="100"
+        settings:position="bottom"
         android:key="security_advanced_settings"
         android:title="@string/security_advanced_settings"
         android:summary="@string/summary_placeholder"

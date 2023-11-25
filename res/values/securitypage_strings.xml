@@ -20,7 +20,7 @@
     <!-- General strings -->
     <string name="screensecurity_title">Screen Security</string>
     <string name="screensecurity_summary">Lockscreen, pocket mode and other screen features</string>
-    <string name="screensecurity_level">Screen Security Level</string>
+    <string name="screensecurity_level">Screen Security</string>
     <string name="screensecurity_levelsummary">OrchidOs Kactus</string>
 
 </resources>

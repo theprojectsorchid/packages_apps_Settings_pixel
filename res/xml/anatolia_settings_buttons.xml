@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C)  2022 EpicROM-AOSP
+<!-- Copyright (C)  2023 OrchidOs
 
-     Licensed under the Apache License, Version 2.0 (the "License");
+     Thanks to epic aosp Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
 
@@ -14,9 +14,10 @@
      limitations under the License.
 -->
 <PreferenceScreen
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	   android:title=" ">
+	    android:title=" ">
      
      
      <com.android.settingslib.widget.LayoutPreference
@@ -27,37 +28,33 @@
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:isPreferenceVisible="true"/>
 
-        <Preference
+        <com.android.settings.preferences.AdaptivePreference
             android:key="screensaver"
+            settings:position="top"
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"
             settings:keywords="@string/keywords_screensaver"
             settings:controller="com.android.settings.display.ScreenSaverPreferenceController"/>
 
-        <Preference
+        <com.android.settings.preferences.AdaptivePreference
             android:key="lockscreen_from_display_settings"
+            settings:position="middle"           
             android:title="@string/lockscreen_settings_title"
             android:fragment="com.android.settings.security.LockscreenDashboardFragment"
             settings:keywords="@string/keywords_ambient_display_screen"
             settings:controller="com.android.settings.security.screenlock.LockScreenPreferenceController"/>
 
-        <com.android.settingslib.RestrictedPreference
+        <com.android.settings.preferences.AdaptiveRestrictedPreference
             android:key="screen_timeout"
             android:title="@string/screen_timeout"
+            settings:position="middle"
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.display.ScreenTimeoutSettings"
             settings:controller="com.android.settings.display.ScreenTimeoutPreferenceController"/>
-
-        
-        <com.android.settings.custom.preference.SecureSettingSwitchPreference
-           android:key="spoof_storage_encryption_status"
-           android:title="@string/spoof_storage_encryption_status_title"
-           android:summary="@string/spoof_storage_encryption_status_summary"
-           android:defaultValue="false"/>   
-        
-        
-        <com.android.settings.custom.preference.SecureSettingSwitchPreference
+              
+        <com.android.settings.preferences.AdaptiveRestrictedSwitchPreference
             android:key="pocket_mode"
+            settings:position="bottom"
             android:title="@string/pocket_mode_title"
             android:summary="@string/pocket_mode_summary"
             settings:keywords="@string/keyword_pocket"
