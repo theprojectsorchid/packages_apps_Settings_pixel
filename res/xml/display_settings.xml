@@ -47,27 +47,8 @@
             settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"/>
     </PreferenceCategory>
 
-  <!--  <PreferenceCategory
-        android:title="@string/category_name_lock_display">
-
-       <Preference
-            android:key="lockscreen_from_display_settings"
-            android:title="@string/lockscreen_settings_title"
-            android:fragment="com.android.settings.security.LockscreenDashboardFragment"
-            settings:keywords="@string/keywords_ambient_display_screen"
-            settings:controller="com.android.settings.security.screenlock.LockScreenPreferenceController"/>
-
-      <com.android.settingslib.RestrictedPreference
-            android:key="screen_timeout"
-            android:title="@string/screen_timeout"
-            android:summary="@string/summary_placeholder"
-            android:fragment="com.android.settings.display.ScreenTimeoutSettings"
-            settings:controller="com.android.settings.display.ScreenTimeoutPreferenceController"/>
-    </PreferenceCategory>
--->
-
     <PreferenceCategory
-        android:title="@string/category_name_appearance">
+        android:title="@string/category_name_lock_display">
 
         <com.android.settings.display.darkmode.DarkModePreference
             android:key="dark_ui_mode"
@@ -77,6 +58,26 @@
             settings:widgetLayout="@null"
             settings:controller="com.android.settings.display.DarkUIPreferenceController"
             settings:keywords="@string/keywords_dark_ui_mode"/>
+            
+      <!-- <Preference
+            android:key="lockscreen_from_display_settings"
+            android:title="@string/lockscreen_settings_title"
+            android:fragment="com.android.settings.security.LockscreenDashboardFragment"
+            settings:keywords="@string/keywords_ambient_display_screen"
+            settings:controller="com.android.settings.security.screenlock.LockScreenPreferenceController"/> -->
+
+     <!-- <com.android.settingslib.RestrictedPreference
+            android:key="screen_timeout"
+            android:title="@string/screen_timeout"
+            android:summary="@string/summary_placeholder"
+            android:fragment="com.android.settings.display.ScreenTimeoutSettings"
+            settings:controller="com.android.settings.display.ScreenTimeoutPreferenceController"/> -->
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="@string/category_name_appearance">
+
 
         <Preference
             android:fragment="com.android.settings.accessibility.TextReadingPreferenceFragment"
