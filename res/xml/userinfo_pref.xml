@@ -25,27 +25,30 @@
         android:order="10" />
 
 
-    <com.android.settingslib.widget.TopIntroPreference
+    <!-- <com.android.settingslib.widget.TopIntroPreference
             android:key="userinfo_bubbles_desc"
             android:order="20"
-            android:title="@string/userinfo_bubble_setting_description"/>
+            android:title="@string/userinfo_bubble_setting_description"/> -->
 
-    <Preference
+        <com.android.settings.preferences.AdaptivePreference
             android:key="multiuser"
             android:order="30"
-            android:title="@string/multiuser_settings_title"
+            settings:position="top"
+            android:title="@string/multiuser_settings_title_info"
             android:fragment="com.android.settings.users.UserSettings"/>
     
-    <Preference
+        <com.android.settings.preferences.AdaptivePreference
             android:key="accounts"
             android:order="40"
-            android:title="@string/accounts_settings_title"
+            settings:position="bottom"
+            android:title="@string/accounts_settings_title_info"
             android:fragment="com.android.settings.accounts.AccountDashboardFragment"/>
 
-    <Preference
+        <com.android.settings.preferences.AdaptivePreference
             android:key="emergency"
-            android:order="50"       
-            android:title="@string/emergency_settings_title"
+            android:order="50"    
+            settings:position="solo"
+            android:title="@string/emergency_settings_title_info"
             android:fragment="com.android.settings.emergency.EmergencyDashboardFragment"/>
         
 </PreferenceScreen>

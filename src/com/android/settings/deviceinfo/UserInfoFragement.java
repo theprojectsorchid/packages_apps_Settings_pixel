@@ -133,7 +133,7 @@ public class UserInfoFragement extends SettingsPreferenceFragment {
         final View userCard = headerPreference.findViewById(R.id.entity_header);
         final TextView useremail = headerPreference.findViewById(R.id.email);
         String email = getEmail(getContext());
-        useremail.setText(email!=null?email:"Add a Google account to show email");
+        useremail.setText(email!=null?email:"Add your account to show email");
 	iv = headerPreference.findViewById(R.id.image_holder);
         Intent i = new Intent(Intent.ACTION_GET_CONTENT);
         i.setType("image/*");
