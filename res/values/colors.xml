@@ -189,7 +189,8 @@
     <color name="SIM_dark_mode_color_orange">#fffcad70</color> <!-- Material Orange 300 -->
 
     <!-- Top app bar colors -->
-    <color name="color_surface_header">?androidprv:attr/colorSurfaceHighlight</color>
+    <color name="surface_header_light">#ff032e67</color>
+    <color name="card_surface_color">#ff032e67</color>
 
     <!-- Accessibility Settings icon background colors -->
     <color name="accessibility_feature_background">#5F6368</color> <!-- Google grey 700 -->

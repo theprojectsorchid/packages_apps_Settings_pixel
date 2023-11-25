@@ -22,12 +22,5 @@
         android:key="banana_logo"
         android:layout="@layout/banana_logo"
         android:selectable="false"/>
-       
-        <Preference
-            android:key="hidden_apps"
-            android:title="@string/hidden_apps_title"
-            android:summary="@string/hidden_apps_summary"
-            android:persistent="false"
-            android:fragment="com.palladium.atomichub.Atomichub" />
-   
+
 </PreferenceScreen>

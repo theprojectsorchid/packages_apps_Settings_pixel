@@ -36,7 +36,11 @@
     <string name="rising_device_title">Device</string>
     <string name="rising_build_version_title">Build Version</string>
     <string name="rising_build_date_title">Build Date</string>
-        
+            <string name="build_is_official_summary">What</string>
+    <string name="build_is_official_summary_oopsie">official</string>
+    <string name="build_is_community_summary_oopsie">community</string>
+    <string name="build_is_community_summary">OrchidOs</string>
+
     <string name="wellbeing_title">Google Wellbeing</string>
     <string name="gesture_illustration_description">Control your device with ease.</string>
     <string name="connected_setting_description">Manage your device\'s connections.</string>
@@ -58,9 +62,13 @@
      <!-- About page -->
     <string name="battery">Battery</string>
     <string name="display">Display</string>
+    <string name="cust_storage_summary">Storage</string>
+    <string name="chipset_summary">Processor</string>
+  <!-- About page -->
+    <string name="cust_battery_summary">Battery</string>
+    <string name="cust_display_summary">Display</string>
     <string name="storage">Storage</string>
     <string name="chipset">Processor</string>
-
     <!-- About phone cards -->
     <string name="about_device_nearby">The device name can and will be seen by the nearby devices.</string>
     <string name="about_device_version_type_gapps">Pixel</string>

@@ -30,7 +30,7 @@
   
   
  
-    <com.android.settings.preferences.ui.AdaptiveRestrictedPreference 
+    <com.android.settings.preferences.AdaptiveRestrictedPreference 
         android:fragment="com.android.settings.network.NetworkProviderSettings"
         android:key="internet_settings"
         android:title="@string/provider_internet_settings"
@@ -41,7 +41,7 @@
         settings:keywords="@string/keywords_internet"
         settings:useAdminDisabledSummary="true" />
 
-    <com.android.settings.preferences.ui.AdaptiveRestrictedPreference 
+    <com.android.settings.preferences.AdaptiveRestrictedPreference 
         android:key="calls_and_sms"
         android:title="@string/calls_and_sms"
         android:icon="@drawable/ic_calls_sms"
@@ -52,7 +52,7 @@
         settings:keywords="@string/calls_and_sms"
         settings:useAdminDisabledSummary="true" />
 
-    <com.android.settings.preferences.ui.AdaptiveRestrictedPreference 
+    <com.android.settings.preferences.AdaptiveRestrictedPreference 
         android:key="mobile_network_list"
         android:title="@string/provider_network_settings_title"
         android:summary="@string/summary_placeholder"
@@ -65,7 +65,7 @@
         settings:useAdminDisabledSummary="true"
         settings:searchable="@bool/config_show_sim_info"/>
 
-    <com.android.settings.preferences.ui.AdaptiveRestrictedPreference 
+    <com.android.settings.preferences.AdaptiveRestrictedPreference 
         android:key="manage_mobile_plan"
         android:title="@string/manage_mobile_plan_title"
         android:icon="@drawable/ic_mobile_plan"
@@ -75,7 +75,7 @@
         settings:isPreferenceVisible="@bool/config_show_sim_info"
         settings:useAdminDisabledSummary="true" />
 
-    <com.android.settings.preferences.ui.AdaptiveRestrictedPreference 
+    <com.android.settings.preferences.AdaptiveRestrictedPreference 
         android:fragment="com.android.settings.network.tether.TetherSettings"
         android:key="tether_settings"
         android:title="@string/tether_settings_title_all"
@@ -86,7 +86,7 @@
         settings:userRestriction="no_config_tethering"
         settings:useAdminDisabledSummary="true" />
 
-    <com.android.settings.preferences.ui.AdaptivePrimarySwitchPreference
+    <com.android.settings.preferences.AdaptivePrimarySwitchPreference
         android:fragment="com.android.settings.AllInOneTetherSettings"
         android:key="all_tether_settings"
         android:title="@string/tether_settings_title_all"
@@ -106,7 +106,7 @@
         settings:isPreferenceVisible="@bool/config_show_data_saver"
         android:fragment="com.android.settings.datausage.DataSaverSummary"/>
 
-    <com.android.settings.preferences.ui.AdaptivePreference 
+    <com.android.settings.preferences.AdaptivePreference 
         android:fragment="com.android.settings.network.AdaptiveConnectivitySettings"
         android:key="adaptive_connectivity"
         android:title="@string/adaptive_connectivity_title"
@@ -124,7 +124,7 @@
         android:positiveButtonText="@string/save"
         android:negativeButtonText="@android:string/cancel" />
 
-    <Preference
+        <com.android.settings.preferences.AdaptivePreference
         android:fragment="com.android.settings.network.AdaptiveConnectivitySettings"
         android:key="adaptive_connectivity"
         android:title="@string/adaptive_connectivity_title"
@@ -132,9 +132,7 @@
         android:icon="@drawable/ic_adaptive_connectivity"
         android:order="25"
         settings:position="bottom" 
-        android:summary="@string/summary_placeholder"
         settings:userRestriction="no_config_vpn"
         settings:useAdminDisabledSummary="true" />
 
-   </PreferenceCategory>
 </PreferenceScreen>

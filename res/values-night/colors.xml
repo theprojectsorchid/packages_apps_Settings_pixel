@@ -16,6 +16,9 @@
 
 <resources
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+
+    <color name="surface_variant_dark">#ff303033</color>    
+    <color name="card_surface_color">#ff1b1b1d</color>
     <color name="switchbar_switch_track_tint">#82000000</color>
     <color name="switchbar_switch_thumb_tint">@android:color/black</color>
     <color name="homepage_accessibility_background">#783BE5</color>

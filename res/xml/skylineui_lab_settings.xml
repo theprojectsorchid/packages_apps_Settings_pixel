@@ -23,25 +23,27 @@
             android:title="@string/qs_brightness_haptic_feedback_title"
             android:summary="@string/qs_brightness_haptic_feedback_summary"
             android:defaultValue="false" />
-<SwitchPreference
+        <com.android.settings.preferences.AdaptiveSwitchPreference
             android:key="smart_5g"
             android:title="@string/smart_5g_title"
             android:persistent="false"
+            settings:position="top"
             android:summary="@string/smart_5g_summary"
             settings:controller="com.android.settings.network.telephony.Smart5gPreferenceController"/>
 
-   <Preference
+        <com.android.settings.preferences.AdaptivePreference
         android:key="display_customization"
         android:title="@string/display_customization"
         android:fragment="com.android.settings.awaken.fragments.DisplayCustomizations"
         android:summary="@string/display_customization"/>   
          
             
-        <Preference
+        <com.android.settings.preferences.AdaptivePreference
             android:key="hidden_apps"
             android:title="@string/hidden_apps_title"
             android:summary="@string/hidden_apps_summary"
             android:persistent="false"
+            settings:position="bottom"
             android:fragment="com.android.settings.display.HiddenAppSettingsFragment" />
    
 </PreferenceScreen>

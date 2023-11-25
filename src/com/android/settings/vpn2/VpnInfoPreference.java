@@ -28,7 +28,7 @@ import androidx.preference.PreferenceViewHolder;
 import com.android.settings.R;
 import com.android.settingslib.HelpUtils;
 import com.android.settingslib.RestrictedPreference;
-import com.android.settings.preferences.ui.AdaptiveRestrictedPreference;
+import com.android.settings.preferences.AdaptiveRestrictedPreference;
 
 
 /**
