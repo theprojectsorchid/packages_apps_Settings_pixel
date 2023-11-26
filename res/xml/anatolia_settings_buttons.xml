@@ -28,6 +28,11 @@
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:isPreferenceVisible="true"/>
 
+    <!-- Empty category for spacing -->
+    <PreferenceCategory
+        android:key="screensaver_space"
+        settings:allowDividerAbove="false"/>
+
         <com.android.settings.preferences.AdaptivePreference
             android:key="screensaver"
             settings:position="top"
