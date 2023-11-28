@@ -19,7 +19,12 @@
     <string name="rice_device_title">Device</string>
     <string name="rice_build_version_title">Build Version</string>
     <string name="rice_build_date_title">Build Date</string>
-        
+            <string name="background_processes_settings_title">Background activities</string>
+
+    <string name="my_info_page">About You</string>
+    <string name="rising_settings_title">settings</string>
+    <string name="rising_settings_summary">more settings</string>
+
     <string name="wellbeing_title">Google Wellbeing</string>
     <string name="gesture_illustration_description">Control your device with ease.</string>
     <string name="connected_setting_description">Manage your device\'s connections.</string>

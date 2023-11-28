@@ -64,14 +64,7 @@
         android:order="-135"
         android:title="@string/anatolia_settings_title" />	
 
-    <com.android.settings.widget.HomepagePreference
-        android:fragment="com.rising.settings.personalizationSettingsLayout"
-        android:icon="@drawable/op_ic_homepage_personalizations"
-        android:key="top_level_rising"
-        android:order="-130"
-        android:title="@string/rising_settings_title"
-        android:summary="@string/rising_settings_summary"
-        settings:controller="com.rising.settings.TopLevelSettingsPreferenceController"/>
+
         
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.DisplaySettings"
