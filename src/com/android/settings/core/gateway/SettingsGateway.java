@@ -41,7 +41,6 @@ import com.android.settings.accounts.ManagedProfileSettings;
 import com.android.settings.applications.AppDashboardFragment;
 import com.android.settings.applications.ProcessStatsSummary;
 import com.android.settings.applications.ProcessStatsUi;
-import com.android.settings.applications.RunningServices;
 import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.appinfo.AlarmsAndRemindersDetails;
 import com.android.settings.applications.appinfo.AppInfoDashboardFragment;
@@ -355,9 +354,7 @@ public class SettingsGateway {
             TurnScreenOnDetails.class.getName(),
             LabSettings.class.getName(),            
             // Anatolia Additions
-            Anatolia.class.getName(),
-
-            RunningServices.class.getName()
+            Anatolia.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -402,7 +399,5 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             // Anatolia Additions
             Settings.AnatoliaSettingsActivity.class.getName(),
-
-            Settings.DevRunningServicesActivity.class.getName()
     };
 }

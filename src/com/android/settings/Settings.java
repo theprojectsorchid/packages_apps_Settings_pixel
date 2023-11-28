@@ -458,6 +458,4 @@ public class Settings extends SettingsActivity {
      * Activity for SkylineUI Workstation
      */
     public static class StartLabActivity extends SettingsActivity {}
-
-    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }
