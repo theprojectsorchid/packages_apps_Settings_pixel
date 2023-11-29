@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The PixelDust Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Volume step options. -->
+    <string-array name="volume_steps_entries" translatable="false">
+        <item>60</item>
+        <item>45</item>
+        <item>30</item>
+        <item>15</item>
+        <item>7</item>
+        <item>5</item>
+    </string-array>
+</resources>
