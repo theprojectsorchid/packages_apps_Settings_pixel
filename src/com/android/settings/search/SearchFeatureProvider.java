@@ -143,9 +143,17 @@ public interface SearchFeatureProvider {
         view.setAllowedHandwritingDelegatePackage(intent.getPackage());
     }
 
-            final Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(activity).toBundle();
-            activity.startActivity(intent, bundle);
-        });
+    /** Start the search activity. */
+    private static void startSearchActivity(
+            Context context, FragmentActivity activity, int pageId, Intent intent) {
+        FeatureFactory.getFactory(context).getSlicesFeatureProvider()
+                .indexSliceDataAsync(context);
+
+        FeatureFactory.getFactory(context).getMetricsFeatureProvider()
+                .logSettingsTileClick(KEY_HOMEPAGE_SEARCH_BAR, pageId);
+
+        final Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(activity).toBundle();
+        activity.startActivity(intent, bundle);
     }
 
     Intent buildSearchIntent(Context context, int pageId);
