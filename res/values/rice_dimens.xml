@@ -25,6 +25,7 @@
     <dimen name="dashboard_tile_image_size">36dp</dimen>
     <!-- Dashboard foreground image size -->
     <dimen name="dashboard_tile_foreground_image_size">24dp</dimen>
-
+    <dimen name="op_control_icon_size_indicator">24.0dip</dimen>
+    <dimen name="dashboard_tile_foreground_image_size_op">21.0dip</dimen>
     <dimen name="stroke_widthAboutUI">1dp</dimen>
 </resources>
