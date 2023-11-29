@@ -14,6 +14,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- About device screen, SkylineUI Release Version -->
     <string name="skylineui_release_version">Welcome To SkylineUI</string>
+   <!-- Title text for quickswitch feature. [CHAR LIMIT=60] -->
+    <string name="quickswitch_launcher_title">QuickSwitch</string>
+    <!-- Summary text for quickswitch feature.. [CHAR LIMIT=NONE] -->
+    <string name="quickswitch_launcher_summary">Set default homescreen application.</string>
 
     <!-- SkylineUI Maintainer -->
     <string name="SkylineUI_maintainer">Build made by</string>
