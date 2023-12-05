@@ -40,7 +40,7 @@ import android.view.View;
 import java.util.List;
 import java.util.ArrayList;
 
-public class QuickSettings extends SettingsPreferenceFragment implements
+public class QuickSettings2 extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
 
