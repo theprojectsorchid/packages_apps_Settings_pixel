@@ -144,7 +144,7 @@
 
     <Preference
         android:key="default_sms_app"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/dot_preference_middle_card"
         android:title="@string/sms_application_title"
         android:summary="@string/summary_placeholder" />
 
@@ -179,7 +179,7 @@
 
         <Preference
             android:key="write_settings_apps"
-            android:layout="@layout/dot_preference_full_alone_card"
+            settings:layout="@layout/dot_preference_full_alone_card"
             android:title="@string/write_settings"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.appinfo.WriteSystemSettingsPreferenceController" />

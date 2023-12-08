@@ -60,7 +60,7 @@
     <!-- Call volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
         android:key="call_volume"
-        android:layout="@layout/dot_preference_middle_card_progress"
+        settings:layout="@layout/dot_preference_middle_card_progress"
         android:icon="@drawable/ic_local_phone_24_lib"
         android:title="@string/call_volume_option_title"
         android:order="-170"
@@ -158,7 +158,7 @@
 
     <!-- Adaptive Playback -->
     <Preference
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/dot_preference_middle_card"
         android:key="sound_adaptive_playback_summary"
         android:title="@string/adaptive_playback_screen_title"
         android:fragment="com.android.settings.sound.AdaptivePlaybackSoundSettings"
