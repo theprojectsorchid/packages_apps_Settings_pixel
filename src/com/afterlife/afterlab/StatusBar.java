@@ -16,7 +16,6 @@
 package com.afterlife.afterlab;
 
 import android.content.ContentResolver;
-import android.content.Intent;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
