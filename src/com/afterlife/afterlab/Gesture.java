@@ -23,8 +23,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
-import android.provider.Settings;
 import android.provider.SearchIndexableResource;
+import android.provider.Settings;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -45,7 +45,8 @@ import java.util.Arrays;
 import java.util.List;
 
 @SearchIndexable
-public class Gesture extends SettingsPreferenceFragment {
+public class Gesture extends SettingsPreferenceFragment 
+            implements Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -55,12 +56,12 @@ public class Gesture extends SettingsPreferenceFragment {
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
     }
-
+    
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+            return false;
     }  
-    
+
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.AFTERLIFE;
