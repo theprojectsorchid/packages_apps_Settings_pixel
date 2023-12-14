@@ -19,14 +19,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="@string/double_tap_power_for_camera_title">
+    android:title=" ">
 
     <com.android.settingslib.widget.IllustrationPreference
         android:key="gesture_double_tap_power_video"
         settings:searchable="false"
         app:lottie_rawRes="@drawable/quickly_open_camera"/>
-
+    
     <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"
         android:key="gesture_double_tap_power"
         android:title="@string/double_tap_power_for_camera_title"
         android:summary="@string/double_tap_power_for_camera_summary"

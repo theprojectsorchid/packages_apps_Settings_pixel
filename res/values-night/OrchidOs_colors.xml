@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (C) 2018 The Android Open Source Project
+  Copyright (C) 2020 The Android Open Source Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,8 +15,7 @@
   limitations under the License.
   -->
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title=" "
-    settings:keywords="@string/keywords_system_navigation"/>
+<resources>
+    <color name="OrchidOs_switchbar_switch_track_tint">#82000000</color>
+    <color name="OrchidOs_switchbar_switch_thumb_tint">?android:attr/colorAccent</color>
+</resources>

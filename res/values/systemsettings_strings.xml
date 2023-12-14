@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="system_navigation_title_extra_summary">Main Navigation Settings</string>
+    <string name="reset_dashboard_title_summary">Factory reset options</string>
+    <string name="athena_title_summary">powered by Athena</string>
+    <string name="dev_info_extra">Advanced Device info</string>
+    <string name="AboutUsSystem_title">About Us</string>
+    <string name="AboutUsSystem_title_summary">More infomation about our eco-system</string>
+    <string name="immersive_navigation_title_category">Immersive navigation</string>
+    <string name="TapTap_extra">Extended Tap options</string>
+    <string name="TapTap_summary">extra options powered by TapTap </string>
+       <!-- TapTap mode -->
+    <string name="taptapmode_title">Tap tap</string>
+    <string name="taptapmode_more">Tap Tap Information</string>
+    <string name="taptapmode_summary">Extra tap functions</string>
+    <string name="taptapmode_summary2">Further information</string>
+    <string name="taptapmode_bubble_setting_description">Tap, Tap provides over 50 actions that can be run from double or triple taps on the back of your device</string>
+    <string name="taptapmode_bubble_setting_description1">The gesture can also be fully controlled, to only run under certain conditions, or run different actions in different scenarios; such as only when an app is running, the screen is off, or when listening to music..many more options are available</string>
+    <string name="taptap_demo">Tap tap demo</string>
+    <string name="about_taptap_info_summary">video demo</string>
+
+</resources>
