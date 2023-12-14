@@ -17,5 +17,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/quicksettings_title">
-
+    <Preference
+        android:key="platform_compat_dashboard"
+        android:title="@string/platform_compat_dashboard_title"
+        android:summary="@string/platform_compat_dashboard_summary"
+        android:fragment="com.android.settings.development.compat.PlatformCompatDashboard" />
 </PreferenceScreen>
