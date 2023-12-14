@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C)  2022 EpicROM-AOSP
+<!-- Copyright (C)  2022 EpicROM-AOSP2023 OrchidOs
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,20 +16,14 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/navbar_title">
- <com.android.settings.custom.preference.SecureSettingSwitchPreference
-        android:key="show_clipboard_overlay"
-                    settings:layout="@layout/dot_preference_middle_card"
-        android:title="@string/show_clipboard_overlay_title1"
-        android:defaultValue="true" />
+	android:title=" ">
 
-        
-    <!-- Statusbar Settings -->
-    <Preference
-            settings:layout="@layout/dot_preference_middle_card"
-        android:key="statusbar_settings"
-        android:title="@string/status_bar_title"
-        android:icon="@drawable/ic_settings_statusbar"
-        android:order="-248"
-        android:fragment="com.android.settings.custom.statusbar.StatusBarSettings" />
+        <com.android.settingslib.widget.LayoutPreference
+                android:key="device_name"
+                android:order="-1"
+                android:selectable="false"
+                android:layout="@layout/device_info_header"
+                settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
+                settings:isPreferenceVisible="false" />
+
 </PreferenceScreen>

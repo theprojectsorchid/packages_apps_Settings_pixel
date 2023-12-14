@@ -217,7 +217,7 @@
         android:summary="@string/skylineui_lab_summary"/>
 
     <com.android.settings.widget.HomepagePreference
-        android:fragment="com.android.settings.system.SystemDashboardFragment"
+        android:fragment="com.OrchidOs.fragments.SystemSettingsExtra"
         android:icon="@drawable/ic_settings_system_dashboard_white"
         android:key="top_level_system"
         android:order="10"

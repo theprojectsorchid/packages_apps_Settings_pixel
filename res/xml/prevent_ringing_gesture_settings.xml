@@ -34,6 +34,7 @@
         android:key="gesture_prevent_ringing_switch" />
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="gesture_prevent_ringing_category"
         android:title="@string/gesture_prevent_ringing_title" />
 </PreferenceScreen>

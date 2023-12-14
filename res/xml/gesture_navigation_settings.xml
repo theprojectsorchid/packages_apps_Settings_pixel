@@ -19,30 +19,47 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-          xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="gesture_navigation_settings_page"
     android:title=" "
     settings:keywords="@string/keywords_gesture_navigation_settings">
+    
+    <PreferenceCategory
+        android:key="nav_gesture_category"
+        android:persistent="false"
+        settings:layout="@layout/afterlab_preference_category"
+        android:title="Navigation Gestures">
+    </PreferenceCategory>
+
 
     <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:key="navigation_bar_hint"
+        android:layout="@layout/SwitchPreferenceFull_Card"
         android:title="@string/show_navbar_gesture_bar_title"
         android:summary="@string/show_navbar_gesture_bar_summary"
         android:defaultValue="true" />
-
+   
+    <com.android.settings.custom.preference.SecureSettingSwitchPreference     
+            android:key="immersive_navigation"
+            android:layout="@layout/SwitchPreferenceFull_Card"            
+            android:title="@string/immersive_navigation_title"
+            android:summary="@string/immersive_navigation_summary"
+            android:defaultValue="true" />
  
     <com.android.settingslib.widget.IllustrationPreference
-        android:key="sounds"
+        android:key="nav_gesture"
         settings:searchable="false"
         android:order="-999"
-        app:lottie_rawRes="@raw/sound"/> 
+        app:lottie_rawRes="@raw/nav_gesture"/> 
 
     <PreferenceCategory
         android:key="assistant_gesture_category"
         android:persistent="false"
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/assistant_gesture_category_title">
 
-        <SwitchPreference
+    <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="assistant_gesture_corner_swipe"
             android:title="@string/assistant_corner_gesture_title"
             android:summary="@string/assistant_corner_gesture_summary"
@@ -52,19 +69,18 @@
     </PreferenceCategory>
 
   
-        <com.android.settings.custom.preference.SecureSettingSwitchPreference     
-                   android:key="immersive_navigation"
-            android:title="@string/immersive_navigation_title"
-            android:summary="@string/immersive_navigation_summary" />
+
 
     <PreferenceCategory
         android:key="back_sensitivity_category"
         android:persistent="false"
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/back_sensitivity_dialog_title">
 
         <com.android.settings.widget.LabeledSeekBarPreference
             android:key="gesture_left_back_sensitivity"
             android:title="@string/left_edge"
+            android:layout="@layout/seekbar_card_bottom"            
             android:max="2"
             settings:textStart="@string/low_label"
             settings:textEnd="@string/high_label"/>
@@ -73,12 +89,14 @@
             android:key="gesture_right_back_sensitivity"
             android:title="@string/right_edge"
             android:max="2"
+            android:layout="@layout/seekbar_card_bottom"            
             settings:textStart="@string/low_label"
             settings:textEnd="@string/high_label"/>
 
         <com.android.settings.widget.LabeledSeekBarPreference
             android:key="gesture_back_height"
             android:title="@string/back_height"
+            android:layout="@layout/seekbar_card_alone"            
             android:max="3"
             android:selectable="true"
             settings:textStart="@string/back_height_low_label"
