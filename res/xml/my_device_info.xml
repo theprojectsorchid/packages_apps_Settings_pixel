@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="my_device_info_pref_screen"
-    android:title="@string/about_settings">
+    android:title=" ">
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="device_name"
@@ -32,6 +32,7 @@
     <PreferenceCategory
         android:key="basic_info_category"
         android:order="0"
+        settings:layout="@layout/afterlab_preference_category"
         android:selectable="false"
         android:title="@string/my_device_info_basic_info_category_title">
 
@@ -83,6 +84,7 @@
     <PreferenceCategory
         android:key="device_detail_category"
         android:selectable="false"
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/my_device_info_device_details_category_title">
 
         <!-- SIM status -->
@@ -118,9 +120,10 @@
             settings:controller="com.android.settings.deviceinfo.imei.ImeiInfoPreferenceController"/>
 
         <!-- Android version -->
-        <Preference
+    <com.android.settings.preferences.ui.AdaptivePreference
             android:key="firmware_version"
             android:order="42"
+            settings:position="solo"
             android:title="@string/firmware_version"
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
@@ -128,6 +131,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/my_device_info_device_identifiers_category_title">
 
         <!--IP address -->

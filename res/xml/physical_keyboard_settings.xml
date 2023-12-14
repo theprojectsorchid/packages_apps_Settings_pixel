@@ -16,13 +16,16 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/physical_keyboard_title">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title=" ">
     <!-- Additional preference screens are inserted here programmatically
          with low order values to set the key map of each attached keyboard. -->
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="keyboard_assistance_category"
         android:title="@string/keyboard_assistance_category">
-        <SwitchPreference
+    <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"             
             android:key="show_virtual_keyboard_switch"
             android:title="@string/show_ime"
             android:summary="@string/show_ime_summary"
@@ -37,6 +40,7 @@
     <!-- Device-specific keyboard settings. -->
     <PreferenceCategory
         android:key="keyboard_extras_category"
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/keyboard_extras_title" >
 
         <com.android.settings.custom.preference.RemotePreference
