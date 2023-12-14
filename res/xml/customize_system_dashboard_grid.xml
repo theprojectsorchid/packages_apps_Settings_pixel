@@ -11,20 +11,23 @@
      limitations under the License.
 -->
 <PreferenceScreen
-    android:title="Your system"
+    android:title=" "
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto">
  
     <PreferenceCategory
-        android:title="Base UI Theme"
+        android:title="System Navigation"
         android:key="ui_category"
         settings:layout="@layout/afterlab_preference_category">
         <Preference
-            android:icon="@drawable/ic_settings_language"
-            android:title="@string/language_settings"
-            android:key="language_input_settings"
-            android:fragment="com.android.settings.language.LanguageAndInputSettings"
+            android:key="gesture_system_navigation_input_summary"
+            android:title="@string/system_navigation_title"
+            android:icon="@drawable/ic_advanced_settings"
+            android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
+            settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"
+            settings:keywords="@string/keywords_system_navigation" 
             settings:layout="@layout/afterlab_card_interface_grid" />
+
         <Preference
             android:key="gesture_settings"
             android:title="@string/gesture_preference_title"
@@ -56,12 +59,14 @@
             android:fragment="com.android.settings.custom.advanced.AdvancedSettings"
             settings:layout="@layout/afterlab_card_interface_grid" />
         <Preference
-            android:key="date_time_settings"
-            android:title="@string/date_and_time"
-            android:icon="@drawable/ic_settings_date_time"
-            android:fragment="com.android.settings.datetime.DateTimeSettings"
-            settings:controller="com.android.settings.datetime.DateTimePreferenceController"
-            settings:layout="@layout/afterlab_card_interface_grid_right" />
+            android:key="athena_info"
+            android:icon="@drawable/ic_advanced_settings"
+            android:title="@string/about_settings">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="dev.sebaubuntu.athena.MainActivity"
+            android:targetPackage="dev.sebaubuntu.athena.dev" />
+        </Preference>
         <Preference
             android:key="reset_dashboard"
             android:title="@string/reset_dashboard_title"
@@ -70,30 +75,30 @@
             settings:controller="com.android.settings.system.ResetPreferenceController"
             settings:layout="@layout/afterlab_card_interface_grid" />
         <Preference
-            android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
-            android:icon="@drawable/ic_settings_about_device"
-            android:key="top_level_about_device"
-            android:title="@string/about_settings"
-            settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"
+            android:key="navigationbar_category"
+            android:title="@string/navbar_title"
+            android:summary="@string/navbar_summary"
+            android:fragment="com.epic.fragments.NavbarSettings"
+            android:icon="@drawable/ic_anatolia_navbar" 
             settings:layout="@layout/afterlab_card_interface_grid_right" />
     </PreferenceCategory>
+
     <PreferenceCategory
-        android:title="Misc and General"
+        android:title="Device Locale"
         android:key="general_category"
         settings:layout="@layout/afterlab_preference_category">
         <Preference
-            android:fragment="com.skylineui.settings.laboratory.LabSettings"
-            android:icon="@drawable/ic_skylineui_lab"
-            android:key="top_level_lab"
-            android:title="@string/skylineui_lab_title"
-            android:summary="@string/skylineui_lab_summary"
-            settings:layout="@layout/afterlab_card_interface_grid" />
-        <Preference
-            android:icon="@drawable/ic_interface_system"
-            android:key="backup_data"
-            android:title="@string/backup_data_title"
-            android:fragment="com.android.settings.backup.ToggleBackupSettingFragment"
-            settings:controller="com.android.settings.backup.BackupDataPreferenceController"
+            android:key="date_time_settings"
+            android:title="@string/date_and_time"
+            android:icon="@drawable/ic_settings_date_time"
+            android:fragment="com.android.settings.datetime.DateTimeSettings"
+            settings:controller="com.android.settings.datetime.DateTimePreferenceController"
             settings:layout="@layout/afterlab_card_interface_grid_right" />
+        <Preference
+            android:icon="@drawable/ic_settings_language"
+            android:title="@string/language_settings"
+            android:key="language_input_settings"
+            android:fragment="com.android.settings.language.LanguageAndInputSettings"
+            settings:layout="@layout/afterlab_card_interface_grid" />
     </PreferenceCategory>
 </PreferenceScreen>
