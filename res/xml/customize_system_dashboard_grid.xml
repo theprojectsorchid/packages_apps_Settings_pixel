@@ -60,6 +60,7 @@
             settings:layout="@layout/afterlab_card_interface_grid" />
         <Preference
             android:key="athena_info"
+            settings:layout="@layout/afterlab_card_interface_grid_right"
             android:icon="@drawable/ic_advanced_settings"
             android:title="@string/about_settings">
         <intent
