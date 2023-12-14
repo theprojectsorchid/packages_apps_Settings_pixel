@@ -17,7 +17,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:key="keyboard_layout_picker"
-                  android:title="@string/keyboard_layout_picker_title"
+                  android:title=" "
                   settings:controller="com.android.settings.inputmethod.KeyboardLayoutPickerController">
 
 </PreferenceScreen>

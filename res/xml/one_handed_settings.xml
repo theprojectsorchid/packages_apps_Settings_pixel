@@ -22,26 +22,36 @@
     android:persistent="false"
     android:title=" ">
 
-    <com.android.settingslib.widget.TopIntroPreference
-        android:key="gesture_one_handed_mode_intro"
-        android:title="@string/one_handed_mode_intro_text"/>
-
     <com.android.settingslib.widget.IllustrationPreference
         android:key="one_handed_header"
         settings:searchable="false"
         android:order="-999"
         app:lottie_rawRes="@raw/lottie_one_hand_mode"/>
+    <!--
+<com.android.settingslib.widget.FooterPreference
+        android:key="one_handed_mode_footer"
+        android:order="-997"
+        android:title="@string/one_handed_mode_footer_text"
+        android:selectable="false"
+        settings:searchable="false"/>  -->
 
 
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="gesture_one_handed_mode_intro"
+        android:order="-996"
+        android:title="@string/one_handed_mode_intro_text"/>
+        
 
     <com.android.settingslib.widget.MainSwitchPreference
         android:key="gesture_one_handed_mode_enabled_main_switch"
         android:title="@string/one_handed_mode_enabled"
+        android:order="-998"
         settings:keywords="@string/keywords_one_handed"
         settings:controller="com.android.settings.gestures.OneHandedMainSwitchPreferenceController"/>
 
     <PreferenceCategory
         android:key="gesture_one_handed_mode_swipe_down"
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/one_handed_mode_swipe_down_category"
         settings:controller="com.android.settings.gestures.OneHandedPreferenceCategoryController">
 
@@ -58,9 +68,5 @@
             settings:controller="com.android.settings.gestures.OneHandedActionShowNotificationPrefController"/>
     </PreferenceCategory>
 
-    <com.android.settingslib.widget.FooterPreference
-        android:key="one_handed_mode_footer"
-        android:title="@string/one_handed_mode_footer_text"
-        android:selectable="false"
-        settings:searchable="false"/>
+
 </PreferenceScreen>

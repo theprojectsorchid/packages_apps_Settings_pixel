@@ -43,11 +43,11 @@ public class UserName extends RelativeLayout {
 	
 	private void updateSettings() {
 		String text = Settings.System.getStringForUser(mContext.getContentResolver(), "afterlab_set_username", UserHandle.USER_CURRENT);
-		nameText.setText(text == null || text == "" ? "Hi User?" : text);
+		nameText.setText(text == null || text == "" ? "for more info" : text);
 		if (getResources().getConfiguration().locale.getLanguage().equals("in")) {
-			greetingText.setText("Selamat Datang.");
+			greetingText.setText("clickbelow");
 		} else {
-			greetingText.setText("Welcome back.");
+			greetingText.setText("clickbelow");
 		}
 	}
 	

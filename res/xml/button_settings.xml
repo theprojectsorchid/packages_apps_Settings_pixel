@@ -1,37 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:settings="http://schemas.android.com/apk/res-auto"
         android:key="button_settings"
-        android:title="@string/button_pref_title">
+        android:title=" ">
+
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="gesture_swipe_down_fingerprint_video"
+        settings:searchable="false"         
+        android:order="-999"       
+        app:lottie_rawRes="@raw/lottie_swipe_fingerprint"/>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
+        android:key="button_backlight_cat"
+        android:title="@string/button_backlight_title">
+
+        <com.android.settings.custom.buttons.preference.ButtonBacklightBrightness
+            android:key="button_backlight"
+            android:title="@string/button_backlight_title"
+            android:dialogTitle="@string/button_backlight_title"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="navbar_key"
-        android:title="@string/navigation_bar_title">
+        android:title="@string/system_navigation_title_extra_summary">
 
         <SwitchPreference
             android:key="disable_nav_keys"
             android:title="@string/disable_navkeys_title"
             android:summary="@string/disable_navkeys_summary"
             android:defaultValue="false" />
-
-        <Preference
+     
+      <ListPreference
+            android:key="volume_key_cursor_control"
+            android:dialogTitle="@string/volbtn_cursor_control_title"
+            android:title="@string/volbtn_cursor_control_title"
+            android:entries="@array/volbtn_cursor_control_entries"
+            android:entryValues="@array/volbtn_cursor_control_values"
+            android:persistent="false" />
+ <!--
+       <Preference
             android:key="navbar_gestures"
             android:title="@string/system_navigation_title"
-            android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings" />
+            android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings" /> -->
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="navigation_bar_compact_layout"
             android:title="@string/navigation_bar_compact_layout_title"
             android:summary="@string/navigation_bar_compact_layout_summary"
             android:defaultValue="false" />
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="navigation_bar_menu_arrow_keys"
             android:title="@string/navigation_bar_arrow_keys_title"
             android:summary="@string/navigation_bar_arrow_keys_summary"
             android:defaultValue="false" />
 
         <com.android.settings.custom.preference.SecureSettingSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="sysui_nav_bar_inverse"
             android:title="@string/nav_bar_layout_inverse_title"
             android:summary="@string/nav_bar_layout_inverse_summary"
@@ -40,6 +72,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="power_key"
         android:title="@string/hardware_keys_power_key_title">
 
@@ -49,6 +82,7 @@
             android:fragment="com.android.settings.gestures.PowerMenuSettings" />
 
         <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="power_end_call"
             android:title="@string/power_end_call_title"
             android:summary="@string/power_end_call_summary"
@@ -63,40 +97,40 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="volume_keys"
         android:title="@string/hardware_keys_volume_keys_title" >
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="volume_wake_screen"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="volume_answer_call"
             android:title="@string/volume_answer_call_title"
             android:summary="@string/volume_answer_call_summary"
             android:defaultValue="false" />
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="volbtn_music_controls"
             android:title="@string/volbtn_music_controls_title"
             android:summary="@string/volbtn_music_controls_summary"
             android:defaultValue="false" />
 
-        <ListPreference
-            android:key="volume_key_cursor_control"
-            android:dialogTitle="@string/volbtn_cursor_control_title"
-            android:title="@string/volbtn_cursor_control_title"
-            android:entries="@array/volbtn_cursor_control_entries"
-            android:entryValues="@array/volbtn_cursor_control_values"
-            android:persistent="false" />
+  
 
         <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="swap_volume_buttons"
             android:title="@string/swap_volume_buttons_title"
             android:summary="@string/swap_volume_buttons_summary" />
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="click_partial_screenshot"
             android:title="@string/click_partial_screenshot_title"
             android:summary="@string/click_partial_screenshot_summary"
@@ -104,10 +138,12 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="swap_capacitive_keys_cat"
         android:title="@string/swap_capacitive_keys_title">
 
         <com.android.settings.custom.preference.SecureSettingSwitchPreference
+           android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="swap_capacitive_keys"
             android:title="@string/swap_capacitive_keys_title"
             android:summary="@string/swap_capacitive_keys_summary"
@@ -115,28 +151,20 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="button_backlight_cat"
-        android:title="@string/button_backlight_title">
-
-        <com.android.settings.custom.buttons.preference.ButtonBacklightBrightness
-            android:key="button_backlight"
-            android:title="@string/button_backlight_title"
-            android:dialogTitle="@string/button_backlight_title"
-            android:persistent="false" />
-
-    </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="home_key"
         android:title="@string/hardware_keys_home_key_title" >
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="home_wake_screen"
             android:title="@string/button_wake_title"
             android:defaultValue="true" />
 
         <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="home_answer_call"
             android:title="@string/home_answer_call_title"
             android:summary="@string/home_answer_call_summary"
@@ -161,11 +189,13 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="back_key"
         android:title="@string/hardware_keys_back_key_title" >
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
-            android:key="back_wake_screen"
+            android:layout="@layout/SwitchPreferenceFull_Card"        
+           android:key="back_wake_screen"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
@@ -180,10 +210,12 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="menu_key"
         android:title="@string/hardware_keys_menu_key_title" >
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="menu_wake_screen"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
@@ -207,11 +239,13 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="assist_key"
         android:title="@string/hardware_keys_assist_key_title" >
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="assist_wake_screen"
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
@@ -234,11 +268,13 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="app_switch_key"
         android:title="@string/hardware_keys_appswitch_key_title" >
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="app_switch_wake_screen"
+           android:layout="@layout/SwitchPreferenceFull_Card"        
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
@@ -261,17 +297,20 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="camera_key"
         android:title="@string/hardware_keys_camera_key_title">
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
-            android:key="camera_wake_screen"
+          android:layout="@layout/SwitchPreferenceFull_Card"        
+          android:key="camera_wake_screen"
             android:title="@string/button_wake_title"
             android:defaultValue="false" />
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="camera_sleep_on_release"
-            android:title="@string/camera_sleep_on_release_title"
+         android:layout="@layout/SwitchPreferenceFull_Card"        
+           android:title="@string/camera_sleep_on_release_title"
             android:summary="@string/camera_sleep_on_release_summary"
             android:defaultValue="false" />
 
@@ -284,6 +323,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="others_settings_category"
         android:title="@string/others_settings_title" >
 

@@ -18,7 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title=" "
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     settings:keywords="@string/keywords_date_and_time">
 
     <com.android.settingslib.widget.IllustrationPreference
@@ -30,6 +30,7 @@
 
         
     <com.android.settingslib.RestrictedSwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"        
         android:key="auto_time"
         android:title="@string/date_time_auto"
         settings:useAdditionalSummary="true"
@@ -48,10 +49,12 @@
         settings:userRestriction="no_config_date_time"/>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="timezone_preference_category"
         android:title="@string/date_time_set_timezone_title">
 
         <com.android.settingslib.RestrictedSwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="auto_zone"
             android:title="@string/zone_auto_title"
             settings:allowDividerAbove="true"
@@ -59,6 +62,7 @@
 
         <!-- This preference gets removed if location-based time zone detection is not supported -->
         <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="location_time_zone_detection"
             android:title="@string/location_time_zone_detection_toggle_title"
             settings:controller="com.android.settings.datetime.LocationTimeZoneDetectionPreferenceController"/>
@@ -74,14 +78,17 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="time_format_preference_category"
         android:title="@string/time_format_category_title"
         settings:keywords="@string/keywords_time_format">
         <SwitchPreference
             android:key="auto_24hour"
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:title="@string/date_time_24hour_auto"/>
 
         <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"        
             android:key="24 hour"
             android:title="@string/date_time_24hour" />
     </PreferenceCategory>
