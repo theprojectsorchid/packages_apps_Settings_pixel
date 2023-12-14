@@ -32,6 +32,12 @@
         android:summary="@string/display_customization"/>   
          
             
+   <Preference
+        android:key="display_customization"
+        android:title="@string/display_customization"
+        android:fragment="com.afterlife.afterlab.CustomizeDashboard2"
+        android:summary="@string/display_customization"/>   
+         
         <Preference
             android:key="hidden_apps"
             android:title="@string/hidden_apps_title"
