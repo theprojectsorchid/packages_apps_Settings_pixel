@@ -95,11 +95,7 @@
             android:title="@string/wakelock_blocker_title"
             android:summary="@string/wakelock_blocker_summary"
             android:fragment="com.android.settings.development.WakeLockBlocker" />
-   <com.android.settings.custom.preference.SystemSettingSwitchPreference
-        android:key="sensor_block"
-        android:title="@string/sensor_block_title"
-        android:summary="@string/sensor_block_summary"
-        android:defaultValue="false" />
+ 
     <!-- Show passwords -->
     <SwitchPreference
         android:key="show_password"
