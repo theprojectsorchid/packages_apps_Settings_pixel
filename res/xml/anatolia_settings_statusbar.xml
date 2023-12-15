@@ -22,4 +22,11 @@
         android:key="banana_logo"
         android:layout="@layout/banana_logo"
         android:selectable="false"/>
+
+        
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/about_device_info"
+        android:key="about_device_info"
+        android:selectable="false"
+        android:order="-10" />
 </PreferenceScreen>
