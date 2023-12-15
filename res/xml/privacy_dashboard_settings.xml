@@ -78,12 +78,6 @@
         android:summary="@string/perm_toggle_description"
         settings:controller="com.android.settings.privacy.CameraToggleController"/>
 
-
-        <Preference
-            android:key="alarm_blocker"
-            android:title="@string/alarm_blocker"
-            android:summary="@string/alarm_blocker_summary"
-            android:fragment="com.android.settings.development.AlarmBlocker" />
     <!-- Microphone toggle -->
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="privacy_mic_toggle"
