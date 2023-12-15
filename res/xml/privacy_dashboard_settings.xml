@@ -84,12 +84,7 @@
         android:title="@string/mic_toggle_title"
         android:summary="@string/mic_toggle_description"
         settings:controller="com.android.settings.privacy.MicToggleController"/>
-    <Preference
-            android:key="wakelock_blocker"
-            android:title="@string/wakelock_blocker_title"
-            android:summary="@string/wakelock_blocker_summary"
-            android:fragment="com.android.settings.development.WakeLockBlocker" />
- 
+
     <!-- Show passwords -->
     <SwitchPreference
         android:key="show_password"
