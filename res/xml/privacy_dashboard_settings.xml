@@ -100,14 +100,6 @@
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
-
-        
-    <Preference
-        android:key="sensor_block_settings"
-        android:title="@string/sensor_block_title"
-        android:summary="@string/sensor_block_summary"
-        android:fragment="com.android.settings.applications.sensors.SensorBlock"/>
-
     <!-- Show passwords -->
     <SwitchPreference
         android:key="show_password"
