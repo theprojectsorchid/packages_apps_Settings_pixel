@@ -44,6 +44,5 @@
     <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
     <!-- Battery light -->
     <string name="battery_light_title">Battery light</string>
-    <string name="battery_light_summary">Turn on the light while charging and blink when battery is low</string>
 
 </resources>
