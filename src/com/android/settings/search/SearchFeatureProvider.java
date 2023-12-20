@@ -120,9 +120,6 @@ public interface SearchFeatureProvider {
                     startSearchActivity(context, activity, pageId, intent);
                 }
             });
-            searchIcon.setHandwritingDelegatorCallback(
-                    () -> startSearchActivity(context, activity, pageId, intent));
-            searchIcon.setAllowedHandwritingDelegatePackage(intent.getPackage());
         }
 
         view.setOnClickListener(new View.OnClickListener() {
@@ -130,34 +127,6 @@ public interface SearchFeatureProvider {
             public void onClick(View v) {
                 startSearchActivity(context, activity, pageId, intent);
             }
-        });
-
-        view.setHandwritingDelegatorCallback(
-                () -> startSearchActivity(context, activity, pageId, intent));
-        view.setAllowedHandwritingDelegatePackage(intent.getPackage());
-    }
-        final ComponentName searchComponentName = resolveInfos.get(0)
-                .getComponentInfo().getComponentName();
-        // Set a component name since activity embedding requires a component name for
-        // registering a rule.
-        intent.setComponent(searchComponentName);
-        ActivityEmbeddingRulesController.registerTwoPanePairRuleForSettingsHome(
-                context,
-                searchComponentName,
-                intent.getAction(),
-                false /* finishPrimaryWithSecondary */,
-                true /* finishSecondaryWithPrimary */,
-                false /* clearTop */);
-
-        toolbar.setOnClickListener(tb -> {
-            FeatureFactory.getFactory(context).getSlicesFeatureProvider()
-                    .indexSliceDataAsync(context);
-
-            FeatureFactory.getFactory(context).getMetricsFeatureProvider()
-                    .logSettingsTileClick(KEY_HOMEPAGE_SEARCH_BAR, pageId);
-
-            final Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(activity).toBundle();
-            activity.startActivity(intent, bundle);
         });
     }
 
