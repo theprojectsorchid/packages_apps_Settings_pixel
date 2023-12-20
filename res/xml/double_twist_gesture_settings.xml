@@ -19,14 +19,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="@string/double_twist_for_camera_mode_title">
+    android:title=" ">
 
     <com.android.settingslib.widget.IllustrationPreference
         android:key="gesture_double_twist_video"
         settings:searchable="false"
         app:lottie_rawRes="@drawable/flip_camera_for_selfie"/>
 
-    <SwitchPreference
+    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
         android:key="gesture_double_twist"
         android:title="@string/double_twist_for_camera_mode_title"
         android:summary="@string/double_twist_for_camera_mode_summary"

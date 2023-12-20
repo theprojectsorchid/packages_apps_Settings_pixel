@@ -28,7 +28,7 @@
         app:controller="com.android.settings.widget.VideoPreferenceController" />
 
 
-    <SwitchPreference
+    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
         android:key="gesture_double_tap_screen"
         android:title="@string/ambient_display_title"
         android:summary="@string/ambient_display_summary"
