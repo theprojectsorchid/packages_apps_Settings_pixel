@@ -246,13 +246,13 @@ public class VolumeSeekBarPreference extends SeekBarPreference {
     private int getLayoutResourceId(Position position) {
         switch (position) {
             case TOP:
-                return R.layout.arc_card_about_top;
+                return R.layout.superioros_dashboard_preference_top;
             case BOTTOM:
-                return R.layout.arc_card_about_bottom;
+                return R.layout.superioros_dashboard_preference_bottom;
             case MIDDLE:
-                return R.layout.arc_card_about_middle;
+                return R.layout.superioros_dashboard_preference_middle;
             default:
-                return R.layout.arc_card_about_middle;
+                return R.layout.superioros_dashboard_preference_middle;
         }
     }
 
