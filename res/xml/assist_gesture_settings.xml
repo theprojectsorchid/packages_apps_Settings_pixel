@@ -29,10 +29,9 @@
 
     <com.android.settings.preferences.ui.AdaptiveSwitchPreference
         android:key="gesture_assist"
-        settings:position="solo"
         android:title="@string/assist_gesture_title"
         app:keywords="@string/keywords_assist_gesture_launch"
         app:controller="com.android.settings.gestures.AssistGestureSettingsPreferenceController"
-        app:allowDividerAbove="false" />
+        app:allowDividerAbove="true" />
 
 </PreferenceScreen>
