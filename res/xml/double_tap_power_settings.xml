@@ -28,6 +28,7 @@
 
     <com.android.settings.preferences.ui.AdaptiveSwitchPreference
         android:key="gesture_double_tap_power"
+        settings:position="solo"
         android:title="@string/double_tap_power_for_camera_title"
         android:summary="@string/double_tap_power_for_camera_summary"
         app:keywords="@string/keywords_gesture"

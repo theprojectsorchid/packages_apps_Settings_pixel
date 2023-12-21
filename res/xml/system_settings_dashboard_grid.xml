@@ -39,7 +39,7 @@
             settings:layout="@layout/afterlab_card_interface_grid_right" />
     </PreferenceCategory>
     <PreferenceCategory
-        android:title="System Features"
+        android:title="Core Device Features"
         android:key="system_category"
         settings:layout="@layout/afterlab_preference_category">
         <Preference
@@ -78,7 +78,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="Device Locale"
+        android:title="Device Locale settings"
         android:key="general_category"
         settings:layout="@layout/afterlab_preference_category">
         <Preference

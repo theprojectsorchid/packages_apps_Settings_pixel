@@ -20,10 +20,12 @@
     <!-- Additional preference screens are inserted here programmatically
          with low order values to set the key map of each attached keyboard. -->
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="keyboard_assistance_category"
         android:title="@string/keyboard_assistance_category">
     <com.android.settings.preferences.ui.AdaptiveSwitchPreference
             android:key="show_virtual_keyboard_switch"
+            settings:position="solo"
             android:title="@string/show_ime"
             android:summary="@string/show_ime_summary"
             android:defaultValue="false" />
@@ -37,6 +39,7 @@
     <!-- Device-specific keyboard settings. -->
     <PreferenceCategory
         android:key="keyboard_extras_category"
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/keyboard_extras_title" >
 
         <com.android.settings.custom.preference.RemotePreference
