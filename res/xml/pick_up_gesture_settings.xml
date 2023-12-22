@@ -27,9 +27,9 @@
         app:lottie_rawRes="@raw/lottie_lift_to_check_phone"/>
 
 
-    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
+    <SwitchPreference
         android:key="gesture_pick_up"
-        settings:position="solo"
+        android:layout="@layout/top_level_preference_mt_alone"
         android:title="@string/ambient_display_pickup_title"
         android:summary="@string/ambient_display_pickup_summary"
         app:keywords="@string/keywords_gesture"

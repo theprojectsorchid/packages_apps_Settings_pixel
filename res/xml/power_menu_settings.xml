@@ -42,9 +42,8 @@
             settings:controller="com.android.settings.gestures.LongPressPowerForAssistantPreferenceController"/>
     </PreferenceCategory>
 
-    <com.android.settings.custom.preference.SecureSettingSwitchPreference
+        <com.android.settingslib.widget.MainSwitchPreference
         android:key="advanced_reboot"
-        android:layout="@layout/top_level_preference_solo_card"
         android:title="@string/advanced_reboot_title"
         android:summary="@string/advanced_reboot_summary"
         android:defaultValue="false" />

@@ -26,7 +26,8 @@
         settings:searchable="false"
         app:lottie_rawRes="@drawable/flip_camera_for_selfie"/>
 
-    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
+    <SwitchPreference
+        android:layout="@layout/dot_preference_full_alone_card"
         android:key="gesture_double_twist"
         android:title="@string/double_twist_for_camera_mode_title"
         android:summary="@string/double_twist_for_camera_mode_summary"
