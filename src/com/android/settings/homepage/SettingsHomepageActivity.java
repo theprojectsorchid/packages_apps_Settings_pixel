@@ -68,7 +68,7 @@ import android.graphics.drawable.Drawable;
 import com.android.internal.util.UserIcons;
 
 import com.android.settings.R;
-import android.provider.Settings;
+import com.android.settings.Settings;
 import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsApplication;
 import com.android.settings.activityembedding.ActivityEmbeddingRulesController;
@@ -221,25 +221,17 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 
         avatarView = findViewById(R.id.account_avatar);
 
-                if (Math.abs(verticalOffset) == totalScrollRange) {
-                    fabSearch.show();
-                    fabSearch.postOnAnimationDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            fabSearch.extend();
-                        }
-                    }, 100);
-                } else {
-                    fabSearch.shrink();
-                    fabSearch.postOnAnimationDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            fabSearch.hide();
-                        }
-                    }, 100);
-                }
-            }
-        });
+        if (avatarView != null) {
+          avatarView.setImageDrawable(getCircularUserIcon(getApplicationContext()));
+          avatarView.setVisibility(View.VISIBLE);
+          avatarView.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  Intent intent = new Intent(Intent.ACTION_MAIN);
+                  intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$UserSettingsActivity"));
+                  startActivity(intent);
+              }
+          });
         }
 
         initSearchBarView();
@@ -788,6 +780,22 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                 ((SplitLayoutListener) fragment).setSplitLayoutSupported(mIsTwoPaneLayout);
             }
         }
+    }
+    
+    private Drawable getCircularUserIcon(Context context) {
+    	final UserManager mUserManager = getSystemService(UserManager.class);
+        Bitmap bitmapUserIcon = mUserManager.getUserIcon(UserHandle.myUserId());
+
+        if (bitmapUserIcon == null) {
+            // get default user icon.
+            final Drawable defaultUserIcon = UserIcons.getDefaultUserIcon(
+                    context.getResources(), UserHandle.myUserId(), false);
+            bitmapUserIcon = UserIcons.convertToBitmap(defaultUserIcon);
+        }
+        Drawable drawableUserIcon = new CircleFramedDrawable(bitmapUserIcon,
+                (int) context.getResources().getDimension(com.android.internal.R.dimen.user_icon_size));
+
+        return drawableUserIcon;
     }
 
     @Override
