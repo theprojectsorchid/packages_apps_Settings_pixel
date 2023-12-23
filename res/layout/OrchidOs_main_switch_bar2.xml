@@ -117,16 +117,3 @@
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </LinearLayout>
-
-
-    <Switch
-        android:id="@android:id/switch_widget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginEnd="@dimen/OrchidOs_switchbar_subsettings_margin_end"
-        android:focusable="false"
-        android:clickable="false"
-        android:theme="@style/SwitchBar.Switch.OrchidOs"/>
-</LinearLayout>
-
