@@ -43,7 +43,6 @@
     
  <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/ic_settings_quick_gestures"
         android:title="@string/taptapmode_title">
         <intent
             android:action="android.intent.action.MAIN"
@@ -54,7 +53,6 @@
 
         <Preference
             android:title="@string/taptap_demo"
-            android:icon="@drawable/ic_gvisual"
             android:summary="@string/about_taptap_info_summary" >
         <intent
             android:action="android.intent.action.VIEW"
