@@ -34,7 +34,7 @@
         <item name="android:clipToPadding">false</item>
     </style>
 
-    <style name="SelectorWithWidgetPreferenceFullCard">
+    <style name="SelectorWithWidgetFullCard">
         <item name="android:layout_marginBottom">4dp</item>
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:layout_marginEnd">16dp</item>
