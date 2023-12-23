@@ -49,9 +49,9 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 
-import com.arrow.support.preferences.AppListPreference;
-import com.arrow.support.preferences.PackageListAdapter;
-import com.arrow.support.preferences.PackageListAdapter.PackageItem;
+import com.android.settings.custom.preference.AppListPreference;
+import com.android.settings.custom.preference.PackageListAdapter;
+import com.android.settings.custom.preference.PackageListAdapter.PackageItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
