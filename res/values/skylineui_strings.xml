@@ -39,4 +39,10 @@
     <!-- Smart 5G -->
     <string name="smart_5g_title">Smart 5G</string>
     <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
+
+
+    <string name="sensor_block_title">sensor block</string>
+    <string name="sensor_block_summary">Warning: These features are experimental and may have risks. Use them with caution.</string>
+    <string name="sensor_block_app_picker_title">Experimental sensor block</string>
+
 </resources>
