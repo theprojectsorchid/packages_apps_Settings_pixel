@@ -41,7 +41,7 @@
             android:title="@string/TapTap_extra">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetClass="ui.activities.MainActivity"
+            android:targetClass="com.kieronquinn.app.taptap.ui.activities.MainActivity"
             android:targetPackage="com.kieronquinn.app.taptap" />
         </Preference>
 
