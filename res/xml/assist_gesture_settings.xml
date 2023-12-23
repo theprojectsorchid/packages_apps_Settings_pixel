@@ -27,7 +27,8 @@
         app:preview="@drawable/gesture_assist"
         app:controller="com.android.settings.widget.VideoPreferenceController" />
 
-    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
+    <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"         
         android:key="gesture_assist"
         android:title="@string/assist_gesture_title"
         app:keywords="@string/keywords_assist_gesture_launch"

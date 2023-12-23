@@ -8,5 +8,6 @@
     <string name="AboutUsSystem_title">About Us</string>
     <string name="AboutUsSystem_title_summary">More infomation about our eco-system</string>
     <string name="immersive_navigation_title_category">Immersive navigation</string>
-
+    <string name="TapTap_extra">Extended Tap options</string>
+    <string name="TapTap_summary">extra options powered by TapTap </string>
 </resources>

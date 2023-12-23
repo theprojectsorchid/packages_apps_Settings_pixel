@@ -26,6 +26,7 @@
 
     <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:key="navigation_bar_hint"
+        android:layout="@layout/SwitchPreferenceFull_Card"
         android:title="@string/show_navbar_gesture_bar_title"
         android:summary="@string/show_navbar_gesture_bar_summary"
         android:defaultValue="true" />
@@ -43,9 +44,9 @@
         settings:layout="@layout/afterlab_preference_category"
         android:title="@string/assistant_gesture_category_title">
 
-    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
+    <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="assistant_gesture_corner_swipe"
-            settings:position="solo"
             android:title="@string/assistant_corner_gesture_title"
             android:summary="@string/assistant_corner_gesture_summary"
             settings:controller="com.android.settings.gestures.GestureNavigationSettingsAssistController"
@@ -56,7 +57,7 @@
   
         <com.android.settings.custom.preference.SecureSettingSwitchPreference     
             android:key="immersive_navigation"
-            android:layout="@layout/top_level_preference_solo_card"
+            android:layout="@layout/SwitchPreferenceFull_Card"            
             android:title="@string/immersive_navigation_title"
             android:summary="@string/immersive_navigation_summary" />
 
@@ -69,6 +70,7 @@
         <com.android.settings.widget.LabeledSeekBarPreference
             android:key="gesture_left_back_sensitivity"
             android:title="@string/left_edge"
+            android:layout="@layout/seekbar_card_bottom"            
             android:max="2"
             settings:textStart="@string/low_label"
             settings:textEnd="@string/high_label"/>
@@ -77,13 +79,14 @@
             android:key="gesture_right_back_sensitivity"
             android:title="@string/right_edge"
             android:max="2"
-            android:layout="@layout/card_view_pref_bottom"
+            android:layout="@layout/seekbar_card_bottom"            
             settings:textStart="@string/low_label"
             settings:textEnd="@string/high_label"/>
 
         <com.android.settings.widget.LabeledSeekBarPreference
             android:key="gesture_back_height"
             android:title="@string/back_height"
+            android:layout="@layout/seekbar_card_alone"            
             android:max="3"
             android:selectable="true"
             settings:textStart="@string/back_height_low_label"

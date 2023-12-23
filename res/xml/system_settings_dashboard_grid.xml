@@ -2,8 +2,15 @@
 <PreferenceScreen
     android:title=" "
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto">
+    xmlns:settings="http://schemas.android.com/apk/res-auto"    
+    xmlns:app="http://schemas.android.com/apk/res-auto">
  
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="gestures"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/lottie_system_nav_fully_gestural"/>
+
     <PreferenceCategory
         android:title="System Navigation"
         android:key="ui_category"

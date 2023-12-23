@@ -28,9 +28,9 @@
         app:lottie_rawRes="@raw/lottie_tap_to_check_phone"/>
 
 
-    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
+    <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"                
         android:key="gesture_tap"
-        settings:position="solo"
         android:title="@string/ambient_display_tap_screen_title"
         android:summary="@string/ambient_display_tap_screen_summary"
         app:keywords="@string/keywords_gesture"

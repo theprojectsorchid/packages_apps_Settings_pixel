@@ -25,10 +25,10 @@
         android:key="gesture_double_tap_power_video"
         settings:searchable="false"
         app:lottie_rawRes="@drawable/quickly_open_camera"/>
-
-    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
+    
+    <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"
         android:key="gesture_double_tap_power"
-        settings:position="solo"
         android:title="@string/double_tap_power_for_camera_title"
         android:summary="@string/double_tap_power_for_camera_summary"
         app:keywords="@string/keywords_gesture"

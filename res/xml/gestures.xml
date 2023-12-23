@@ -34,6 +34,17 @@
         android:fragment="com.google.android.settings.gestures.columbus.ColumbusSettings"
         settings:controller="com.google.android.settings.gestures.columbus.ColumbusPreferenceController" />
   
+        <Preference
+            android:key="TapTap_info"
+            android:icon="@drawable/ic_advanced_settings"
+            android:summary="@string/TapTap_summary"
+            android:title="@string/TapTap_extra">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="ui.activities.MainActivity"
+            android:targetPackage="com.kieronquinn.app.taptap" />
+        </Preference>
+
     <Preference
         android:key="gesture_assist_input_summary"
         android:title="@string/assist_gesture_title"

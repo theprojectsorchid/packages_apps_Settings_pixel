@@ -33,17 +33,19 @@
         android:title="@string/power_menu_long_press_category_title">
         <com.android.settingslib.widget.SelectorWithWidgetPreference
             android:key="gesture_power_menu_long_press_for_power_menu"
+            android:layout="@layout/SelectorWithWidgetPreferenceFull_Card"       
             android:title="@string/power_menu_long_press_for_power_menu_title"
             settings:controller="com.android.settings.gestures.LongPressPowerForPowerMenuPreferenceController"/>
 
         <com.android.settingslib.widget.SelectorWithWidgetPreference
             android:key="gesture_power_menu_long_press_for_assistant"
+            android:layout="@layout/SelectorWithWidgetPreferenceFull_Card"       
             android:title="@string/power_menu_long_press_for_assistant_title"
             settings:controller="com.android.settings.gestures.LongPressPowerForAssistantPreferenceController"/>
     </PreferenceCategory>
 
     <SwitchPreference
-        android:layout="@layout/dot_preference_full_alone_card"        
+        android:layout="@layout/SwitchPreferenceFull_Card"       
         android:key="advanced_reboot"
         android:title="@string/advanced_reboot_title"
         android:summary="@string/advanced_reboot_summary"
@@ -58,6 +60,7 @@
     <com.android.settings.widget.LabeledSeekBarPreference
         android:key="gesture_power_menu_long_press_for_assist_sensitivity"
         android:title="@string/power_menu_long_press_for_assist_sensitivity_title"
+        android:layout="@layout/seekbar_card_alone"       
         android:summary="@string/power_menu_long_press_for_assist_sensitivity_summary"
         settings:allowDividerAbove="true"
         settings:textStart="@string/power_menu_long_press_for_assist_sensitivity_low_label"

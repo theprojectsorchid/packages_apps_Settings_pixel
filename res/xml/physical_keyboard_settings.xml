@@ -24,9 +24,9 @@
         settings:layout="@layout/afterlab_preference_category"
         android:key="keyboard_assistance_category"
         android:title="@string/keyboard_assistance_category">
-    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
+    <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"             
             android:key="show_virtual_keyboard_switch"
-            settings:position="solo"
             android:title="@string/show_ime"
             android:summary="@string/show_ime_summary"
             android:defaultValue="false" />
