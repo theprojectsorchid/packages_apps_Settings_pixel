@@ -23,10 +23,10 @@
 
 
     <com.android.settingslib.widget.IllustrationPreference
-        android:key="gestures"
+        android:key="gestures_settings"
         settings:searchable="false"
         android:order="-999"
-        app:lottie_rawRes="@raw/lottie_system_nav_fully_gestural"/>
+        app:lottie_rawRes="@raw/doubletap"/>
     
     <Preference
         android:key="gesture_columbus"
