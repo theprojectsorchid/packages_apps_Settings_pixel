@@ -17,13 +17,10 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title=" ">
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="orchidosrom_grid"
+        android:layout="@layout/orchidosrom_grid"
+        android:selectable="false"/>
 
-        <com.android.settingslib.widget.LayoutPreference
-                android:key="device_name"
-                android:order="-1"
-                android:selectable="false"
-                android:layout="@layout/device_info_header"
-                settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
-                settings:isPreferenceVisible="false" />
 
 </PreferenceScreen>
