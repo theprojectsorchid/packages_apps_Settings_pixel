@@ -26,6 +26,8 @@
 
 
     <style name="SwitchPreferenceFullCard">
+        <item name="android:trackTint">@color/OrchidOs_switchbar_switch_track_tint</item>
+        <item name="android:thumbTint">@color/OrchidOs_switchbar_switch_thumb_tint</item>        
         <item name="android:layout_marginBottom">4dp</item>
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:layout_marginEnd">16dp</item>
