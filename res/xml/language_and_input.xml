@@ -28,6 +28,7 @@
         android:order="-999"
         app:lottie_rawRes="@raw/language_settings"/>
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="languages_category"
         android:title="@string/locale_picker_category_title">
         <Preference
@@ -48,6 +49,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="keyboards_category"
         android:title="@string/keyboard_and_input_methods_category">
         <Preference
@@ -64,6 +66,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="speech_category"
         android:title="@string/speech_category_title">
         <com.android.settings.widget.GearPreference
@@ -86,6 +89,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="input_assistance_category"
         android:title="@string/input_assistance">
         <!-- Spell checker preference title, summary and fragment will be set programmatically. -->
@@ -123,7 +127,7 @@
 
     </PreferenceCategory>
 
-    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
+    <SwitchPreference
         android:key="vibrate_input_devices"
         android:title="@string/vibrate_input_devices"
         android:summary="@string/vibrate_input_devices_summary"
