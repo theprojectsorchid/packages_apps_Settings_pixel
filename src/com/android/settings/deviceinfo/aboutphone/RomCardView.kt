@@ -34,7 +34,7 @@ class RomCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(contex
         )
         */
         linearLayout.id = R.id.rom_logo_id
-        rom_logo.setImageResource(R.drawable.ic_rom_logo)
+        rom_logo.setImageResource(R.drawable.empty_logo)
         val rlparams = RelativeLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.MATCH_PARENT
@@ -42,8 +42,12 @@ class RomCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(contex
         rlparams.addRule(RelativeLayout.ABOVE, R.id.rom_logo_id)
         rom_logo.layoutParams = rlparams
         minimumWidth = rom_logo.width
-        val version = Build.VERSION.RELEASE_OR_PREVIEW_DISPLAY.toString()
-        val releaseType = SystemProperties.get("org.pixelexperience.version")
+        val version = TextView(context)
+        releaseType.text =
+            String.format(resources.getString(R.string.about_device_rom_title), version)
+        val releaseType = TextView(context)
+        releaseType.text =
+            String.format(resources.getString(R.string.about_device_rom_title), version)
         val rom_title = TextView(context)
         rom_title.text =
             String.format(resources.getString(R.string.about_device_rom_title), version)
@@ -89,7 +93,7 @@ class RomCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(contex
         layout.addView(rom_logo, rlparams)
         layout.addView(linearLayout, lparamas)
 	layout.setOnClickListener {
-            context.startActivity(Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS))
+            context.startActivity(Intent(Settings.ACTION_user_header))
         }
     }
 }
