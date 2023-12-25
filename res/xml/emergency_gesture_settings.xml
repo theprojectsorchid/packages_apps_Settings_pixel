@@ -31,11 +31,13 @@
     <SwitchPreference
         android:key="emergency_gesture_sound"
         android:icon="@drawable/ic_hearing"
+                android:layout="@layout/SwitchPreferenceFull_Card"        
         android:title="@string/emergency_gesture_sound_setting_title"
         android:summary="@string/emergency_gesture_sound_setting_summary"
         app:keywords="@string/keywords_gesture"
         app:controller="com.android.settings.emergency.EmergencyGestureSoundPreferenceController"/>
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="emergency_gesture_notify_for_help"
         android:title="@string/emergency_gesture_category_call_for_help_title">
         <com.android.settings.emergency.EmergencyGestureNumberOverridePreference
