@@ -53,6 +53,7 @@
             android:defaultValue="false" />
         <com.android.settingslib.widget.LayoutPreference
             android:key="apply_change_button"
+            android:selectable="true"
             android:layout="@layout/qs_tile_apply_change_button" />
     </PreferenceCategory>
 
