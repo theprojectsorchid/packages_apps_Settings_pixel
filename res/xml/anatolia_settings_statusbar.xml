@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2022 EpicROM-AOSP
+<!-- Copyright (C) 2022 EpicROM-AOSP 2023 OrchidOs
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,18 +15,14 @@
 -->
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/statusbar_title">
-    <!-- BananaDroid logo -->
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="banana_logo"
-        android:layout="@layout/banana_logo"
-        android:selectable="false"/>
+	    android:title=" ">
 
-        
     <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/about_device_info"
-        android:key="about_device_info"
+        android:key="device_name"
+        android:order="-1"
+        android:fragment="com.android.settings.deviceinfo.UserInfoFragement"        
         android:selectable="false"
-        android:order="-10" />
+        android:layout="@layout/device_info_header" />
 </PreferenceScreen>
