@@ -16,7 +16,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
-        android:title="@string/account_settings_title"
+        android:title=" "
         settings:keywords="@string/keywords_accounts">
 
     <com.android.settingslib.widget.LayoutPreference
@@ -26,6 +26,7 @@
         android:order="-10000"/>
 
     <PreferenceCategory
+      settings:layout="@layout/afterlab_preference_category"
       android:key="dashboard_tile_placeholder"
       android:order="100"/>
 
