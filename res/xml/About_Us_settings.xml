@@ -27,7 +27,7 @@
             android:title="@string/aboutus_bubble_setting_description"/>
         
  
-    <com.android.settings.preferences.ui.AdaptivePreference
+    <Preference
             android:title="@string/about_us_info"
             settings:position="top"           
             android:summary="@string/about_us_info_summary" >
@@ -36,7 +36,7 @@
             android:data="https://github.com/theorchidproject" />
         </Preference>
 
-    <com.android.settings.preferences.ui.AdaptivePreference
+    <Preference
         settings:position="bottom"           
         android:title="@string/aboutus_link_title"
         android:summary="@string/aboutus_link_summary" >
