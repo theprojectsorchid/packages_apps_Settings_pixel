@@ -42,15 +42,9 @@ class RomCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(contex
         rlparams.addRule(RelativeLayout.ABOVE, R.id.rom_logo_id)
         rom_logo.layoutParams = rlparams
         minimumWidth = rom_logo.width
-        val version = TextView(context)
-        releaseType.text =
-            String.format(resources.getString(R.string.about_device_rom_title), version)
-        val releaseType = TextView(context)
-        releaseType.text =
-            String.format(resources.getString(R.string.about_device_rom_title), version)
         val rom_title = TextView(context)
         rom_title.text =
-            String.format(resources.getString(R.string.about_device_rom_title), version)
+            String.format(resources.getString(R.string.about_device_rom_title))
         rom_title.setTextColor(
             Utils.getColorAttrDefaultColor(
                 context,
@@ -64,36 +58,9 @@ class RomCardView(context: Context, attrs: AttributeSet?) : AboutBaseCard(contex
             LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
-        val rom_version = TextView(context)
-        rom_version.text = releaseType
-        rom_version.setTextColor(
-            Utils.getColorAttrDefaultColor(
-                context,
-                android.R.attr.textColorSecondary
-            )
-        )
-        rom_version.setPadding(0, 12, 0, 24)
-        rom_version.textSize = 14f
-        rom_version.isSingleLine = true
-        rom_version.layoutParams = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        )
-        rom_version.textAlignment = TEXT_ALIGNMENT_CENTER
-        linearLayout.gravity = Gravity.CENTER_HORIZONTAL
-        val lparamas = RelativeLayout.LayoutParams(
-            RelativeLayout.LayoutParams.MATCH_PARENT,
-            RelativeLayout.LayoutParams.WRAP_CONTENT
-        )
-        lparamas.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM)
-        linearLayout.layoutParams = lparamas
         linearLayout.addView(rom_title)
-        linearLayout.addView(rom_version)
         linearLayout.setBackgroundColor(resources.getColor(R.color.contextual_card_background, null))
         layout.addView(rom_logo, rlparams)
-        layout.addView(linearLayout, lparamas)
-	layout.setOnClickListener {
-            context.startActivity(Intent(Settings.ACTION_user_header))
+            context.startActivity(Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS))
         }
     }
-}
