@@ -33,7 +33,8 @@
   
     <PreferenceCategory
         android:key="recent_location_access"
-        android:title="@string/location_category_recent_location_access"
+         settings:layout="@layout/afterlab_preference_category"
+       android:title="@string/location_category_recent_location_access"
         settings:controller=
             "com.android.settings.location.RecentLocationAccessPreferenceController"/>
 
@@ -62,9 +63,9 @@
         android:fragment="com.android.settings.location.LocationServices"
         settings:controller="com.android.settings.location.LocationServicesPreferenceController"/>
 
-    <com.android.settingslib.widget.FooterPreference
+    <!-- <com.android.settingslib.widget.FooterPreference
         android:title="@string/location_settings_footer_general"
         android:key="location_footer"
         settings:controller="com.android.settings.location.LocationSettingsFooterPreferenceController"
-        android:selectable="false"/>
+        android:selectable="false"/> -->
 </PreferenceScreen>
