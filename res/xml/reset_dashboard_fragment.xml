@@ -32,6 +32,7 @@
     <!-- Network reset -->
         <com.android.settings.preferences.ui.AdaptiveRestrictedPreference
         android:key="network_reset_pref"
+        settings:position="top"
         android:title="@string/reset_network_title"
         settings:userRestriction="no_network_reset"
         settings:useAdminDisabledSummary="true"
@@ -53,6 +54,7 @@
     <com.android.settings.preferences.ui.AdaptiveRestrictedPreference
         android:key="factory_reset"
         android:title="@string/main_clear_title"
+        settings:position="bottom"
         settings:keywords="@string/keywords_factory_data_reset"
         settings:userRestriction="no_factory_reset"
         settings:useAdminDisabledSummary="true"
