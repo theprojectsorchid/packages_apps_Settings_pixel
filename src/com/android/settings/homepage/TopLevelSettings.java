@@ -110,13 +110,13 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
            case 0:
                return R.xml.top_level_settings;
            case 1:
-               return R.xml.top_level_settings;
+               return R.xml.top_level_settings_oos11;
            case 2:
-               return R.xml.top_level_settings;
+               return R.xml.top_level_settings_wave;
            case 3:
-               return R.xml.top_level_settings;
+               return R.xml.top_level_settings_spark;
            case 4:
-               return R.xml.top_level_settings;
+               return R.xml.top_level_settings_spark_clean;
            default:
                return R.xml.top_level_settings;
         }
@@ -802,8 +802,8 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 }
             };
             
-    private void setDashboardStyle(Context context) {
-        mDashBoardStyle = Settings.System.getIntForUser(context.getContentResolver(),
-                    Settings.System.SETTINGS_DASHBOARD_STYLE, 0, UserHandle.USER_CURRENT);
+            private void setDashboardStyle(Context context) {
+                mDashBoardStyle = Settings.System.getIntForUser(context.getContentResolver(),
+                            Settings.System.SETTINGS_DASHBOARD_GMS, 0, UserHandle.USER_CURRENT)
     }
 }
