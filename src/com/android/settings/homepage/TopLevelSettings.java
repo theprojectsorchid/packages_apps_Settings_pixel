@@ -28,15 +28,12 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.content.res.Configuration;
-import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.TextView;
-import android.os.Handler;
-import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.app.Activity;
@@ -52,25 +49,19 @@ import android.provider.Settings;
 import android.view.View;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import android.view.View;
-import android.widget.ImageView;
 
 import android.widget.TextView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.os.UserHandle;
 
-import androidx.annotation.VisibleForTesting;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.window.embedding.ActivityEmbeddingController;
-
-import com.android.internal.util.UserIcons;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -84,15 +75,10 @@ import com.android.settings.support.SupportPreferenceController;
 import com.android.settings.widget.HomepagePreference;
 import com.android.settings.widget.HomepagePreferenceLayoutHelper.HomepagePreferenceLayout;
 import com.android.settingslib.core.instrumentation.Instrumentable;
-import com.android.settingslib.drawable.CircleFramedDrawable;
 import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 import com.android.settings.widget.EntityHeaderController;
-
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Arrays;
 
 @SearchIndexable(forTarget = MOBILE)
 public class TopLevelSettings extends DashboardFragment implements SplitLayoutListener,
@@ -110,9 +96,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     private boolean mScrollNeeded = true;
     private boolean mFirstStarted = true;
     private ActivityEmbeddingController mActivityEmbeddingController;
-    
-    private boolean googleServicesAvailable;
-    private int extraPreferenceOrder = -151;
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
@@ -199,7 +182,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
         mIsEmbeddingActivityEnabled =
                 ActivityEmbeddingUtils.isEmbeddingActivityEnabled(getContext());
         if (!mIsEmbeddingActivityEnabled) {
@@ -215,74 +197,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         if (mHighlightMixin == null) {
             mHighlightMixin = new TopLevelHighlightMixin(activityEmbedded);
         }
-    }
-
-    private void initHomepageWidgetsView() {
-               final LayoutPreference widgetPreference =
-                        (LayoutPreference) getPreferenceScreen().findPreference("top_level_homepage_widgets");
-        if (widgetPreference != null) {
-            // widgets elements
-            final ImageView searchIcon = widgetPreference.findViewById(R.id.search_widget_icon);
-            final ImageView systemIcon = widgetPreference.findViewById(R.id.system_widget_icon);
-            searchIcon.bringToFront();
-            systemIcon.bringToFront();
-            systemIcon.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    launchComponent("com.android.settings", "com.android.settings.Settings$SystemDashboardActivity");
-                }
-            });
-
-            // widgets
-            final View batteryView = widgetPreference.findViewById(R.id.battery_widget);
-            batteryView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    launchComponent("com.android.settings", "com.android.settings.Settings$PowerUsageSummaryActivity");
-                }
-            });
-            final View searchView = widgetPreference.findViewById(R.id.search_widget);
-            final View systemView = widgetPreference.findViewById(R.id.system_widget);
-            systemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    launchComponent("com.android.settings", "com.android.settings.Settings$SystemDashboardActivity");
-                }
-            });
-            final View storageView = widgetPreference.findViewById(R.id.storage_widget);
-            storageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    launchComponent("com.android.settings", "com.android.settings.Settings$StorageDashboardActivity");
-                }
-            });
-            final FragmentActivity activity = getActivity();
-            if (activity != null) {
-                FeatureFactory.getFactory(activity).getSearchFeatureProvider().initSearchToolbar(activity /* activity */, searchView, (View) searchIcon, SettingsEnums.SETTINGS_HOMEPAGE);
-            }
-        }
-    }
-
-    private Drawable getCircularUserIcon(Context context) {
-        final UserManager mUserManager = getSystemService(UserManager.class);
-        Bitmap bitmapUserIcon = mUserManager.getUserIcon(UserHandle.myUserId());
-
-        if (bitmapUserIcon == null) {
-            // get default user icon.
-            final Drawable defaultUserIcon = UserIcons.getDefaultUserIcon(
-                    context.getResources(), UserHandle.myUserId(), false);
-            bitmapUserIcon = UserIcons.convertToBitmap(defaultUserIcon);
-        }
-        Drawable drawableUserIcon = new CircleFramedDrawable(bitmapUserIcon,
-                (int) context.getResources().getDimension(R.dimen.homepage_user_icon_size));
-
-        return drawableUserIcon;
-    }
-
-    private void launchComponent(String packageName, String className) {
-        Intent intent = new Intent();
-        intent.setComponent(new ComponentName(packageName, className));
-        startActivity(intent);
     }
 
     /** Wrap ActivityEmbeddingController#isActivityEmbedded for testing. */
@@ -308,15 +222,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                     /* scrollNeeded= */ false);
         }
         super.onStart();
-        RecyclerView recyclerView = getListView();
-        if (recyclerView != null) {
-            recyclerView.post(new Runnable() {
-                @Override
-                public void run() {
-                    initHomepageWidgetsView();
-                }
-            });
-        }
+        onUserCard();
     }
 
     private boolean isOnlyOneActivityInTask() {
@@ -351,13 +257,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             if (icon != null) {
                 icon.setTint(tintColor);
             }
-            String preferenceKey = preference.getKey();
-            if (preferenceKey != null && !("top_level_homepage_widgets".equals(preferenceKey) ||
-                                           "top_level_homepage_banner_view".equals(preferenceKey))) {
-                setUpPreferenceLayout(preference);
-            }
-        });
-    }
         onSetPrefCard();
         }
     }
