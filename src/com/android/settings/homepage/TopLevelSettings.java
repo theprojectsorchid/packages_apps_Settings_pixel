@@ -210,7 +210,9 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             systemIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    launchComponent("com.android.settings", "com.android.settings.Settings$SystemDashboardActivity");
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$SystemDashboardActivity"));
+                    startActivity(intent);
                 }
             });
 
@@ -219,7 +221,9 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             batteryView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    launchComponent("com.android.settings", "com.android.settings.Settings$PowerUsageSummaryActivity");
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$PowerUsageSummaryActivity"));
+                    startActivity(intent);
                 }
             });
             final View searchView = widgetPreference.findViewById(R.id.search_widget);
@@ -227,14 +231,18 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             systemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    launchComponent("com.android.settings", "com.android.settings.Settings$SystemDashboardActivity");
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$SystemDashboardActivity"));
+                    startActivity(intent);
                 }
             });
             final View storageView = widgetPreference.findViewById(R.id.storage_widget);
             storageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    launchComponent("com.android.settings", "com.android.settings.Settings$StorageDashboardActivity");
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$StorageDashboardActivity"));
+                    startActivity(intent);
                 }
             });
             final FragmentActivity activity = getActivity();
