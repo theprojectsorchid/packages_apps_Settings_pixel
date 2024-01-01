@@ -29,8 +29,6 @@
         android:order="-999"
         app:lottie_rawRes="@raw/privacy"/> 
   
-
-
     <!-- Work Policy info -->
     <Preference
         android:key="work_policy_info"
@@ -88,13 +86,19 @@
         settings:controller="com.android.settings.privacy.MicToggleController"/> -->
 
     <!-- Show passwords -->
-    <SwitchPreference
+     <!-- <SwitchPreference
          android:layout="@layout/SwitchPreferenceFull_Card"
        android:key="show_password"
         android:title="@string/show_password"
         android:summary="@string/show_password_summary"
-        settings:controller="com.android.settings.security.ShowPasswordPreferenceController"/>
-
+        settings:controller="com.android.settings.security.ShowPasswordPreferenceController"/>-->
+        <!-- Buttons -->
+        <Preference
+            android:key="extrapriv_title_category"
+            android:title="@string/extrapriv_title"
+            android:summary="@string/extrapriv_title_summary"
+            android:fragment="com.epic.fragments.ButtonSettings" />
+            
     <!-- On lock screen notifications -->
     <com.android.settings.RestrictedListPreference
         android:key="privacy_lock_screen_notifications"
