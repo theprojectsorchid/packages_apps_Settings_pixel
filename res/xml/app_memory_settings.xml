@@ -19,6 +19,7 @@
 
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/average_memory_use">
 
         <com.android.settings.SummaryPreference
@@ -40,7 +41,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="processes"
+         settings:layout="@layout/afterlab_preference_category"
+       android:key="processes"
         android:title="@string/memory_details" />
 
 </PreferenceScreen>

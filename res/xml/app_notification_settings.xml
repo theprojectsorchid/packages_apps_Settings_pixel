@@ -33,13 +33,15 @@
 
     <!-- Conversations added here -->
     <PreferenceCategory
-        android:title="@string/conversations_category_title"
+          settings:layout="@layout/afterlab_preference_category"
+      android:title="@string/conversations_category_title"
         android:key="conversations"
         android:visibility="gone"
         settings:allowDividerAbove="false"
         settings:allowDividerBelow="false">
     </PreferenceCategory>
     <com.android.settingslib.RestrictedSwitchPreference
+         android:layout="@layout/SwitchPreferenceFull_Card"                
         android:key="invalid_conversation_switch"
         android:title="@string/conversation_section_switch_title" />
     <Preference
@@ -63,7 +65,8 @@
 
     <!-- Show badge -->
     <com.android.settingslib.RestrictedSwitchPreference
-        android:key="badge"
+          android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:key="badge"
         android:title="@string/notification_badge_title"
         settings:useAdditionalSummary="true"
         android:order="1001"
@@ -72,7 +75,8 @@
 
     <!-- Importance toggle -->
     <com.android.settingslib.RestrictedSwitchPreference
-        android:key="allow_sound"
+          android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:key="allow_sound"
         android:title="@string/allow_interruption"
         android:summary="@string/allow_interruption_summary" />
 
@@ -83,7 +87,8 @@
 
     <!-- Bypass DND -->
     <com.android.settingslib.RestrictedSwitchPreference
-        android:key="bypass_dnd"
+          android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:key="bypass_dnd"
         android:title="@string/app_notification_override_dnd_title"
         android:summary="@string/app_notification_override_dnd_summary"/>
 

@@ -67,13 +67,7 @@
         android:fragment="com.afterlife.afterlab.CustomizeDashboard3"
         android:summary="@string/display_customization"/>   
          
-        <Preference
-            android:key="hidden_apps"
-            android:title="@string/hidden_apps_title"
-            android:summary="@string/hidden_apps_summary"
-            android:persistent="false"
-            settings:position="middle"
-            android:fragment="com.android.settings.display.HiddenAppSettingsFragment" />
+
     
     <com.android.settings.custom.preference.SystemSettingSeekBarPreference
         android:key="qs_transparency"

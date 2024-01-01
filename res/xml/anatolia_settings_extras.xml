@@ -14,14 +14,37 @@
      limitations under the License.
 -->
 <PreferenceScreen
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/extras_title">
+    android:title=" "
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"    
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- BananaDroid info -->
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="banana_info"
-        android:layout="@layout/banana_info"
-        android:selectable="false" />
+     <com.android.settingslib.widget.IllustrationPreference
+        android:key="taptap_anim"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/taptap"/>
+
+    <com.android.settingslib.widget.TopIntroPreference
+            android:key="extraappmode_bubble_desc"
+            android:order="-997"        
+            android:selectable="false"
+            android:title="@string/extraappmode_bubble_setting_description"/>
+
+    <Preference
+            android:key="aurora_info"
+            android:summary="@string/aurora_info_title_summary"
+            android:title="@string/aurora_info_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.aurora.store.MainActivity"
+            android:targetPackage="com.aurora.store" />
+        </Preference>
+
+    <Preference
+       android:key="platform_compat_dashboard"
+        android:title="@string/platform_compat_dashboard_title"
+        android:summary="@string/platform_compat_dashboard_summary"
+        android:fragment="com.android.settings.development.compat.PlatformCompatDashboard" />    
 
 </PreferenceScreen>

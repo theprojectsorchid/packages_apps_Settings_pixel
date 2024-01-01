@@ -39,6 +39,7 @@
         settings:keywords="@string/keywords_applications_settings"/>
 
     <PreferenceCategory
+          settings:layout="@layout/afterlab_preference_category"
         android:key="recent_apps_category"
         android:title="@string/recent_app_category_title"
         android:order="-996"
@@ -57,6 +58,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="general_category"
         android:title="@string/category_name_general"
         android:order="-995"
@@ -103,5 +105,20 @@
         android:title="@string/special_access"
         android:order="20"
         settings:controller="com.android.settings.applications.SpecialAppAccessPreferenceController"/>
+        
+    <Preference
+            android:order="25"
+            android:key="hidden_apps"
+            android:title="@string/hidden_apps_title"
+            android:summary="@string/hidden_apps_summary"
+            android:persistent="false"
+            android:fragment="com.android.settings.display.HiddenAppSettingsFragment" />
 
+
+    <Preference
+            android:order="30"
+            android:key="extra_apps"
+            android:title="@string/extra_apps_title"
+            android:summary="@string/extra_apps_summary"
+            android:fragment="com.epic.fragments.ExtraSettings"/>        
 </PreferenceScreen>

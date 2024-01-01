@@ -159,5 +159,10 @@
     <string name="volume_panel_haptic_feedback_title">Volume haptic feedback</string>
     <string name="volume_panel_haptic_feedback_summary">Enable volume haptic feedback when adjust volume</string>
 
-
+        <!-- app pages -->
+    <string name="extra_apps_title">Advanced Apps</string>
+    <string name="extra_apps_title_summary">Extended application environments</string>
+    <string name="aurora_info_title_summary">Device alternative store</string>
+    <string name="aurora_info_title">Aurora Store</string>
+        <string name="extraappmode_bubble_setting_description">Below are extra application options to enable you to gain more control enjoy</string>
 </resources>

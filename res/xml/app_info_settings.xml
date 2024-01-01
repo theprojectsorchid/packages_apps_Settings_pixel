@@ -37,25 +37,27 @@
         android:order="-9998" />
 
     <Preference
+        settings:layout="@layout/afterlab_cardview_top"        
         android:key="app_settings_link"
         android:title="@string/app_settings_link"
         settings:controller="com.android.settings.applications.appinfo.AppSettingPreferenceController" />
 
     <Preference
         android:key="all_services_settings"
+        settings:layout="@layout/afterlab_cardview_middle"        
         android:title="@string/app_info_all_services_label"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.applications.appinfo.AppAllServicesPreferenceController" />
 
     <Preference
         android:key="notification_settings"
-        android:layout="@layout/dot_preference_top_card"
+        settings:layout="@layout/afterlab_cardview_middle"        
         android:title="@string/notifications_label"
         settings:controller="com.android.settings.applications.appinfo.AppNotificationPreferenceController" />
 
     <com.android.settings.widget.FixedLineSummaryPreference
         android:key="permission_settings"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/permissions_label"
         android:summary="@string/summary_placeholder"
         settings:summaryLineCount="1"
@@ -63,48 +65,48 @@
 
     <Preference
         android:key="storage_settings"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/storage_settings_for_app"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.applications.appinfo.AppStoragePreferenceController" />
 
     <com.android.settings.applications.AppDomainsPreference
         android:key="instant_app_launch_supported_domain_urls"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/app_launch_supported_domain_urls_title"
         android:selectable="true"
         settings:controller="com.android.settings.applications.appinfo.InstantAppDomainsPreferenceController" />
 
     <Preference
         android:key="data_settings"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/data_usage_app_summary_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.applications.appinfo.AppDataUsagePreferenceController" />
 
     <Preference
         android:key="time_spent_in_app"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/time_spent_in_app_pref_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.applications.appinfo.TimeSpentInAppPreferenceController" />
 
     <Preference
         android:key="battery"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/app_battery_usage_title"
         android:summary="@string/summary_placeholder" />
 
     <Preference
         android:key="app_language_setting"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/app_locale_preference_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.applications.appinfo.AppLocalePreferenceController" />
 
     <Preference
         android:key="preferred_settings"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/launch_by_default"
         android:summary="@string/summary_placeholder"
         android:selectable="true"
@@ -112,7 +114,7 @@
 
     <Preference
         android:key="memory"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/memory_settings_title"
         android:summary="@string/summary_placeholder"
         android:enabled="false" />
@@ -120,43 +122,44 @@
     <!-- Default apps shortcuts -->
     <Preference
         android:key="default_home"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/home_app"
         android:summary="@string/summary_placeholder" />
 
     <Preference
         android:key="default_browser"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/default_browser_title"
         android:summary="@string/summary_placeholder" />
 
     <Preference
         android:key="default_phone_app"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/default_phone_title"
         android:summary="@string/default_phone_title" />
 
     <Preference
         android:key="default_emergency_app"
-        android:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_middle"
         android:title="@string/default_emergency_app"
         android:summary="@string/summary_placeholder" />
 
     <Preference
         android:key="default_sms_app"
-        settings:layout="@layout/dot_preference_middle_card"
+        settings:layout="@layout/afterlab_cardview_bottom"
         android:title="@string/sms_application_title"
         android:summary="@string/summary_placeholder" />
 
     <PreferenceCategory
-        android:key="app_hibernation_info"
+         settings:layout="@layout/afterlab_preference_category"
+       android:key="app_hibernation_info"
         android:title="@string/unused_apps_category"
         settings:controller=
             "com.android.settings.applications.appinfo.AppHibernationPreferenceCategoryController">
 
         <SwitchPreference
-            android:key="hibernation_switch"
-            android:layout="@layout/dot_preference_full_alone_card"
+          android:layout="@layout/SwitchPreferenceFull_Card"                
+           android:key="hibernation_switch"
             android:title="@string/unused_apps_switch"
             android:summary="@string/unused_apps_switch_summary"
             settings:controller=
@@ -166,46 +169,47 @@
     <!-- Advanced apps settings -->
     <PreferenceCategory
         android:key="advanced_app_info"
-        android:layout="@layout/dot_preference_category"
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/advanced_apps"
         settings:controller="com.android.settings.applications.appinfo.AdvancedAppInfoPreferenceCategoryController">
 
         <Preference
             android:key="system_alert_window"
-            android:layout="@layout/dot_preference_full_alone_card"
+            android:layout="@layout/afterlab_interface_single"
             android:title="@string/draw_overlay"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.appinfo.DrawOverlayDetailPreferenceController" />
 
         <Preference
             android:key="write_settings_apps"
-            settings:layout="@layout/dot_preference_full_alone_card"
+            settings:layout="@layout/afterlab_interface_single"
             android:title="@string/write_settings"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.appinfo.WriteSystemSettingsPreferenceController" />
 
         <Preference
             android:key="picture_in_picture"
-            android:layout="@layout/dot_preference_full_alone_card"
+            android:layout="@layout/afterlab_interface_single"
             android:title="@string/picture_in_picture_app_detail_title"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.specialaccess.pictureinpicture.PictureInPictureDetailPreferenceController" />
 
         <Preference
             android:key="install_other_apps"
-            android:layout="@layout/dot_preference_full_alone_card"
+            android:layout="@layout/afterlab_interface_single"
             android:title="@string/install_other_apps"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.appinfo.ExternalSourceDetailPreferenceController" />
 
         <Preference
             android:key="interact_across_profiles"
-            android:layout="@layout/dot_preference_full_alone_card"
+            android:layout="@layout/afterlab_interface_single"
             android:title="@string/interact_across_profiles_title"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.applications.specialaccess.interactacrossprofiles.InteractAcrossProfilesDetailsPreferenceController" />
 
         <Preference
+            android:layout="@layout/afterlab_interface_single"
             android:key="alarms_and_reminders"
             android:title="@string/alarms_and_reminders_title"
             android:summary="@string/summary_placeholder"
@@ -216,25 +220,26 @@
     <!-- App installer info -->
     <PreferenceCategory
         android:key="app_installer"
-        android:layout="@layout/dot_preference_category"
+        settings:layout="@layout/afterlab_preference_category"
         android:title="@string/app_install_details_group_title"
         settings:controller="com.android.settings.applications.appinfo.AppInstallerPreferenceCategoryController">
 
         <Preference
             android:key="app_info_store"
-            android:layout="@layout/dot_preference_full_alone_card"
+            android:layout="@layout/afterlab_interface_single"
             android:title="@string/app_install_details_title"
             settings:controller="com.android.settings.applications.appinfo.AppInstallerInfoPreferenceController" />
 
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/package_details_group_title">
+         settings:layout="@layout/afterlab_preference_category"
+       android:title="@string/package_details_group_title">
 
         <Preference
             android:key="app_version"
             android:title="@string/package_version"
-            android:selectable="false"
+            android:selectable="true"
             android:order="9998"
             settings:controller="com.android.settings.applications.appinfo.AppVersionPreferenceController"
             settings:enableCopying="true"/>
@@ -242,7 +247,7 @@
         <Preference
             android:key="app_package_name"
             android:title="@string/package_name"
-            android:selectable="false"
+            android:selectable="true"
             android:order="9999"
             settings:controller="com.android.settings.applications.appinfo.AppPackageNamePreferenceController"
             settings:enableCopying="true"/>
