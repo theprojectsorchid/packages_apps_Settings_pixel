@@ -25,42 +25,56 @@
         android:layout="@layout/preference_usercard"
         android:fragment="com.android.settings.users.UserSettings"
         android:key="top_level_usercard"
-        android:order="-240" />    -->
+        android:order="-250" />    -->
 
 <!-- <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_phone_info"
         android:key="top_level_about_device"
-        android:order="-230"
+        android:order="-240"
         android:title="@string/about_settings"
         android:summary="@string/summary_placeholder"
         android:fragment="com.epic.fragments.StatusBarSettings"/> -->
-
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_wireless"
-        android:key="top_level_about_con"
-        settings:layout="@layout/top_level_preference_solo_card"
-        android:order="-220"
-        android:title="@string/about_settings"
-        android:fragment="com.android.settings.network.NetworkDashboardFragment" />
-
-    <com.android.settings.widget.HomepagePreference
-        android:fragment="com.android.settings.deviceinfo.UserInfoFragement"
-        android:icon="@drawable/ic_settings_about_device"
-        android:key="top_level_userinfo"
-        settings:layout="@layout/afterlab_cardview_single_left"
-        android:order="-215"
-        android:title="@string/about_settings" />
+    
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="user_device_info"
+        android:order="-230"
+        android:fragment="com.android.settings.deviceinfo.UserInfoFragement"         
+        android:layout="@layout/about_device_info"
+        android:selectable="true" />
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
-        android:icon="@drawable/ic_settings_wireless"
         android:title="Connectivity"
         android:key="internet_settings"
-        settings:layout="@layout/afterlab_cardview_single_right"
-        android:order="-210"/>
-    
- 
+        settings:layout="@layout/afterlab_card_interface_grid"
+        android:order="-220"/>
 
+    <com.android.settings.widget.HomepagePreference
+        android:key="top_level_battery_card"
+        settings:layout="@layout/afterlab_card_interface_grid_right"
+        android:order="-215"
+        android:title="@string/power_usage_summary_title"
+        android:summary="@string/summary_placeholder"
+        android:fragment="com.android.settings.fuelgauge.batteryusage.PowerUsageSummary"
+        settings:controller="com.android.settings.fuelgauge.TopLevelBatteryPreferenceController"
+        settings:highlightableMenuKey="@string/menu_key_battery" />
+    
+    <com.android.settings.widget.HomepagePreference
+        android:key="top_level_grid_display"
+        settings:layout="@layout/afterlab_cardview_top"
+        android:order="-210"
+        android:title="@string/display_settings"
+        android:fragment="com.android.settings.DisplaySettings" />
+    
+    
+    <com.android.settings.widget.HomepagePreference
+        android:title="@string/sound_settings"
+        android:key="top_level_sound"
+        android:order="-205"
+        android:fragment="com.android.settings.notification.SoundSettings"
+        settings:highlightableMenuKey="@string/menu_key_sound"
+        settings:layout="@layout/afterlab_cardview_bottom" />
+    
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_apps"
         android:title="@string/apps_dashboard_title"
@@ -68,16 +82,27 @@
         android:order="-200"
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         settings:highlightableMenuKey="@string/menu_key_apps"
-        settings:layout="@layout/afterlab_cardview_single_left" />
+        settings:layout="@layout/afterlab_cardview_top" />
 
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_notifications"
         android:title="@string/configure_notification_settings"
         android:key="top_level_notifications"
-        android:order="-190"
+        android:order="-195"
         android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
         settings:highlightableMenuKey="@string/menu_key_notifications"
-        settings:layout="@layout/afterlab_cardview_single_right" />
+        settings:layout="@layout/afterlab_cardview_middle" />
+    
+    <com.android.settings.widget.HomepagePreference
+        android:icon="@drawable/ic_storage_white"
+        android:title="@string/storage_settings"
+        android:key="top_level_storage"
+        android:summary="@string/summary_placeholder"
+        android:order="-190"
+        android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
+        settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"
+        settings:highlightableMenuKey="@string/menu_key_storage"
+        settings:layout="@layout/afterlab_cardview_bottom" />
 
     <SwitchPreference
         android:title="Airplane mode"
@@ -116,21 +141,6 @@
         settings:layout="@layout/afterlab_cardview_bottom" />
 
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/homepage_widgets"
-        android:key="top_level_homepage_widgets"
-        android:fragment="com.android.settings.awaken.fragments.DisplayCustomizations4"
-        android:selectable="true"
-        android:order="-135" />
-
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_volume_up_24dp"
-        android:title="@string/sound_settings"
-        android:key="top_level_sound"
-        android:order="-110"
-        android:fragment="com.android.settings.notification.SoundSettings"
-        settings:highlightableMenuKey="@string/menu_key_sound"
-        settings:layout="@layout/afterlab_cardview_top" />
 
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_settings_display_white"
@@ -142,7 +152,8 @@
         settings:highlightableMenuKey="@string/menu_key_display"
         settings:layout="@layout/afterlab_cardview_bottom" />
 	
-	<com.android.settings.widget.RestrictedHomepagePreference
+	<!-- <com.android.settings.widget.RestrictedHomepagePreference
+        android:fragment="com.android.settings.DisplaySettings"
         android:icon="@drawable/ic_settings_wallpaper_white"
         android:key="top_level_wallpaper"
         android:order="-90"
@@ -150,29 +161,19 @@
         android:summary="@string/wallpaper_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_wallpaper"
 		settings:layout="@layout/afterlab_cardview_bottom"
-        settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
+        settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/> -->
 
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_settings_battery_white"
-        android:title="@string/power_usage_summary_title"
+        android:title="@string/display_settings"
         android:key="top_level_battery"
-        android:summary="@string/summary_placeholder"
         android:order="-80"
-        android:fragment="com.android.settings.fuelgauge.batteryusage.PowerUsageSummary"
-        settings:controller="com.android.settings.fuelgauge.TopLevelBatteryPreferenceController"
+        android:fragment="com.android.settings.DisplaySettings"
+        settings:controller="com.android.settings.display.TopLevelDisplayPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_battery"
         settings:layout="@layout/afterlab_cardview_top" />
 
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_storage_white"
-        android:title="@string/storage_settings"
-        android:key="top_level_storage"
-        android:summary="@string/summary_placeholder"
-        android:order="-70"
-        android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
-        settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"
-        settings:highlightableMenuKey="@string/menu_key_storage"
-        settings:layout="@layout/afterlab_cardview_bottom" />
+
 
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_settings_accessibility"
@@ -235,12 +236,13 @@
         settings:layout="@layout/afterlab_cardview_top" />
 
     <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_settings_accounts"
-        android:title="@string/account_dashboard_title"
+        android:icon="@drawable/ic_settings_display_white"
+        android:title="@string/display_settings"
         android:key="top_level_accounts"
-        android:order="-10"
-        android:fragment="com.android.settings.accounts.AccountDashboardFragment"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        android:order="-15"
+        android:fragment="com.android.settings.DisplaySettings"
+        settings:controller="com.android.settings.display.TopLevelDisplayPreferenceController"        
+        settings:layout="@layout/afterlab_cardview_bottom" />
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.OrchidOs.fragments.SystemSettingsExtra"

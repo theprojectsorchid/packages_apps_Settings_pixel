@@ -279,10 +279,16 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.preference_usercard);
             }
 	        if (key.equals("top_level_userinfo")){
-	        preference.setLayoutResource(R.layout.afterlab_cardview_single_left);
+	        preference.setLayoutResource(R.layout.afterlab_card_interface_grid_right);
 	        }
+            if (key.equals("top_level_grid_display")){
+                preference.setLayoutResource(R.layout.afterlab_cardview_top);    
+            }            
+            if (key.equals("top_level_battery_card")){
+                preference.setLayoutResource(R.layout.afterlab_card_interface_grid_right);    
+            }             
             if (key.equals("internet_settings")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_single_right);
+                preference.setLayoutResource(R.layout.afterlab_card_interface_grid);
             }
             if (key.equals("airplane_mode")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_top_switch);
@@ -300,13 +306,13 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
             }
             if (key.equals("top_level_apps")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_single_left);
+                preference.setLayoutResource(R.layout.afterlab_cardview_top);
             }
             if (key.equals("top_level_notifications")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_single_right);
+                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
             }
             if (key.equals("top_level_sound")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_top);
+                preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
             }
             if (key.equals("top_level_display")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
@@ -324,7 +330,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.afterlab_cardview_top);
             }
             if (key.equals("top_level_security")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
+                preference.setLayoutResource(R.layout.afterlab_cardview_top);
             }
             if (key.equals("top_level_privacy")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
@@ -336,7 +342,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.afterlab_cardview_top);
             }
             if (key.equals("top_level_accounts")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
+                preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
             }
             if (key.equals("top_level_system")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
@@ -693,6 +699,17 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 				return 1;
 			} else {
 				return 2;
+			}
+		}
+	}
+	
+	class AfterlifeSpanSizeSG extends GridLayoutManager.SpanSizeLookup {
+		@Override
+		public int getSpanSize(int position) {
+		    if (position == 0 || position == 1 || position == 2) {
+				return 2;
+			} else {
+				return 1;
 			}
 		}
 	}

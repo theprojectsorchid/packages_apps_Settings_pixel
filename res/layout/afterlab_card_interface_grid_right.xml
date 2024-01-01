@@ -13,7 +13,7 @@
 -->
 <LinearLayout
     android:gravity="center_vertical"
-    android:background="@android:color/transparent"
+    android:background="@drawable/custom_preference_background"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
