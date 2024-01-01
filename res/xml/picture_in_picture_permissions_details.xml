@@ -16,7 +16,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:key="picture_in_picture_permission_detail_settings"
-    android:title="@string/picture_in_picture_app_detail_title">
+    android:title=" ">
 
     <com.android.settings.widget.FilterTouchesSwitchPreference
         android:key="app_ops_settings_switch"

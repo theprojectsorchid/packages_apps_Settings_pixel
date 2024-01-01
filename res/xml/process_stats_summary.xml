@@ -16,11 +16,12 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/app_memory_use"
+    android:title=" "
     android:key="app_list">
 
     <PreferenceCategory
-        android:title="@string/average_memory_use"/>
+          settings:layout="@layout/afterlab_preference_category"
+      android:title="@string/average_memory_use"/>
 
     <com.android.settings.SummaryPreference
         android:key="status_header"

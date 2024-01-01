@@ -16,9 +16,10 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/memory_usage_apps">
+    android:title=" ">
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="app_list"
         android:title="@string/average_memory_use" />
 
