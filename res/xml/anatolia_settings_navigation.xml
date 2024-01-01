@@ -18,6 +18,15 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title=" ">
+ 
+ <Preference
+        android:key="web_view"
+        android:title="@string/taptapmode_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.WebViewImplementation"
+            android:targetPackage="com.android.settings" />
+ </Preference>
 
     <com.android.settingslib.widget.IllustrationPreference
         android:key="location"
@@ -25,23 +34,34 @@
         android:order="-999"
         app:lottie_rawRes="@raw/location"/>
  
-    <Preference
-            android:title="@string/about_us_info"
-            settings:position="top"           
-            android:summary="@string/about_us_info_summary" >
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://github.com/theorchidproject" />
-        </Preference>
 
-    <Preference
-        settings:position="bottom"           
-        android:title="@string/aboutus_link_title"
-        android:summary="@string/aboutus_link_summary" >
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/orchidosdemo" />
-    </Preference>
+   <com.android.settings.vpn2.VpnInfoPreference
+        android:fragment="com.android.settings.vpn2.VpnSettings"
+        android:key="vpn_settings"
+        android:title="@string/vpn_settings_title"
+        android:icon="@drawable/ic_vpn_key"
+        android:order="15"
+        android:summary="@string/summary_placeholder"
+        settings:userRestriction="no_config_vpn"
+        settings:useAdminDisabledSummary="true" /> 
 
+    <com.android.settings.network.PrivateDnsModeDialogPreference
+        android:key="private_dns_settings"
+        android:title="@string/select_private_dns_configuration_title"
+        android:icon="@drawable/ic_private_dns_settings"
+        android:order="20"
+        android:dialogTitle="@string/select_private_dns_configuration_dialog_title"
+        android:dialogLayout="@layout/private_dns_mode_dialog"
+        android:positiveButtonText="@string/save"
+        android:negativeButtonText="@android:string/cancel" />
+
+ <Preference
+        android:key="rethink_dns"
+        android:title="@string/taptapmode_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.celzero.bravedns.ui.HomescreenActivity"
+            android:targetPackage="com.celzero.bravedns" />
+ </Preference>
 
 </PreferenceScreen>

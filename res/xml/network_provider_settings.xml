@@ -52,14 +52,16 @@
         android:icon="@drawable/ic_settings_ethernet"/>
 
     <PreferenceCategory
-        android:key="provider_model_mobile_network"
+         settings:layout="@layout/afterlab_preference_category"
+       android:key="provider_model_mobile_network"
         android:title="@string/summary_placeholder"
         android:layout="@layout/preference_category_no_label"
         settings:isPreferenceVisible="@bool/config_show_sim_info"
         settings:controller="com.android.settings.network.NetworkMobileProviderController"/>
 
     <com.android.settingslib.RestrictedSwitchPreference
-        android:key="main_toggle_wifi"
+              android:layout="@layout/SwitchPreferenceFull_Card"
+       android:key="main_toggle_wifi"
         android:title="@string/wifi"
         settings:keywords="@string/keywords_wifi"
         settings:allowDividerAbove="true"/>

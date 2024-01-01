@@ -19,10 +19,12 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	    android:title=" ">
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="device_name"
-        android:order="-1"
-        android:fragment="com.android.settings.deviceinfo.UserInfoFragement"        
-        android:selectable="false"
-        android:layout="@layout/device_info_header" />
+ <Preference
+        android:key="data_monitor"
+        android:title="@string/taptapmode_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.wifi.linkturbo.WifiLinkTurboSettings"
+            android:targetPackage="com.android.settings" />
+ </Preference>
 </PreferenceScreen>

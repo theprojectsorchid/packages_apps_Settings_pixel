@@ -25,8 +25,24 @@
         settings:searchable="false"
         android:order="-999"
         app:lottie_rawRes="@raw/display_accessibility"/> 
+ <Preference
+        android:key="data_monitor"
+        android:title="@string/taptapmode_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.drnoob.datamonitor.ui.SetupActivity"
+            android:targetPackage="com.drnoob.datamonitor" />
+ </Preference>
 
 
+ <Preference
+        android:fragment="com.android.settings.network.AdaptiveConnectivitySettings"
+        android:key="adaptive_connectivity"
+        android:title="@string/adaptive_connectivity_title"
+        android:summary="@string/summary_placeholder"
+        android:icon="@drawable/ic_adaptive_connectivity"
+        android:order="25"
+        settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"/>
     <Preference
         android:key="unrestricted_access"
         android:title="@string/unrestricted_data_saver"
