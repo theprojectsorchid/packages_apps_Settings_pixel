@@ -18,10 +18,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="privacy_controls_page"
-    android:title="@string/privacy_controls_title">
+    android:title=" ">
 
     <!-- Camera toggle -->
     <com.android.settingslib.RestrictedSwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"                
         android:key="privacy_camera_toggle"
         android:title="@string/camera_toggle_title"
         android:summary="@string/perm_toggle_description"
@@ -29,6 +30,7 @@
 
     <!-- Microphone toggle -->
     <com.android.settingslib.RestrictedSwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"                
         android:key="privacy_mic_toggle"
         android:title="@string/mic_toggle_title"
         android:summary="@string/mic_toggle_description"
@@ -36,7 +38,8 @@
 
     <!-- Clipboard access notifications -->
     <SwitchPreference
-        android:key="show_clip_access_notification"
+         android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:key="show_clip_access_notification"
         android:title="@string/show_clip_access_notification"
         android:summary="@string/show_clip_access_notification_summary"
         settings:controller="com.android.settings.privacy.ShowClipAccessNotificationPreferenceController"/>

@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="privacy_dashboard_page"
-    android:title="@string/privacy_advanced_settings">
+    android:title=" ">
 
     <!-- Work Policy info -->
     <Preference
@@ -53,6 +53,7 @@
 
     <!-- Show media on lock screen -->
     <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"
         android:key="privacy_media_controls_lockscreen"
         android:title="@string/media_controls_lockscreen_title"
         android:summary="@string/media_controls_lockscreen_description"
@@ -70,6 +71,7 @@
     <!-- Work profile settings are at the bottom with high order value to avoid users thinking that
          any of the above settings (including dynamic) are specific to the work profile. -->
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="privacy_work_profile_notifications_category"
         android:title="@string/profile_section_header_for_advanced_privacy"
         android:order="998">
@@ -90,12 +92,14 @@
     -->
 
     <SwitchPreference
-        android:key="content_capture"
+         android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:key="content_capture"
         android:title="@string/content_capture"
         android:summary="@string/content_capture_summary"
         settings:controller="com.android.settings.privacy.EnableContentCapturePreferenceController"/>
 
     <com.android.settingslib.PrimarySwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"                
         android:key="content_capture_custom_settings"
         android:title="@string/content_capture"
         android:summary="@string/content_capture_summary"
