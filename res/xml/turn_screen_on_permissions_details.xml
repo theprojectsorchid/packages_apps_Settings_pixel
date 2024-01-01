@@ -16,9 +16,10 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:key="turn_screen_on_permission_detail_settings"
-    android:title="@string/turn_screen_on_title">
+    android:title=" ">
 
     <com.android.settings.widget.FilterTouchesSwitchPreference
+             android:layout="@layout/SwitchPreferenceFull_Card"
         android:key="app_ops_settings_switch"
         android:title="@string/allow_turn_screen_on"/>
 

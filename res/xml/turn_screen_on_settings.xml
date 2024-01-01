@@ -19,5 +19,5 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="turn_screen_on_screen"
-    android:title="@string/turn_screen_on_title"
+    android:title=" "
     settings:searchable="false" />
