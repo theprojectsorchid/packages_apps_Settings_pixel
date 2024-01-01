@@ -16,7 +16,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/spellcheckers_settings_title">
+    android:title=" ">
     <Preference
         android:key="spellchecker_language"
         android:title="@string/phone_language"

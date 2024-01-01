@@ -41,7 +41,8 @@
         android:title="@string/captioning_preset"/>
 
     <PreferenceCategory
-        android:key="custom"
+         settings:layout="@layout/afterlab_preference_category"
+       android:key="custom"
         android:title="@string/captioning_custom_options_title">
 
         <ListPreference

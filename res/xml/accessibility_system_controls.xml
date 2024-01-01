@@ -56,6 +56,7 @@
     <!-- Auto-rotation preference that will be shown when device state based auto-rotation settings
          are available. -->
     <Preference
+         android:layout="@layout/settings_preference_solo_card"
         android:key="device_state_auto_rotate_accessibility"
         android:persistent="false"
         android:title="@string/accelerometer_title"
