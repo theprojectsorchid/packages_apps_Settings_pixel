@@ -29,6 +29,7 @@
 
 
     <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"                
         android:key="toggle_primary_mono"
         android:persistent="false"
         android:summary="@string/accessibility_toggle_primary_mono_summary"

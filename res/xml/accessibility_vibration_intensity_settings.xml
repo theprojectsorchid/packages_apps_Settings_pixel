@@ -15,9 +15,10 @@
 -->
 
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:settings="http://schemas.android.com/apk/res-auto"
+   xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="@string/accessibility_vibration_settings_title">
+    android:title=" ">
 
     <com.android.settingslib.widget.MainSwitchPreference
         android:key="vibration_main_switch"
@@ -26,6 +27,7 @@
         app:controller="com.android.settings.accessibility.VibrationMainSwitchPreferenceController"/>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="accessibility_call_vibration_category"
         android:title="@string/accessibility_call_vibration_category_title">
 
@@ -36,6 +38,7 @@
             app:controller="com.android.settings.accessibility.RingVibrationIntensityPreferenceController" />
 
         <SwitchPreference
+         android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="ramping_ringer"
             android:title="@string/vibrate_when_ringing_option_ramping_ringer"
             app:keywords="@string/keywords_ramping_ringer_vibration"
@@ -44,6 +47,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
         android:key="accessibility_notification_alarm_vibration_category"
         android:title="@string/accessibility_notification_alarm_vibration_category_title">
 
@@ -62,7 +66,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="accessibility_interactive_haptics_category"
+         settings:layout="@layout/afterlab_preference_category"
+       android:key="accessibility_interactive_haptics_category"
         android:title="@string/accessibility_interactive_haptics_category_title">
 
         <com.android.settings.widget.SeekBarPreference

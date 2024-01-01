@@ -17,6 +17,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="accessibility_shortcuts_settings"
     android:persistent="false"
     android:title=" ">
@@ -33,6 +34,7 @@
         settings:controller="com.android.settings.accessibility.AccessibilityButtonPreferenceController"/>
 
     <SwitchPreference
+         android:layout="@layout/SwitchPreferenceFull_Card"
         android:key="accessibility_shortcut_preference"
         android:persistent="false"
         android:title="@string/accessibility_shortcut_service_on_lock_screen_title"

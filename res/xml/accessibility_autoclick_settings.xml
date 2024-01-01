@@ -17,15 +17,18 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/accessibility_autoclick_preference_title">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title=" ">
 
     <com.android.settingslib.widget.TopIntroPreference
+        android:order="-997"
         android:key="accessibility_autoclick_intro"
         android:persistent="false"
         android:title="@string/accessibility_autoclick_intro_text" />
 
     <com.android.settingslib.widget.IllustrationPreference
-        android:key="accessibility_autoclick_banner"
+         android:order="-999"
+       android:key="accessibility_autoclick_banner"
         android:persistent="false"
         android:selectable="false"
         settings:searchable="false"
@@ -62,6 +65,7 @@
         settings:controller="com.android.settings.accessibility.ToggleAutoclickCustomSeekbarController" />
 
     <com.android.settings.accessibility.AccessibilityFooterPreference
+        android:order="-998"
         android:key="accessibility_autoclick_footer"
         android:title="@string/accessibility_autoclick_description"
         android:persistent="false"
