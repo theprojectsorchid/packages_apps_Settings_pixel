@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="manage_assist_screen"
-    android:title="@string/default_assist_title"
+    android:title=" "
     settings:keywords="@string/keywords_assist_input">
 
     <com.android.settings.widget.GearPreference
@@ -35,17 +35,20 @@
         settings:controller="com.android.settings.gestures.AssistGestureSettingsPreferenceController" />
 
     <SwitchPreference
-        android:key="context"
+                android:layout="@layout/SwitchPreferenceFull_Card"
+       android:key="context"
         android:title="@string/assist_access_context_title"
         android:summary="@string/assist_access_context_summary" />
 
     <SwitchPreference
-        android:key="screenshot"
+                android:layout="@layout/SwitchPreferenceFull_Card"
+       android:key="screenshot"
         android:title="@string/assist_access_screenshot_title"
         android:summary="@string/assist_access_screenshot_summary" />
 
     <SwitchPreference
-        android:key="flash"
+                android:layout="@layout/SwitchPreferenceFull_Card"
+       android:key="flash"
         android:title="@string/assist_flash_title"
         android:summary="@string/assist_flash_summary" />
 
