@@ -17,7 +17,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/privacy_settings_title">
+    android:title=" ">
 
     <!-- Backup settings -->
     <Preference
@@ -42,6 +42,7 @@
         settings:controller="com.android.settings.backup.DataManagementPreferenceController" />
 
     <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"
         android:key="auto_restore"
         android:title="@string/auto_restore_title"
         android:summary="@string/auto_restore_summary"

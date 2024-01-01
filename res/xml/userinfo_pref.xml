@@ -31,7 +31,7 @@
             android:title="@string/userinfo_bubble_setting_description"/>
 
    <com.android.settings.preferences.ui.AdaptivePreference
-            settings:position="middle"
+            settings:position="top"
             android:key="multiuser"
             android:order="30"
             android:title="@string/multiuser_settings_title"
