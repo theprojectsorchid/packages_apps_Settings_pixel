@@ -80,9 +80,9 @@
 
     </PreferenceCategory>
 
-     <!-- <com.android.settingslib.widget.FooterPreference
+      <com.android.settingslib.widget.FooterPreference
         android:title="@string/location_settings_footer_general"
         android:key="location_footer"
         settings:controller="com.android.settings.location.LocationSettingsFooterPreferenceController"
-        android:selectable="false"/> -->
+        android:selectable="false"/> 
 </PreferenceScreen>
