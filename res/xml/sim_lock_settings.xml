@@ -16,10 +16,11 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res-auto"
-        android:title="@string/sim_lock_settings">
+        android:title=" ">
 
     <SwitchPreference
-            android:key="sim_toggle"
+         android:layout="@layout/SwitchPreferenceFull_Card"
+           android:key="sim_toggle"
             android:title="@string/sim_pin_toggle"
             android:summaryOn="@string/sim_lock_on"
             android:summaryOff="@string/sim_lock_off"/>

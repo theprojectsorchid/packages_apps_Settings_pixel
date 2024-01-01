@@ -53,4 +53,13 @@
     <com.android.settings.datausage.DataUsagePreference
         android:key="wifi_data_usage"
         android:title="@string/wifi_data_usage"/>
+
+   <Preference
+        android:key="wifi_monitor"
+        android:title="@string/taptapmode_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.truemlgpro.wifiinfo.MainActivity"
+            android:targetPackage="com.truemlgpro.wifiinfo" />
+ </Preference>     
 </PreferenceScreen>

@@ -62,6 +62,7 @@
             settings:allowDividerBelow="false"/>
 
         <SwitchPreference
+              android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="mobile_data_enable"
             android:title="@string/mobile_data_settings_title"
             android:summary="@string/mobile_data_settings_summary"
@@ -69,6 +70,7 @@
             settings:allowDividerAbove="true"/>
 
         <com.android.settingslib.RestrictedSwitchPreference
+              android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="button_roaming_key"
             android:title="@string/roaming"
             android:persistent="false"
@@ -88,6 +90,7 @@
             settings:controller="com.android.settings.datausage.BillingCyclePreferenceController"/>
 
         <SwitchPreference
+              android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="carrier_wifi_toggle"
             android:title="@string/carrier_wifi_offload_title"
             android:summary="@string/carrier_wifi_offload_summary"
@@ -100,7 +103,8 @@
             settings:searchable="false"/>
 
         <SwitchPreference
-            android:key="mms_message"
+               android:layout="@layout/SwitchPreferenceFull_Card"
+           android:key="mms_message"
             android:title="@string/mms_message_title"
             android:summary="@string/mms_message_summary"
             settings:controller="com.android.settings.network.telephony.MmsMessagePreferenceController"/>
@@ -110,8 +114,17 @@
             android:title="@string/data_during_calls_title"
             android:summary="@string/data_during_calls_summary"
             settings:controller="com.android.settings.network.telephony.DataDuringCallsPreferenceController"/>
+    
+    
+    <com.android.settings.preferences.ui.AdaptiveSwitchPreference
+            android:key="smart_5g"
+            android:title="@string/smart_5g_title"
+            android:persistent="false"
+            android:summary="@string/smart_5g_summary"
+            settings:controller="com.android.settings.network.telephony.Smart5gPreferenceController"/>
 
         <SwitchPreference
+              android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="enhanced_4g_lte"
             android:title="@string/enhanced_4g_lte_mode_title"
             android:persistent="false"
@@ -120,6 +133,7 @@
             settings:controller="com.android.settings.network.telephony.Enhanced4gLtePreferenceController"/>
 
         <SwitchPreference
+              android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="4g_calling"
             android:title="@string/enhanced_4g_lte_mode_title_4g_calling"
             android:persistent="false"
@@ -128,6 +142,7 @@
             settings:controller="com.android.settings.network.telephony.Enhanced4gCallingPreferenceController"/>
 
         <SwitchPreference
+              android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="advance_call"
             android:title="@string/enhanced_4g_lte_mode_title_advanced_calling"
             android:persistent="false"
@@ -136,7 +151,8 @@
             settings:controller="com.android.settings.network.telephony.Enhanced4gAdvancedCallingPreferenceController"/>
 
         <SwitchPreference
-            android:key="nr_advanced_calling"
+               android:layout="@layout/SwitchPreferenceFull_Card"
+           android:key="nr_advanced_calling"
             android:title="@string/nr_advanced_calling_title"
             android:persistent="false"
             android:summary="@string/nr_advanced_calling_summary"
@@ -144,6 +160,7 @@
             settings:controller="com.android.settings.network.telephony.NrAdvancedCallingPreferenceController"/>
 
         <SwitchPreference
+              android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="contact_discovery_opt_in"
             android:title="@string/contact_discovery_opt_in_title"
             android:persistent="false"
@@ -178,6 +195,7 @@
             settings:enableCopying="true"/>
 
         <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"
             android:key="calling_category"
             android:title="@string/call_category"
             settings:controller="com.android.settings.network.telephony.CallingPreferenceCategoryController">
@@ -195,12 +213,14 @@
             </Preference>
 
             <SwitchPreference
+               android:layout="@layout/SwitchPreferenceFull_Card"
                 android:key="video_calling_key"
                 android:title="@string/video_calling_settings_title"
                 android:persistent="true"
                 settings:controller="com.android.settings.network.telephony.VideoCallingPreferenceController"/>
 
             <SwitchPreference
+               android:layout="@layout/SwitchPreferenceFull_Card"
                 android:key="backup_calling_key"
                 android:title="@string/backup_calling_settings_title"
                 android:persistent="false"
@@ -230,10 +250,12 @@
 
         <PreferenceCategory
             android:key="network_operators_category_key"
+        settings:layout="@layout/afterlab_preference_category"
             android:title="@string/network_operator_category"
             settings:controller="com.android.settings.network.telephony.NetworkPreferenceCategoryController">
 
             <SwitchPreference
+               android:layout="@layout/SwitchPreferenceFull_Card"
                 android:key="auto_select_key"
                 android:title="@string/select_automatically"
                 settings:controller="com.android.settings.network.telephony.gsm.AutoSelectPreferenceController"/>
@@ -260,6 +282,7 @@
         </Preference>
 
         <SwitchPreference
+               android:layout="@layout/SwitchPreferenceFull_Card"
             android:key="enable_2g"
             android:title="@string/enable_2g_title"
             android:summary="@string/enable_2g_summary"

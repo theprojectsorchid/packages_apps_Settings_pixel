@@ -17,9 +17,10 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/wifi_configure_settings_preference_title">
+    android:title=" ">
 
     <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"
         android:key="enable_wifi_wakeup"
         android:title="@string/wifi_wakeup"
         android:icon="@drawable/ic_auto_wifi"
@@ -27,7 +28,8 @@
         settings:controller="com.android.settings.wifi.WifiWakeupPreferenceController"/>
 
     <SwitchPreference
-        android:key="notify_open_networks"
+        android:layout="@layout/SwitchPreferenceFull_Card"
+       android:key="notify_open_networks"
         android:title="@string/wifi_notify_open_networks"
         android:icon="@drawable/ic_open_wifi_notifications"
         android:summary="@string/wifi_notify_open_networks_summary"
@@ -35,7 +37,8 @@
         settings:controller="com.android.settings.wifi.NotifyOpenNetworksPreferenceController"/>
 
     <SwitchPreference
-        android:key="wifi_cellular_data_fallback"
+        android:layout="@layout/SwitchPreferenceFull_Card"
+       android:key="wifi_cellular_data_fallback"
         android:title="@string/wifi_cellular_data_fallback_title"
         android:summary="@string/wifi_cellular_data_fallback_summary"
         settings:controller="com.android.settings.wifi.CellularFallbackPreferenceController" />
