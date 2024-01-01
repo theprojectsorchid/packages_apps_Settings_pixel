@@ -447,7 +447,7 @@
     <bool name="config_show_trust_agent_click_intent">true</bool>
 
     <!-- Whether wallpaper attribution should be shown or not. -->
-    <bool name="config_show_wallpaper_attribution">true</bool>
+    <bool name="config_show_wallpaper_attribution">false</bool>
 
     <!-- Whether assist_and_voice_input should be shown or not. -->
     <bool name="config_show_assist_and_voice_input">true</bool>
@@ -465,7 +465,7 @@
     <bool name="config_show_top_level_accessibility">false</bool>
 
     <!-- Whether top_level_battery should be shown or not. -->
-    <bool name="config_show_top_level_battery">false</bool>
+    <bool name="config_show_top_level_battery">true</bool>
 
     <!-- Whether to use compact battery status string. -->
     <bool name="config_use_compact_battery_status">false</bool>
@@ -474,7 +474,7 @@
     <bool name="config_show_top_level_connected_devices">true</bool>
 
     <!-- Whether top_level_display should be shown or not. -->
-    <bool name="config_show_top_level_display">true</bool>
+    <bool name="config_show_top_level_display">false</bool>
 
     <!-- Whether wifi_ip_address should be shown or not. -->
     <bool name="config_show_wifi_ip_address">true</bool>
