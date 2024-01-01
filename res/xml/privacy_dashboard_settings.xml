@@ -95,8 +95,7 @@
         <!-- Buttons -->
         <Preference
             android:key="extrapriv_title_category"
-            android:title="@string/extrapriv_title"
-            android:summary="@string/extrapriv_title_summary"
+            android:title="@string/privacy_dashboard_title"
             android:fragment="com.epic.fragments.ButtonSettings" />
             
     <!-- On lock screen notifications -->
