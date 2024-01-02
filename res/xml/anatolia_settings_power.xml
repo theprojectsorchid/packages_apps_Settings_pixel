@@ -14,14 +14,56 @@
      limitations under the License.
 -->
 <PreferenceScreen
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title=" ">
-        <com.android.settingslib.widget.LayoutPreference
-                android:key="device_name"
-                android:order="-1"
-                android:selectable="false"
-                android:layout="@layout/device_info_header"
-                settings:isPreferenceVisible="false" />
+   
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="wifi_animation"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/wifi"/>
 
+    <com.android.settingslib.RestrictedPreference
+        android:fragment="com.android.settings.network.NetworkProviderSettings"
+        android:key="internet_settings"
+        android:title="@string/provider_internet_settings"
+        android:summary="@string/summary_placeholder"
+        settings:allowDividerAbove="false"
+        settings:keywords="@string/keywords_internet"
+        settings:useAdminDisabledSummary="true" />
+
+    <com.android.settingslib.RestrictedPreference
+        android:key="calls_and_sms"
+        android:title="@string/calls_and_sms"
+        android:summary="@string/summary_placeholder"
+        settings:isPreferenceVisible="@bool/config_show_sim_info"
+        settings:allowDividerBelow="false"
+        settings:keywords="@string/calls_and_sms"
+        settings:useAdminDisabledSummary="true" />
+
+    <com.android.settings.widget.AddPreference
+        android:key="mobile_network_list"
+        android:title="@string/provider_network_settings_title"
+        android:summary="@string/summary_placeholder"
+        settings:keywords="@string/keywords_more_mobile_networks"
+        settings:userRestriction="no_config_mobile_networks"
+        settings:isPreferenceVisible="@bool/config_show_sim_info"
+        settings:allowDividerAbove="true"
+        settings:useAdminDisabledSummary="true"
+        settings:searchable="@bool/config_show_sim_info"/>
+   
+    <com.android.settings.datausage.DataSaverPreference
+        android:key="restrict_background_parent_entry"
+        android:title="@string/data_saver_title"
+        android:order="10"
+        settings:isPreferenceVisible="@bool/config_show_data_saver"
+        android:fragment="com.android.settings.datausage.DataSaverSummary"/> 
+       
+    <Preference
+            android:key="navigationbar_category"
+            android:title="@string/navbar_title"
+            android:summary="@string/navbar_summary"
+            android:fragment="com.epic.fragments.NavbarSettings" />
 </PreferenceScreen>

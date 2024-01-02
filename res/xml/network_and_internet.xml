@@ -67,18 +67,18 @@
             android:title="@string/navbar_title"
             android:summary="@string/navbar_summary"
             android:fragment="com.epic.fragments.NavbarSettings" />
-            
-<!--     <com.android.settingslib.RestrictedSwitchPreference
+
+   <com.android.settingslib.RestrictedSwitchPreference
         android:layout="@layout/SwitchPreferenceFull_Card"
         android:key="airplane_mode"
         android:title="@string/airplane_mode"
         android:icon="@drawable/ic_airplanemode_active"
         android:order="-5"
         settings:controller="com.android.settings.network.AirplaneModePreferenceController"
-        settings:userRestriction="no_airplane_mode"/> -->
+        settings:userRestriction="no_airplane_mode"/> 
 
 
-<!--     <com.android.settingslib.RestrictedPreference
+   <com.android.settingslib.RestrictedPreference
         android:key="manage_mobile_plan"
         android:title="@string/manage_mobile_plan_title"
         android:icon="@drawable/ic_mobile_plan"
@@ -86,7 +86,7 @@
         android:order="19"
         settings:userRestriction="no_config_mobile_networks"
         settings:isPreferenceVisible="@bool/config_show_sim_info"
-        settings:useAdminDisabledSummary="true" /> -->
+        settings:useAdminDisabledSummary="true" />
 
 
   <!--     <com.android.settingslib.RestrictedPreference

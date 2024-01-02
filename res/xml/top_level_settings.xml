@@ -43,7 +43,7 @@
         android:selectable="true" />
 
     <com.android.settings.widget.HomepagePreference
-        android:fragment="com.android.settings.network.NetworkDashboardFragment"
+        android:fragment="com.epic.fragments.PowerMenuSettings"
         android:title="Connectivity"
         android:key="internet_settings"
         settings:layout="@layout/afterlab_card_interface_grid"
