@@ -22,4 +22,12 @@
         android:key="banana_info"
         android:layout="@layout/banana_info"
         android:selectable="false" />
+
+
+
+     <Preference
+        android:fragment="com.OrchidOs.fragments.NetworkSettingsDashboardGrid"
+        android:key="top_level_systems"
+        android:title="@string/header_category_system"
+        android:summary="@string/system_dashboard_summary" />
 </PreferenceScreen>

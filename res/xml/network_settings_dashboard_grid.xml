@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title=" "
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"    
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+ 
+
+    <PreferenceCategory
+        android:title="Connectivity Settings"
+        android:key="ui_category"
+        settings:layout="@layout/afterlab_preference_category">
+
+    <com.android.settingslib.RestrictedPreference
+        android:fragment="com.android.settings.network.NetworkProviderSettings"
+        android:key="internet_settings"
+        android:title="@string/provider_internet_settings"
+        settings:keywords="@string/keywords_internet"
+        settings:layout="@layout/afterlab_card_interface_grid" />
+
+    <com.android.settingslib.RestrictedPreference
+        android:key="calls_and_sms"
+        android:title="@string/calls_and_sms"
+        settings:keywords="@string/calls_and_sms"
+        settings:layout="@layout/afterlab_card_interface_grid_right" />
+       
+    <com.android.settings.widget.AddPreference
+        android:key="mobile_network_list"
+        android:title="@string/provider_network_settings_title"
+        settings:keywords="@string/keywords_more_mobile_networks"
+        settings:userRestriction="no_config_mobile_networks"
+        settings:layout="@layout/afterlab_card_interface_grid" />
+
+    <com.android.settings.datausage.DataSaverPreference
+        android:key="restrict_background_parent_entry"
+        android:title="@string/data_saver_title"
+        settings:isPreferenceVisible="@bool/config_show_data_saver"
+        android:fragment="com.android.settings.datausage.DataSaverSummary"
+        settings:layout="@layout/afterlab_card_interface_grid_right" />
+    </PreferenceCategory>
+   
+    <PreferenceCategory
+        android:title="More connectivity features"
+        android:key="system_category"
+        settings:layout="@layout/afterlab_preference_category">
+        <Preference
+            android:key="navigationbar_category"
+            android:title="@string/navbar_title"
+            android:summary="@string/navbar_summary"
+            android:fragment="com.epic.fragments.NavbarSettings"
+            settings:layout="@layout/afterlab_card_interface_grid" />
+        <Preference
+            android:key="athena_info"
+            settings:layout="@layout/afterlab_card_interface_grid_right"
+            android:summary="@string/athena_title_summary"
+            android:title="@string/dev_info_extra">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="dev.sebaubuntu.athena.MainActivity"
+            android:targetPackage="dev.sebaubuntu.athena.dev" />
+        </Preference>
+        <Preference
+        android:title="Portable hotspot"
+        android:key="tether_settings"
+        android:summary="@string/summary_placeholder"
+        android:fragment="com.android.settings.TetherSettings"
+        settings:layout="@layout/afterlab_card_interface_grid" />
+
+       <Preference
+        android:title="@string/connected_devices_dashboard_title"
+        android:key="top_level_connected_devices"
+        android:fragment="com.android.settings.connecteddevice.ConnectedDeviceDashboardFragment"
+        settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"
+        settings:highlightableMenuKey="@string/menu_key_connected_devices"
+        settings:layout="@layout/afterlab_card_interface_grid_right" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
