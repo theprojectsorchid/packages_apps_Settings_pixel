@@ -34,7 +34,6 @@
         android:key="internet_settings"
         android:title="@string/provider_internet_settings"
         android:summary="@string/summary_placeholder"
-        android:icon="@drawable/ic_settings_wireless"
         android:order="-30"
         settings:allowDividerAbove="true"
         settings:keywords="@string/keywords_internet"
@@ -43,7 +42,6 @@
     <com.android.settingslib.RestrictedPreference
         android:key="calls_and_sms"
         android:title="@string/calls_and_sms"
-        android:icon="@drawable/ic_calls_sms"
         android:order="-20"
         android:summary="@string/summary_placeholder"
         settings:isPreferenceVisible="@bool/config_show_sim_info"
@@ -55,7 +53,6 @@
         android:key="mobile_network_list"
         android:title="@string/provider_network_settings_title"
         android:summary="@string/summary_placeholder"
-        android:icon="@drawable/ic_sim_card"
         android:order="-15"
         settings:keywords="@string/keywords_more_mobile_networks"
         settings:userRestriction="no_config_mobile_networks"
@@ -68,7 +65,6 @@
          settings:isPreferenceVisible="@bool/config_airplane_mode_info"
        android:key="airplane_mode"
         android:title="@string/airplane_mode"
-        android:icon="@drawable/ic_airplanemode_active"
         android:order="-5"
         settings:controller="com.android.settings.network.AirplaneModePreferenceController"
         settings:userRestriction="no_airplane_mode"/>
@@ -76,7 +72,6 @@
     <com.android.settingslib.RestrictedPreference
         android:key="manage_mobile_plan"
         android:title="@string/manage_mobile_plan_title"
-        android:icon="@drawable/ic_mobile_plan"
         android:persistent="false"
         android:order="19"
         settings:userRestriction="no_config_mobile_networks"
@@ -88,7 +83,6 @@
       android:fragment="com.android.settings.TetherSettings"
         android:key="tether_settings"
         android:title="@string/tether_settings_title_all"
-        android:icon="@drawable/ic_wifi_tethering"
         android:order="5"
         android:summary="@string/summary_placeholder"
         settings:keywords="@string/keywords_hotspot_tethering"
@@ -99,13 +93,19 @@
         android:fragment="com.android.settings.AllInOneTetherSettings"
         android:key="all_tether_settings"
         android:title="@string/tether_settings_title_all"
-        android:icon="@drawable/ic_wifi_tethering"
         android:order="6"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.network.AllInOneTetherPreferenceController"
         settings:keywords="@string/keywords_hotspot_tethering"
         settings:userRestriction="no_config_tethering"
         settings:useAdminDisabledSummary="true" />
+
+    <Preference
+        android:order="7"
+        android:fragment="com.OrchidOs.fragments.NetworkSettingsDashboardGrid"
+        android:key="top_level_systems"
+        android:title="@string/data_saver_title"
+        android:summary="@string/vpn_settings_title" />
 
 <!--     <com.android.settings.datausage.DataSaverPreference
         android:key="restrict_background_parent_entry"

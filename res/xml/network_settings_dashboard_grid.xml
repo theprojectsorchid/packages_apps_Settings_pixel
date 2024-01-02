@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title=" "
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"    
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+ 
+    <PreferenceCategory
+        android:title="Connectivity Settings"
+        android:key="ui_category"
+        settings:layout="@layout/afterlab_preference_category">
+        
+        <com.android.settings.datausage.DataSaverPreference
+        android:key="restrict_background_parent_entry"
+        android:title="@string/data_saver_title"
+        android:fragment="com.android.settings.datausage.DataSaverSummary" 
+        settings:layout="@layout/afterlab_card_interface_grid" />
+
+        <Preference
+            android:key="athena_info"
+            settings:layout="@layout/afterlab_card_interface_grid_right"
+            android:summary="@string/athena_title_summary"
+            android:title="@string/dev_info_extra">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.bluetooth.BluetoothSettings"
+            android:targetPackage="com.android.settings" />
+        </Preference>
+        
+         <Preference
+            android:key="athena_info"
+            settings:layout="@layout/afterlab_card_interface_grid"
+            android:summary="@string/athena_title_summary"
+            android:title="@string/dev_info_extra">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.Settings$AdvancedConnectedDeviceActivity"
+            android:targetPackage="com.android.settings" />
+        </Preference>
+      <Preference
+            android:key="athena_info"
+            settings:layout="@layout/afterlab_card_interface_grid_right"
+            android:summary="@string/athena_title_summary"
+            android:title="@string/dev_info_extra">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.drnoob.datamonitor.ui.activities.MainActivity"
+            android:targetPackage="com.drnoob.datamonitor" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Core Features"
+        android:key="system_category"
+        settings:layout="@layout/afterlab_preference_category">
+        
+        <PreferenceScreen
+        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
+        android:title="@string/about_settings"
+        settings:layout="@layout/afterlab_card_interface_grid" />
+        
+        <Preference
+            android:key="athena_info"
+            settings:layout="@layout/afterlab_card_interface_grid_right"
+            android:summary="@string/athena_title_summary"
+            android:title="@string/dev_info_extra">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.WebViewImplemetation"
+            android:targetPackage="com.android.settings" />
+        </Preference>
+        
+        <com.android.settings.network.PrivateDnsModeDialogPreference
+        android:key="private_dns_settings"
+        android:title="@string/select_private_dns_configuration_title"
+        android:dialogTitle="@string/select_private_dns_configuration_dialog_title"
+        android:dialogLayout="@layout/private_dns_mode_dialog"
+        android:positiveButtonText="@string/save"
+        android:negativeButtonText="@android:string/cancel"
+            settings:layout="@layout/afterlab_card_interface_grid" />
+        
+        <Preference
+        android:fragment="com.android.settings.network.AdaptiveConnectivitySettings"
+        android:key="adaptive_connectivity"
+        android:title="@string/adaptive_connectivity_title"
+        android:summary="@string/summary_placeholder"
+        settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"
+        settings:layout="@layout/afterlab_card_interface_grid_right" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Device Vpn settings"
+        android:key="general_category"
+        settings:layout="@layout/afterlab_preference_category">
+        
+        <Preference
+            android:key="athena_info"
+            settings:layout="@layout/afterlab_card_interface_grid_right"
+            android:summary="@string/athena_title_summary"
+            android:title="@string/dev_info_extra">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.celzero.bravedns.ui.HomeScreenActivity"
+            android:targetPackage="com.celzero.bravedns" />
+        </Preference>
+        
+        <com.android.settings.vpn2.VpnInfoPreference
+        android:fragment="com.android.settings.vpn2.VpnSettings"
+        android:key="vpn_settings"
+        android:title="@string/vpn_settings_title"
+        android:summary="@string/summary_placeholder"
+        settings:userRestriction="no_config_vpn"
+        settings:useAdminDisabledSummary="true" 
+        settings:layout="@layout/afterlab_card_interface_grid" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
