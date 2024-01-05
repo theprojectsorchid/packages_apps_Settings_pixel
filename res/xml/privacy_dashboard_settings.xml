@@ -97,7 +97,12 @@
             android:key="extrapriv_title_category"
             android:title="@string/privacy_dashboard_title"
             android:fragment="com.epic.fragments.ButtonSettings" />
-            
+    <com.android.settings.preferences.ui.AdaptivePreference
+        android:key="display_customization"
+        settings:position="solo"
+        android:title="@string/display_customization"
+        android:fragment="com.android.settings.awaken.fragments.DisplayCustomizations5"
+        android:summary="@string/display_customization"/> 
     <!-- On lock screen notifications -->
     <com.android.settings.RestrictedListPreference
         android:key="privacy_lock_screen_notifications"

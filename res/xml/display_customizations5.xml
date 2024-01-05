@@ -18,5 +18,57 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:key="display_customizations5"
     android:title=" ">
+		 <!-- FlexoOS logo -->
+    <PreferenceScreen
+        android:key="flexo_lottie_animation"
+        android:layout="@layout/flexoos_card"
+        android:selectable="false"
+        android:order="-190" />
 
+    <!-- Clipboard access notifications -->
+     <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"
+        android:key="show_clip_access_notification"
+        android:title="@string/show_clip_access_notification"
+        android:summary="@string/show_clip_access_notification_summary"
+        settings:controller="com.android.settings.privacy.ShowClipAccessNotificationPreferenceController"/> 
+  <!--     
+    <SwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"
+        android:key="privacy_media_controls_lockscreen"
+        android:title="@string/media_controls_lockscreen_title"
+        android:summary="@string/media_controls_lockscreen_description"
+        settings:controller=
+            "com.android.settings.sound.MediaControlsLockScreenPreferenceController" /> -->
+    <!-- Ignore secure window feature  -->
+    <com.android.settings.custom.preference.SecureSettingSwitchPreference
+         android:layout="@layout/SwitchPreferenceFull_Card"
+       android:key="window_ignore_secure"
+        android:title="@string/ignore_window_secure_title"
+        android:summary="@string/ignore_window_secure_summary"
+        android:defaultValue="false"/> 
+
+          <!-- Camera toggle -->
+         
+    <com.android.settingslib.RestrictedSwitchPreference
+        android:key="privacy_camera_toggle"
+        android:title="@string/camera_toggle_title"
+        android:summary="@string/perm_toggle_description"
+        settings:controller="com.android.settings.privacy.CameraToggleController"/> 
+
+    <!-- Microphone toggle -->
+          
+   <com.android.settingslib.RestrictedSwitchPreference
+        android:key="privacy_mic_toggle"
+        android:title="@string/mic_toggle_title"
+        android:summary="@string/mic_toggle_description"
+        settings:controller="com.android.settings.privacy.MicToggleController"/> 
+
+    <!-- Show passwords -->
+     <!-- <SwitchPreference
+         android:layout="@layout/SwitchPreferenceFull_Card"
+       android:key="show_password"
+        android:title="@string/show_password"
+        android:summary="@string/show_password_summary"
+        settings:controller="com.android.settings.security.ShowPasswordPreferenceController"/>-->  
 </PreferenceScreen>
