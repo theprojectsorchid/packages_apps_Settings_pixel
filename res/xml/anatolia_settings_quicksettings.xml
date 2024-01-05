@@ -25,7 +25,7 @@
 
 
 
-    <com.android.settings.preferences.ui.AdaptivePreference
+     <Preference
         android:fragment="com.OrchidOs.fragments.NetworkSettingsDashboardGrid"
         android:key="top_level_systems"
         android:title="@string/header_category_system"

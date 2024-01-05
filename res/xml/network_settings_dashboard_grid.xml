@@ -11,25 +11,25 @@
         android:key="ui_category"
         settings:layout="@layout/afterlab_preference_category">
 
-        <com.android.settings.preferences.ui.AdaptiveRestrictedPreference
+    <com.android.settingslib.RestrictedPreference
         android:fragment="com.android.settings.network.NetworkProviderSettings"
         android:key="internet_settings"
-        settings:position="top"
         android:title="@string/provider_internet_settings"
         settings:keywords="@string/keywords_internet"
         settings:layout="@layout/afterlab_card_interface_grid" />
 
-    <com.android.settingslib.RestrictedPreference
+    <Preference
+        android:fragment="com.android.settings.awaken.fragments.DisplayCustomizations6"
         android:key="calls_and_sms"
         android:title="@string/calls_and_sms"
         settings:keywords="@string/calls_and_sms"
         settings:layout="@layout/afterlab_card_interface_grid_right" />
        
-    <com.android.settings.widget.AddPreference
+    <Preference
+        android:fragment="com.android.settings.awaken.fragments.DisplayCustomizations7"
         android:key="mobile_network_list"
         android:title="@string/provider_network_settings_title"
         settings:keywords="@string/keywords_more_mobile_networks"
-        settings:userRestriction="no_config_mobile_networks"
         settings:layout="@layout/afterlab_card_interface_grid" />
 
     <com.android.settings.datausage.DataSaverPreference
