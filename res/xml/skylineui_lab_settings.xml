@@ -16,8 +16,18 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title=" ">
+
+ <Preference
+        android:key="rethink_dns"
+        android:title="@string/taptapmode_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.celzero.bravedns.ui.HomescreenActivity"
+            android:targetPackage="com.celzero.bravedns" />
+ </Preference>
 
     <com.android.settings.preferences.ui.AdaptivePreference
         android:key="display_customization"
