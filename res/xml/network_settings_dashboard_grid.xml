@@ -11,9 +11,10 @@
         android:key="ui_category"
         settings:layout="@layout/afterlab_preference_category">
 
-    <com.android.settingslib.RestrictedPreference
+        <com.android.settings.preferences.ui.AdaptiveRestrictedPreference
         android:fragment="com.android.settings.network.NetworkProviderSettings"
         android:key="internet_settings"
+        settings:position="top"
         android:title="@string/provider_internet_settings"
         settings:keywords="@string/keywords_internet"
         settings:layout="@layout/afterlab_card_interface_grid" />
