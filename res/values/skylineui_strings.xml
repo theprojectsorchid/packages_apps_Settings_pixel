@@ -277,4 +277,10 @@ s that internet users can use wisely.</string>
     
     <string name="app_info_install_time">Installed: %1$s</string>
     <string name="app_info_update_time">Updated: %1$s</string>
+
+    <string name="xd_build_unmaintained_summary">Certified Kaktus</string>
+    
+    <string name="longpress_to_clipboard">longpress to clipboard</string>
+
+    <string name="copied_to_clipboard">Copied to clipboard</string>
 </resources>
