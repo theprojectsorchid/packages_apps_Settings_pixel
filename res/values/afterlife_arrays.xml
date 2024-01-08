@@ -160,33 +160,7 @@
         <item>2</item>
     </string-array>
 
-    <!-- Status bar - Battery Bar -->
-    <string-array name="battery_bar_style_entries" translatable="false">
-        <item>@string/battery_bar_style_regular</item>
-        <item>@string/battery_bar_style_center_mirrored</item>
-        <item>@string/battery_bar_style_reversed</item>
-    </string-array>
 
-    <string-array name="battery_bar_style_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
-    <!-- Power menu Animations  -->
-    <string-array name="power_menu_animations_entries">
-        <item>@string/power_menu_animation_aosp</item>
-        <item>@string/power_menu_animation_bottom</item>
-        <item>@string/power_menu_animation_top</item>
-        <item>@string/power_menu_animation_fly</item>
-        <item>@string/power_menu_animation_turn</item>
-        <item>@string/power_menu_animation_slide</item>
-        <item>@string/power_menu_animation_xylon</item>
-        <item>@string/power_menu_animation_card</item>
-        <item>@string/power_menu_animation_translucent_top</item>
-        <item>@string/power_menu_animation_translucent_bottom</item>
-        <item>@string/power_menu_animation_rotate</item>
-    </string-array>
 
     <string-array name="power_menu_animations_values" translatable="false">
         <item>0</item>
@@ -306,16 +280,6 @@
     <string-array name="qs_battery_style_entries" translatable="false">
         <item>@string/qs_use_status_bar_battery_style</item>
         <item>@string/status_bar_battery_style_icon_portrait</item>
-        <item>@string/status_bar_battery_style_icon_rlandscape</item>
-        <item>@string/status_bar_battery_style_icon_landscape</item>
-        <item>@string/status_bar_battery_style_circle</item>
-        <item>@string/status_bar_battery_style_dotted_circle</item>
-        <item>@string/status_bar_battery_style_filled_circle</item>
-        <item>@string/status_bar_battery_style_text</item>
-        <item>@string/status_bar_battery_style_hidden</item>
-        <item>@string/status_bar_battery_style_icon_landscape_buddy</item>
-        <item>@string/status_bar_battery_style_icon_landscape_line</item>
-        <item>@string/status_bar_battery_style_icon_landscape_musku</item>
         <item>@string/status_bar_battery_style_icon_landscape_pill</item>
         <item>@string/status_bar_battery_style_icon_landscape_signal</item>
         <item>@string/status_bar_battery_style_icon_rlandscape_style_a</item>
@@ -392,20 +356,5 @@
         <item>2</item>
     </string-array>
 	
-	<!-- AOD Schedule -->
-    <string-array name="doze_always_on_auto_mode_entries">
-        <item>@string/disabled</item>
-        <item>@string/night_display_auto_mode_twilight</item>
-        <item>@string/night_display_auto_mode_custom</item>
-        <item>@string/always_on_display_schedule_mixed_sunset</item>
-        <item>@string/always_on_display_schedule_mixed_sunrise</item>
-    </string-array>
-
-    <string-array name="doze_always_on_auto_mode_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </string-array>
+	
 </resources>
