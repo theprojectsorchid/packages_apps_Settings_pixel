@@ -17,5 +17,28 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/extras_title">
+   <com.android.settingslib.widget.LayoutPreference
+        android:key="my_device_info_header"
+        android:order="-500"
+        android:layout="@layout/device_info"
+        android:selectable="false"
+        settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
+        settings:isPreferenceVisible="true"/>
+    <PreferenceScreen
+        android:key="flexo_lottie_animation"
+        android:layout="@layout/flexoos_card"
+        android:selectable="false"
+        android:order="-190" />
+    
+    <!-- BananaDroid info -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="banana_info"
+        android:layout="@layout/banana_info"
+        android:selectable="false" />
 
+
+  <com.android.settingslib.widget.LayoutPreference
+        android:key="orchidosrom_grid"
+        android:layout="@layout/orchidosrom_grid"
+        android:selectable="false"/>  
 </PreferenceScreen>
