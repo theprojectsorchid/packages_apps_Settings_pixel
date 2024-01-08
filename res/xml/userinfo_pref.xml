@@ -25,27 +25,23 @@
         android:order="10" />
 
 
-    <com.android.settingslib.widget.TopIntroPreference
-            android:key="userinfo_bubbles_desc"
-            android:order="20"
-            android:title="@string/userinfo_bubble_setting_description"/>
 
     <Preference
             android:key="multiuser"
             android:order="30"
-            android:title="@string/multiuser_settings_title"
+            android:title="@string/bluetooth_profile_details"
             android:fragment="com.android.settings.users.UserSettings"/>
     
     <Preference
             android:key="accounts"
             android:order="40"
-            android:title="@string/accounts_settings_title"
+            android:title="@string/Accounts_settings_title"
             android:fragment="com.android.settings.accounts.AccountDashboardFragment"/>
 
     <Preference
             android:key="emergency"
             android:order="50"       
-            android:title="@string/emergency_settings_title"
+            android:title="@string/default_emergency_app"
             android:fragment="com.android.settings.emergency.EmergencyDashboardFragment"/>
         
 </PreferenceScreen>
