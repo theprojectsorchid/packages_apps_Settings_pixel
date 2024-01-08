@@ -119,6 +119,5 @@
             android:order="30"
             android:key="extra_apps"
             android:title="@string/extra_apps_title"
-            android:summary="@string/extra_apps_summary"
             android:fragment="com.epic.fragments.ExtraSettings"/>        
 </PreferenceScreen>

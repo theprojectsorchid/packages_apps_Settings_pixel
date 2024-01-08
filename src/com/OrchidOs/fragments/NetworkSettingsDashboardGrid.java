@@ -30,7 +30,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @SearchIndexable
-public class SystemSettingsExtra extends SettingsPreferenceFragment { 
+public class NetworkSettingsDashboardGrid extends SettingsPreferenceFragment { 
 	
 	private PreferenceCategory mThemesCategory, mSystemCategory, mGeneralCategory;
 	private PreferenceScreen mPreferenceScreen;

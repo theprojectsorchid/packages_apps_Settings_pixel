@@ -17,10 +17,11 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/lockscreen_settings_title">
+    android:title=" ">
 
     <PreferenceCategory
-        android:key="lockscreen_what_to_show"
+ settings:layout="@layout/afterlab_preference_category"       
+ android:key="lockscreen_what_to_show"
         android:title="@string/lockscreen_settings_what_to_show_category">
         <com.android.settings.RestrictedListPreference
             android:key="security_setting_lock_screen_notif"
@@ -40,14 +41,16 @@
             settings:controller="com.android.settings.biometrics.face.FaceSettingsLockscreenUnlockMethodPreferenceController" />
 
         <SwitchPreference
-            android:key="security_display_lockscreen_bypass"
+             android:layout="@layout/SwitchPreferenceFull_Card"            
+             android:key="security_display_lockscreen_bypass"
             android:title="@string/lockscreen_bypass_title"
             android:summary="@string/lockscreen_bypass_summary"
             settings:searchable="false"
             settings:controller="com.android.settings.biometrics.face.FaceSettingsLockscreenBypassPreferenceController" />
 
         <com.android.settingslib.RestrictedSwitchPreference
-            android:key="security_lockscreen_add_users_when_locked"
+             android:layout="@layout/SwitchPreferenceFull_Card"            
+             android:key="security_lockscreen_add_users_when_locked"
             android:title="@string/user_add_on_lockscreen_menu"
             settings:controller="com.android.settings.users.AddUserWhenLockedPreferenceController" />
 
@@ -57,30 +60,35 @@
             android:summary="@string/owner_info_settings_summary" />
 
         <com.android.settings.custom.preference.SecureSettingSwitchPreference
-            android:key="lockscreen_media_metadata"
+             android:layout="@layout/SwitchPreferenceFull_Card"            
+             android:key="lockscreen_media_metadata"
             android:title="@string/lockscreen_media_art_title"
             android:defaultValue="false" />
 
         <SwitchPreference
-            android:key="lockscreen_privacy_wallet_switch"
+             android:layout="@layout/SwitchPreferenceFull_Card"            
+             android:key="lockscreen_privacy_wallet_switch"
             android:title="@string/lockscreen_privacy_wallet_setting_toggle"
             android:summary="@string/lockscreen_privacy_wallet_summary"
             settings:controller="com.android.settings.display.WalletPrivacyPreferenceController" />
 
         <SwitchPreference
+             android:layout="@layout/SwitchPreferenceFull_Card"            
             android:key="lock_screen_show_qr_scanner"
             android:title="@string/lockscreen_privacy_qr_code_scanner_setting_toggle"
             android:summary="@string/lockscreen_privacy_qr_code_scanner_summary"
             settings:controller="com.android.settings.display.QRCodeScannerPreferenceController" />
 
         <SwitchPreference
-            android:key="lockscreen_privacy_controls_switch"
+              android:layout="@layout/SwitchPreferenceFull_Card"            
+           android:key="lockscreen_privacy_controls_switch"
             android:title="@string/lockscreen_privacy_controls_setting_toggle"
             android:summary="@string/lockscreen_privacy_controls_summary"
             settings:controller="com.android.settings.display.ControlsPrivacyPreferenceController" />
 
         <SwitchPreference
-            android:key="lockscreen_trivial_controls_switch"
+              android:layout="@layout/SwitchPreferenceFull_Card"            
+           android:key="lockscreen_trivial_controls_switch"
             android:title="@string/lockscreen_trivial_controls_setting_toggle"
             android:summary="@string/lockscreen_trivial_controls_summary"
             settings:controller="com.android.settings.display.ControlsTrivialPrivacyPreferenceController"/>
@@ -91,20 +99,23 @@
             settings:controller="com.android.settings.display.CustomizableLockScreenQuickAffordancesPreferenceController" />
 
         <SwitchPreference
-            android:key="lockscreen_double_line_clock_switch"
+              android:layout="@layout/SwitchPreferenceFull_Card"            
+           android:key="lockscreen_double_line_clock_switch"
             android:title="@string/lockscreen_double_line_clock_setting_toggle"
             android:summary="@string/lockscreen_double_line_clock_summary"
             settings:controller="com.android.settings.display.LockscreenClockPreferenceController" />
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="ambient_display_category_when_to_show"
+settings:layout="@layout/afterlab_preference_category"        
+android:key="ambient_display_category_when_to_show"
         android:title="@string/ambient_display_category_triggers"
         settings:controller="com.android.settings.display.AmbientDisplayWhenToShowPreferenceController"
         android:order="1000">
 
         <com.android.settingslib.RestrictedSwitchPreference
-            android:key="ambient_display_always_on"
+              android:layout="@layout/SwitchPreferenceFull_Card"            
+           android:key="ambient_display_always_on"
             android:title="@string/doze_always_on_title"
             android:summary="@string/doze_always_on_summary"
             settings:keywords="@string/keywords_always_show_time_info"
@@ -140,7 +151,8 @@
             settings:controller="com.android.settings.gestures.ScreenOffUdfpsPreferenceController" />
 
         <SwitchPreference
-            android:key="ambient_display_notification"
+              android:layout="@layout/SwitchPreferenceFull_Card"            
+           android:key="ambient_display_notification"
             android:title="@string/doze_title"
             android:summary="@string/doze_summary"
             settings:controller="com.android.settings.display.AmbientDisplayNotificationsPreferenceController" />
@@ -158,7 +170,8 @@
     <!-- Work profile settings are at the bottom with high order value to avoid users thinking that
          any of the above settings (including dynamic) are specific to the work profile. -->
     <PreferenceCategory
-        android:key="security_setting_lock_screen_notif_work_header"
+settings:layout="@layout/afterlab_preference_category"        
+android:key="security_setting_lock_screen_notif_work_header"
         android:title="@string/profile_section_header"
         android:order="1001"
         settings:searchable="false">

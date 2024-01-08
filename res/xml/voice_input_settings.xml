@@ -14,8 +14,9 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title=" ">
+<PreferenceScreen     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"        
+    android:title=" ">
 
     <!-- The contents of this category are filled in by the Java code
          based on the list of available voice interaction and recognition services. -->
