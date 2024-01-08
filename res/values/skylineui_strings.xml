@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2022 VoidUI Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- About device screen, SkylineUI Release Version -->
+    <string name="skylineui_release_version">Welcome To SkylineUI</string>
+
+    <!-- SkylineUI Maintainer -->
+    <string name="SkylineUI_maintainer">Build made by</string>
+
+    <!-- SkylineUI Workstation -->
+    <string name="skylineui_lab_title">SkylineUI Workstation</string>
+    <string name="skylineui_lab_footer">Warning: These features are experimental and may have risks. Use them with caution.</string>
+    <string name="skylineui_lab_summary">Experimental features</string>
+
+    <!-- Statusbar colored icons -->
+    <string name="statusbar_colored_icons_title">Colored icons</string>
+    <string name="statusbar_colored_icons_summary">Use proper app icons for notification icons in status bar</string>
+
+    <!-- Hidden apps -->
+    <string name="hidden_apps_title">Hidden apps</string>
+    <string name="hidden_apps_summary">Applications that should be hidden from launcher. Requires a launcher restart for changes to take effect</string>
+
+    <!-- Fragment for hosting a selectable list of applications -->
+    <string name="search">Search</string>
+    <string name="search_apps">Search apps</string>
+
+    <!-- Display Customizations Fragment 1 to 5 -->
+    <string name="display_customization">custom page</string>
+
+    
+    <!-- Advanced Settings -->
+    <string name="advanced_pref_title">Advanced Settings</string>
+    <string name="advanced_backup_title">@string/privacy_settings_title</string>
+
+    
+    <!-- AfterLife Customize -->
+    <string name="customize_dashboard_title">AfterLabs</string>
+    <string name="build_tweaks_summary_title">Go to another World</string>
+
+    <!-- Afterlabs Theme -->
+    <string name="afterlabs_theme_cat">Afterlabs Theme</string>
+
+    <!-- General -->
+    <string name="ok">Okay</string>
+    <string name="default_string">Default</string>
+    <string name="add">Add</string>
+    <string name="enabled">Enabled</string>
+	<string name="disabled">Disabled</string>
+    <string name="choose_app">Choose application</string>
+    <string name="help">Help</string>
+    <string name="reset_message">Reset all entries to default?</string>
+    <string name="attention">Attention</string>
+    <string name="reset">Reset</string>
+    
+    <string name="category_system_title">System</string>
+    <string name="category_buttons_title">Buttons</string>
+    <string name="category_lockscreen_title">Lockscreen</string>
+    <string name="category_gestures_title">Gestures</string>
+    <string name="category_battery_title">Battery</string>
+    <string name="category_notifications_title">Notifications</string>
+    <string name="category_powermenu_title">Power Menu</string>
+    <string name="category_quicksettings_title">Quick Settings</string>
+    <string name="category_statusbar_title">Statusbar</string>
+    <string name="category_misc_title">Miscellaneous</string>
+
+    <!-- Summary category-->
+    <string name="battery_summary">Battery customization options</string>
+    <string name="button_summary">Buttons customization options</string>
+    <string name="gestures_summary">Gesture and navbar customization options</string>
+    <string name="lockscreen_summary">Lockscreen customization options</string>
+    <string name="misc_summary">Miscellaneous customization options</string>
+    <string name="notification_summary">Notification customization options</string>
+    <string name="power_summary">PowerMenu customization options</string>
+    <string name="quicksetting_summary">Quick Settings customization options</string>
+    <string name="statusbar_summary">About Statusbar customization options</string>
+    <string name="system_summary">System and Theme customization options</string>
+
+    <!-- Sub category -->
+    <string name="general_category">General</string>
+    
+    <!-- About Project -->
+    <string name="about_afterlife_title">About Afterlife</string>
+    <string name="abouttitl">AfterLife Prjkt</string>
+    <string name="aboutsumm">AfterLifePrjkt is an operating system that runs on the Android system with the current API level at 13.0 - 14.0 (beta). This OS provides a comfortable experience to users both in terms of performance and appearance and also has open source propertie
+s that internet users can use wisely.</string>
+    <string name="github">Github</string>
+    <string name="github_description">View our source code</string>
+    <string name="telegram">Telegram</string>
+    <string name="telegram_description">Subscribe to our Telegram channel</string>
+    <string name="leads">The Leads</string>
+    <string name="designers">Design UI/UX</string>
+    <string name="contributor">Contributors</string>
+
+    <!-- Leads --> 
+    <string name="afl_team_1">Romeo Delta Whiskey</string>
+    <string name="founder">Founder</string>
+    <string name="afl_team1_description">Lead and Source Manager</string>
+    <string name="afl_team1_github">RdW-afk</string>
+    <string name="afl_team1_tele">Romeo_Delta_Whiskey</string>
+    <string name="afl_team1_ig">rdw_inst</string>
+    <string name="afl_team1_fb">RIefhan Xanderzz</string>
+
+    <string name="afl_team_2">Ari Lesmana</string>
+    <string name="coli_1">Co-Lead</string>
+    <string name="afl_team2_description">Idea and Source Manager</string>
+    <string name="afl_team2_github">arilsmn</string>
+    <string name="afl_team2_tele">xarilsmn</string>
+    <string name="afl_team2_ig">xarilsmn</string>
+    <string name="afl_team2_fb">muhammad.saidillah.14</string>
+
+    <string name="afl_team_3">Aditya Eka Pranata</string>
+    <string name="coli_2">Co-Lead</string>
+    <string name="afl_team3_description">Source Manager</string>
+    <string name="afl_team3_github">aepranata</string>
+    <string name="afl_team3_tele">aepranata</string>
+    <string name="afl_team3_ig">null</string>
+    <string name="afl_team3_fb">aepranata.bwi</string>
+
+    <!-- Designer -->
+    <string name="afl_designer_1">ᄅ0ㄣ⇂XᴚƆ</string>
+    <string name="afl_designer_github_1">Indra1402-sfyn</string>
+    <string name="afl_designer_telegram_1">Corex1402</string>
+
+    <string name="afl_designer_2">nssʇıǝɹ</string>
+    <string name="afl_designer_github_2">itssu4012650</string>
+    <string name="afl_designer_telegram_2">reitssu</string>
+
+    <string name="afl_designer_3">Declanヅ</string>
+    <string name="afl_designer_github_3">DeclanG9</string>
+    <string name="afl_designer_telegram_3">seklek</string>
+
+    <string name="afl_designer_4">Joko Jr😎</string>
+    <string name="afl_designer_github_4">703joko</string>
+    <string name="afl_designer_telegram_4">jrinfected</string>
+
+    <!-- Designer Summary -->
+    <string name="afl_designer_description">Core, Designer UI/UX</string>
+
+    <!-- Contributors -->
+    <string name="afl_contributors_1">IverzAsterix</string>
+    <string name="afl_contributors_github_1">asterixiverz</string>
+    <string name="afl_contributors_telegram_1">iverzasterix</string>
+
+    <string name="afl_contributors_2">Mlkyjuicee</string>
+    <string name="afl_contributors_github_2">affandilham</string>
+    <string name="afl_contributors_telegram_2">affandilham</string>
+
+    <string name="afl_contributors_3">Aernma</string>
+    <string name="afl_contributors_github_3">aaernma</string>
+    <string name="afl_contributors_telegram_3">aavadaakedavra</string>
+
+    <!-- Contributors Descript -->
+    <string name="afl_contributors_description">Helper</string>
+
+    <!-- ETC -->
+    <string name="more">View more..</string>
+    <string name="cust_category_title">Category Preference Style</string>
+    <string name="cust_category_summary">set style of Preference Category</string>
+
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app</string>
+
+    <!-- QS battery -->
+    <string name="qs_use_status_bar_battery_style">Follow status bar style</string>
+    <string name="status_bar_qs_category_title">QS customizations</string>
+
+    <!-- QS Transparency -->
+    <string name="qs_transparency_title">Background transparency</string>
+    <string name="qs_transparency_summary">Set transparency level for QS background</string>
+
+    <!-- QS tiles layout -->
+    <string name="qs_tile_layout_title">QS tiles layout</string>
+    <string name="qs_tile_layout_summary">Customize tiles layout in QS panel</string>
+    <string name="qs_tiles_layout_category">Tiles layout</string>
+    <string name="qs_rows_portrait_title">Rows (Portrait)</string>
+    <string name="qqs_rows_portrait_title">Rows (Quick QS portrait)</string>
+    <string name="qs_columns_portrait_title">Columns (Portrait)</string>
+    <string name="qs_apply_change_button_title">Apply change</string>
+    <string name="qs_apply_change_failed">Failed to apply change</string>
+    <string name="qs_tile_hide_label_title">Hide labels</string>
+    <string name="qs_tile_hide_label_summary">Show only icon for QS tiles</string>
+    <string name="qs_tile_vertical_layout_title">Vertical layout</string>
+    <string name="qs_tile_vertical_layout_summary">Enable vertical layout for QS tiles</string>
+    <string name="unit_seconds">Second(s)</string>
+
+    <!-- Material dismiss all button for notifications -->
+    <string name="notification_material_dismiss_title">Clear all notification button</string>
+    <string name="notification_material_dismiss_summary">Replace clear all notification text with material style floating button</string>
+    <string name="notification_material_dismiss_style_title">Button style</string>
+    <string name="notification_material_dismiss_bgstyle_title">Button background</string>
+
+    
+    <!-- QS Dual Tone Colors -->
+    <string name="qs_dual_tone_title">QS dual-tone</string>
+    <string name="qs_dual_tone_summary">Use dual tone background colors</string>
+
+    <!-- Max visible notification icons -->
+    <string name="max_visible_notification_icons_title">Notification icons</string>
+    <string name="max_visible_notification_icons_summary">Max. notification icons visible on statusbar</string>
+
+    <!-- Fonts -->
+    <string name="clock_format">12\n26</string>
+    <string name="text_sample">AaBbCc</string>
+    <string name="theme_customization_lock_clock_title">Clock font style</string>
+    <string name="theme_customization_lock_clock_summary">Set lockscreen clock font style</string>
+
+    <!-- Extra Title Category-->
+    <string name="notification_icon_cat">Statusbar Icon</string>
+    <string name="reticker_cat">Re-Ticker</string>
+    <string name="notification_clear_all_cat">Clear All Buttons</string>
+    <string name="misc_cat">Misc</string>
+    <string name="weather_cat">Weather</string>
+    
+    <string name="qs_ui_title">Quick Settings UI</string>
+    <string name="android_eleven">Android 11</string>
+
+
+    <!-- QS tile shape -->
+    <string name="qs_tile_shape">QS tile shape</string>
+    <string name="qs_tile_round">Round</string>
+    <string name="qs_tile_rect">Rounded Rectangle</string>
+    <string name="qs_tile_mix">Round for active tiles and Rounded Rectangle for inactive tiles</string>
+    
+    <!-- Anatolia -->
+    <string name="anatolia_settings_title">Anatolia Settings</string>
+    <string name="anatolia_settings_summary">Our customization hub</string>
+
+    <!-- Categories -->
+    <string name="buttons_title">Buttons</string>
+    <string name="gestures_title">Gestures</string>
+    <string name="lockscreen_title">Lock screen</string>
+    <string name="navbar_title">Navigation</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="powermenu_title">Power menu</string>
+    <string name="quicksettings_title">Quick settings</string>
+    <string name="statusbar_title">Status bar</string>
+    <string name="extras_title">Extras</string>
+    <string name="buttons_summary">Buttons options</string>
+    <string name="gestures_summary">Gestures menu</string>
+    <string name="lockscreen_summary">Lock screen customizations</string>
+    <string name="navbar_summary">Navbar menu</string>
+    <string name="notifications_summary">Notifications options</string>
+    <string name="powermenu_summary">Power menu customizations</string>
+    <string name="quicksettings_summary">Quick settings options</string>
+    <string name="statusbar_summary">Status bar customizations</string>
+    <string name="extras_summary">Some extra options</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+</resources>
