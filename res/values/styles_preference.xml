@@ -33,7 +33,7 @@
         <item name="dialogPreferenceStyle">@style/DialogPreference</item>
         <item name="editTextPreferenceStyle">@style/EditTextPreference</item>
         <!-- For preference category color -->
-        <item name="preferenceCategoryTitleTextColor">?android:attr/textColorSecondary</item>
+        <item name="preferenceCategoryTitleTextColor">?android:attr/colorAccent</item>
         <item name="preferenceFragmentCompatStyle">@style/SettingsPreferenceFragmentStyle</item>
     </style>
 
