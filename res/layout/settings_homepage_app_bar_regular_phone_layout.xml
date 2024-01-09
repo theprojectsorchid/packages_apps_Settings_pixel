@@ -22,21 +22,22 @@
     android:background="?android:attr/colorBackground"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/account_avatar"
-        android:layout_width="@dimen/avatar_length"
-        android:layout_height="@dimen/avatar_length"
-        android:layout_marginTop="@dimen/avatar_margin_top"
-        android:layout_marginEnd="@dimen/avatar_margin_end"
-        android:layout_gravity="end"
-        android:visibility="invisible"
-        android:accessibilityTraversalAfter="@id/homepage_title"
-        android:contentDescription="@string/search_bar_account_avatar_content_description"/>
+
+        <ImageView
+            android:id="@+id/account_avatar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/avatar_margin_end"
+            android:visibility="invisible"
+            android:accessibilityTraversalAfter="@id/homepage_title"
+            android:contentDescription="@string/search_bar_account_avatar_content_description" />
 
     <TextView
         android:id="@+id/homepage_title"
         android:text="@string/dashboard_random4"
-        style="@style/custom_toolbar.Expanded"/>
+        style="@style/custom_toolbar.Expanded"            
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
 
     <FrameLayout
         android:id="@+id/suggestion_content"

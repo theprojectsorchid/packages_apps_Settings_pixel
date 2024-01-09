@@ -60,7 +60,7 @@
         android:layout_height="0.0dip"
         android:layout_weight="1.0">
         <TextView
-            android:textSize="17.0sp"
+            android:textSize="20.0sp"
             android:textColor="?android:textColorPrimary"
             android:id="@android:id/title"
             android:layout_width="wrap_content"
