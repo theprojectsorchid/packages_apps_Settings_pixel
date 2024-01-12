@@ -65,7 +65,8 @@
         settings:searchable="@bool/config_show_sim_info"/>
 
     <com.android.settingslib.RestrictedSwitchPreference
-        android:key="airplane_mode"
+         settings:isPreferenceVisible="@bool/config_airplane_mode_info"
+       android:key="airplane_mode"
         android:title="@string/airplane_mode"
         android:icon="@drawable/ic_airplanemode_active"
         android:order="-5"
@@ -83,7 +84,8 @@
         settings:useAdminDisabledSummary="true" />
 
     <com.android.settingslib.RestrictedPreference
-        android:fragment="com.android.settings.TetherSettings"
+          settings:isPreferenceVisible="@bool/config_tether_settings_info"
+      android:fragment="com.android.settings.TetherSettings"
         android:key="tether_settings"
         android:title="@string/tether_settings_title_all"
         android:icon="@drawable/ic_wifi_tethering"
@@ -105,15 +107,15 @@
         settings:userRestriction="no_config_tethering"
         settings:useAdminDisabledSummary="true" />
 
-    <com.android.settings.datausage.DataSaverPreference
+<!--     <com.android.settings.datausage.DataSaverPreference
         android:key="restrict_background_parent_entry"
         android:title="@string/data_saver_title"
         android:icon="@drawable/ic_settings_data_usage"
         android:order="10"
         settings:isPreferenceVisible="@bool/config_show_data_saver"
-        android:fragment="com.android.settings.datausage.DataSaverSummary"/>
+        android:fragment="com.android.settings.datausage.DataSaverSummary"/> -->
 
-    <com.android.settings.vpn2.VpnInfoPreference
+<!--     <com.android.settings.vpn2.VpnInfoPreference
         android:fragment="com.android.settings.vpn2.VpnSettings"
         android:key="vpn_settings"
         android:title="@string/vpn_settings_title"
@@ -121,9 +123,9 @@
         android:order="15"
         android:summary="@string/summary_placeholder"
         settings:userRestriction="no_config_vpn"
-        settings:useAdminDisabledSummary="true" />
+        settings:useAdminDisabledSummary="true" /> -->
 
-    <com.android.settings.network.PrivateDnsModeDialogPreference
+<!--     <com.android.settings.network.PrivateDnsModeDialogPreference
         android:key="private_dns_settings"
         android:title="@string/select_private_dns_configuration_title"
         android:icon="@drawable/ic_private_dns_settings"
@@ -131,14 +133,16 @@
         android:dialogTitle="@string/select_private_dns_configuration_dialog_title"
         android:dialogLayout="@layout/private_dns_mode_dialog"
         android:positiveButtonText="@string/save"
-        android:negativeButtonText="@android:string/cancel" />
+        android:negativeButtonText="@android:string/cancel" /> -->
 
+<!--     <com.android.settings.network.PrivateDnsModeDialogPreference
     <Preference
+        settings:isPreferenceVisible="@bool/config_adaptive_connectivity_info"
         android:fragment="com.android.settings.network.AdaptiveConnectivitySettings"
         android:key="adaptive_connectivity"
         android:title="@string/adaptive_connectivity_title"
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_adaptive_connectivity"
         android:order="25"
-        settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"/>
+        settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"/> -->
 </PreferenceScreen>
