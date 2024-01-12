@@ -64,6 +64,7 @@
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="airplane_mode"
         android:title="@string/airplane_mode"
+        settings:isPreferenceVisible="@bool/config_airplane_mode_info"
         android:icon="@drawable/ic_airplanemode_active"
         android:disableDependentsState="true"
         android:order="-5"
@@ -82,6 +83,7 @@
     <com.android.settingslib.RestrictedPreference
         android:fragment="com.android.settings.TetherSettings"
         android:key="tether_settings"
+        settings:isPreferenceVisible="@bool/config_tether_settings_info"
         android:title="@string/tether_settings_title_all"
         android:icon="@drawable/ic_wifi_tethering"
         android:order="5"
@@ -131,6 +133,7 @@
 
     <Preference
         android:fragment="com.android.settings.network.AdaptiveConnectivitySettings"
+        settings:isPreferenceVisible="@bool/config_adaptive_connectivity_info"
         android:key="adaptive_connectivity"
         android:title="@string/adaptive_connectivity_title"
         android:summary="@string/summary_placeholder"
