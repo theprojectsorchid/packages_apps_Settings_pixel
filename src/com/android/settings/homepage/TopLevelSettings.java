@@ -88,7 +88,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     private static final String SAVED_HIGHLIGHT_MIXIN = "highlight_mixin";
     private static final String PREF_KEY_SUPPORT = "top_level_support";
     private static final String KEY_USER_CARD = "top_level_usercard";
-
+    private int mDashBoardStyle;
     private boolean mIsEmbeddingActivityEnabled;
     private TopLevelHighlightMixin mHighlightMixin;
     private int mPaddingHorizontal;
@@ -240,8 +240,8 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             if (icon != null) {
                 icon.setTint(tintColor);
             }
+        });  
         onSetPrefCard();
-        }
     }
 
 
