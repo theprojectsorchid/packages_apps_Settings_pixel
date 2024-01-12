@@ -262,16 +262,16 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.preference_usercard);
             }
 	        if (key.equals("top_level_userinfo")){
-	        preference.setLayoutResource(R.layout.afterlab_card_interface_grid_right);
+	        preference.setLayoutResource(R.layout.afterlab_card_interface_grid_right_top_level);
 	        }
             if (key.equals("top_level_grid_display")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_top);    
             }            
             if (key.equals("top_level_battery_card")){
-                preference.setLayoutResource(R.layout.afterlab_card_interface_grid_right);    
+                preference.setLayoutResource(R.layout.afterlab_card_interface_grid_right_top_level);    
             }             
             if (key.equals("internet_settings")){
-                preference.setLayoutResource(R.layout.afterlab_card_interface_grid);
+                preference.setLayoutResource(R.layout.afterlab_card_interface_grid-top_level);
             }
             if (key.equals("airplane_mode")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_top_switch);
@@ -310,7 +310,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.afterlab_cardview_top);
             }
             if (key.equals("top_level_security")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_top);
+                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
             }
             if (key.equals("top_level_privacy")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
@@ -328,7 +328,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.afterlab_cardview_bottom);
             }
             if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
+                preference.setLayoutResource(R.layout.afterlab_cardview_top);
             }
             if (key.equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")){
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
@@ -337,10 +337,10 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.afterlab_cardview_middle);
             }
             if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.home.TopLevelSettingsActivity")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
+                preference.setLayoutResource(R.layout.afterlab_cardview_top);
             }
             if (key.equals("top_level_wellbeing")){
-                preference.setLayoutResource(R.layout.afterlab_cardview_middle);
+                preference.setLayoutResource(R.layout.afterlab_cardview_top);
             }
             
 	    } else if (mDashBoardStyle == 1) {

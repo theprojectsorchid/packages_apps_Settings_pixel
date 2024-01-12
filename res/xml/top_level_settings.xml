@@ -111,14 +111,15 @@
         settings:controller="com.android.settings.network.AirplaneModePreferenceController"
         settings:layout="@layout/afterlab_cardview_top_switch" />
 
-    <Preference
+
+<!-- <Preference
         android:icon="@drawable/ic_devices_other"
         android:title="Portable hotspot"
         android:key="tether_settings"
         android:summary="@string/summary_placeholder"
         android:order="-160"
         android:fragment="com.android.settings.TetherSettings"
-        settings:layout="@layout/afterlab_cardview_middle" />
+        settings:layout="@layout/afterlab_cardview_middle" />   -->
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.communal.CommunalDashboardFragment"
@@ -139,16 +140,6 @@
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:layout="@layout/afterlab_cardview_bottom" />
-
-    <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/ic_apps"
-        android:title="@string/apps_dashboard_title"
-        android:key="top_level_apps"
-        android:order="-130"
-        android:fragment="com.android.settings.applications.AppDashboardFragment"
-        settings:highlightableMenuKey="@string/menu_key_apps"
-        settings:layout="@layout/afterlab_cardview_top" />
-
 
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_settings_display_white"
