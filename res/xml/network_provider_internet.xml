@@ -135,6 +135,7 @@
         android:positiveButtonText="@string/save"
         android:negativeButtonText="@android:string/cancel" /> -->
 
+<!--     <com.android.settings.network.PrivateDnsModeDialogPreference
     <Preference
         settings:isPreferenceVisible="@bool/config_adaptive_connectivity_info"
         android:fragment="com.android.settings.network.AdaptiveConnectivitySettings"
@@ -143,5 +144,5 @@
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_adaptive_connectivity"
         android:order="25"
-        settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"/>
+        settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"/> -->
 </PreferenceScreen>
