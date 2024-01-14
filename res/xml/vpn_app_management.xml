@@ -15,7 +15,8 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
         orderingFromXml="false"
         >
 
@@ -32,6 +33,7 @@
         -->
 
         <com.android.settingslib.RestrictedSwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"                
                 android:order="10"
                 android:key="always_on_vpn"
                 android:title="@string/vpn_menu_lockdown"
@@ -42,6 +44,7 @@
                 settings:restrictedSwitchSummary="@string/disabled_by_admin_summary_text" />
 
         <com.android.settingslib.RestrictedSwitchPreference
+        android:layout="@layout/SwitchPreferenceFull_Card"                
                 android:order="20"
                 android:key="lockdown_vpn"
                 android:title="@string/vpn_require_connection"

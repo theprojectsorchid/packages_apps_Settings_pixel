@@ -15,8 +15,9 @@
 -->
 
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto">
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="connection_header"
@@ -78,7 +79,8 @@
         android:summary="@string/wifi_subscription_summary"/>
 
     <SwitchPreference
-        android:key="auto_connect"
+         android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:key="auto_connect"
         android:title="@string/wifi_auto_connect_title"
         android:summary="@string/wifi_auto_connect_summary"/>
 

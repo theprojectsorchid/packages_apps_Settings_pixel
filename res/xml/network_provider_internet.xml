@@ -83,7 +83,7 @@
         settings:isPreferenceVisible="@bool/config_show_sim_info"
         settings:useAdminDisabledSummary="true" />
 
-    <com.android.settingslib.RestrictedPreference
+<!--     <com.android.settingslib.RestrictedPreference
           settings:isPreferenceVisible="@bool/config_tether_settings_info"
       android:fragment="com.android.settings.TetherSettings"
         android:key="tether_settings"
@@ -93,9 +93,9 @@
         android:summary="@string/summary_placeholder"
         settings:keywords="@string/keywords_hotspot_tethering"
         settings:userRestriction="no_config_tethering"
-        settings:useAdminDisabledSummary="true" />
+        settings:useAdminDisabledSummary="true" /> -->
 
-    <com.android.settingslib.PrimarySwitchPreference
+<!--      <com.android.settingslib.PrimarySwitchPreference
         android:fragment="com.android.settings.AllInOneTetherSettings"
         android:key="all_tether_settings"
         android:title="@string/tether_settings_title_all"
@@ -105,7 +105,7 @@
         settings:controller="com.android.settings.network.AllInOneTetherPreferenceController"
         settings:keywords="@string/keywords_hotspot_tethering"
         settings:userRestriction="no_config_tethering"
-        settings:useAdminDisabledSummary="true" />
+        settings:useAdminDisabledSummary="true" /> -->
 
 <!--     <com.android.settings.datausage.DataSaverPreference
         android:key="restrict_background_parent_entry"

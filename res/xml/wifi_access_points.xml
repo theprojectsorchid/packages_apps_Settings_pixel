@@ -15,7 +15,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/wifi_settings_category">
+        android:title=" ">
 
     <com.android.settings.bluetooth.BluetoothProgressCategory
             android:key="access_points"

@@ -43,24 +43,28 @@
 
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="usb_tether_settings"
+         android:layout="@layout/SwitchPreferenceFull_Card"                
         android:title="@string/usb_tethering_button_text"
         android:summary="@string/usb_tethering_subtext"
         settings:keywords="@string/keywords_hotspot_tethering" />
 
     <SwitchPreference
-        android:key="enable_bluetooth_tethering"
+           android:layout="@layout/SwitchPreferenceFull_Card"                
+      android:key="enable_bluetooth_tethering"
         android:title="@string/bluetooth_tether_checkbox_text"
         android:summary="@string/bluetooth_tethering_subtext"
         settings:keywords="@string/keywords_hotspot_tethering" />
 
     <SwitchPreference
+         android:layout="@layout/SwitchPreferenceFull_Card"                
         android:key="enable_ethernet_tethering"
         android:title="@string/ethernet_tether_checkbox_text"
         android:summary="@string/ethernet_tethering_subtext"
         settings:keywords="@string/keywords_hotspot_tethering" />
 
     <com.android.settings.custom.preference.SecureSettingSwitchPreference
-        android:key="tethering_allow_vpn_upstreams"
+          android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:key="tethering_allow_vpn_upstreams"
         android:title="@string/tethering_allow_vpn_upstreams_title"
         android:summary="@string/tethering_allow_vpn_upstreams_summary"
         android:defaultValue="false" />

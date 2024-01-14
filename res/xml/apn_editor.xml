@@ -15,7 +15,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:title="@string/apn_edit">
+                  android:title=" ">
     <EditTextPreference
         android:title="@string/apn_name"
         android:dialogTitle="@string/apn_name"
@@ -144,7 +144,8 @@
         android:persistent="false"
         />
     <SwitchPreference
-        android:title="@string/carrier_enabled"
+          android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:title="@string/carrier_enabled"
         android:key="carrier_enabled"
         android:enabled="false"
         android:summaryOn="@string/carrier_enabled_summaryOn"
