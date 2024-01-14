@@ -43,6 +43,7 @@
         android:key="main_toggle_wifi"
         android:title="@string/wifi_settings"
         android:summary="@string/summary_placeholder"
+        android:icon="@drawable/ic_settings_wireless"
         android:order="-30"
         settings:allowDividerAbove="true">
         <intent
@@ -63,9 +64,9 @@
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="airplane_mode"
         android:title="@string/airplane_mode"
-        settings:isPreferenceVisible="false"
-             android:layout="@layout/SwitchPreferenceFull_Card"                
-      android:disableDependentsState="true"
+        settings:isPreferenceVisible="@bool/config_airplane_mode_info"
+        android:icon="@drawable/ic_airplanemode_active"
+        android:disableDependentsState="true"
         android:order="-5"
         settings:controller="com.android.settings.network.AirplaneModePreferenceController"
         settings:userRestriction="no_airplane_mode"/>
@@ -79,7 +80,7 @@
         settings:userRestriction="no_config_mobile_networks"
         settings:useAdminDisabledSummary="true" />
 
- <!--     <com.android.settingslib.RestrictedPreference
+    <com.android.settingslib.RestrictedPreference
         android:fragment="com.android.settings.TetherSettings"
         android:key="tether_settings"
         settings:isPreferenceVisible="@bool/config_tether_settings_info"
@@ -89,9 +90,9 @@
         android:summary="@string/summary_placeholder"
         settings:keywords="@string/keywords_hotspot_tethering"
         settings:userRestriction="no_config_tethering"
-        settings:useAdminDisabledSummary="true" /> -->
+        settings:useAdminDisabledSummary="true" />
 
- <!--     <com.android.settingslib.PrimarySwitchPreference
+    <com.android.settingslib.PrimarySwitchPreference
         android:fragment="com.android.settings.AllInOneTetherSettings"
         android:key="all_tether_settings"
         android:title="@string/tether_settings_title_all"
@@ -101,7 +102,7 @@
         settings:controller="com.android.settings.network.AllInOneTetherPreferenceController"
         settings:keywords="@string/keywords_hotspot_tethering"
         settings:userRestriction="no_config_tethering"
-        settings:useAdminDisabledSummary="true" /> -->
+        settings:useAdminDisabledSummary="true" />
 
  <!--    <com.android.settings.datausage.DataSaverPreference
         android:key="restrict_background_parent_entry"
