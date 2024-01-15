@@ -19,8 +19,7 @@
         <Preference
             android:key="athena_info"
             settings:layout="@layout/afterlab_card_interface_grid_right"
-            android:summary="@string/athena_title_summary"
-            android:title="@string/dev_info_extra">
+            android:title="@string/data_saver_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.android.settings.bluetooth.BluetoothSettings"
@@ -30,8 +29,7 @@
          <Preference
             android:key="athena_info"
             settings:layout="@layout/afterlab_card_interface_grid"
-            android:summary="@string/athena_title_summary"
-            android:title="@string/dev_info_extra">
+            android:title="@string/data_saver_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.android.settings.Settings$AdvancedConnectedDeviceActivity"
@@ -40,8 +38,7 @@
       <Preference
             android:key="athena_info"
             settings:layout="@layout/afterlab_card_interface_grid_right"
-            android:summary="@string/athena_title_summary"
-            android:title="@string/dev_info_extra">
+            android:title="@string/data_saver_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.drnoob.datamonitor.ui.activities.MainActivity"
@@ -61,8 +58,7 @@
         <Preference
             android:key="athena_info"
             settings:layout="@layout/afterlab_card_interface_grid_right"
-            android:summary="@string/athena_title_summary"
-            android:title="@string/dev_info_extra">
+            android:title="@string/data_saver_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.android.settings.WebViewImplemetation"
@@ -95,8 +91,7 @@
         <Preference
             android:key="athena_info"
             settings:layout="@layout/afterlab_card_interface_grid_right"
-            android:summary="@string/athena_title_summary"
-            android:title="@string/dev_info_extra">
+            android:title="@string/data_saver_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.celzero.bravedns.ui.HomeScreenActivity"
