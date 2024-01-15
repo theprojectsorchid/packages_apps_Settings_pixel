@@ -10,7 +10,7 @@
         android:key="ui_category"
         settings:layout="@layout/afterlab_preference_category">
         
-        <com.android.settings.datausage.DataSaverPreference
+        <Preference
         android:key="restrict_background_parent_entry"
         android:title="@string/data_saver_title"
         android:fragment="com.android.settings.datausage.DataSaverSummary" 
@@ -50,7 +50,7 @@
         android:key="system_category"
         settings:layout="@layout/afterlab_preference_category">
         
-        <PreferenceScreen
+        <Preference
         android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
         android:title="@string/about_settings"
         settings:layout="@layout/afterlab_card_interface_grid" />
@@ -102,9 +102,6 @@
         android:fragment="com.android.settings.vpn2.VpnSettings"
         android:key="vpn_settings"
         android:title="@string/vpn_settings_title"
-        android:summary="@string/summary_placeholder"
-        settings:userRestriction="no_config_vpn"
-        settings:useAdminDisabledSummary="true" 
         settings:layout="@layout/afterlab_card_interface_grid" />
     </PreferenceCategory>
 

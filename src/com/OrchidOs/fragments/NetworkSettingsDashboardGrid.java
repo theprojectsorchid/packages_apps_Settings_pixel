@@ -41,7 +41,7 @@ public class NetworkSettingsDashboardGrid extends SettingsPreferenceFragment {
     public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		if (afterLabsStyle() == 1) {
-			addPreferencesFromResource(R.xml.system_settings_dashboard_grid);
+			addPreferencesFromResource(R.xml.network_settings_dashboard_grid);
 			//Category Pref//
 			mThemesCategory = findPreference("ui_category");
 			mSystemCategory = findPreference("system_category");
@@ -149,7 +149,7 @@ public class NetworkSettingsDashboardGrid extends SettingsPreferenceFragment {
                 public List<SearchIndexableResource> getXmlResourcesToIndex(
                         Context context, boolean enabled) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.system_settings_dashboard_grid;
+                    sir.xmlResId = R.xml.network_settings_dashboard_grid;
                     return Arrays.asList(sir);
                 }
 
