@@ -30,11 +30,13 @@
 
 
     <PreferenceCategory
-        android:key="print_jobs_category"
+          settings:layout="@layout/afterlab_preference_category"        
+       android:key="print_jobs_category"
         android:title="@string/print_print_jobs"
         android:order="0" />
 
     <PreferenceCategory
+         settings:layout="@layout/afterlab_preference_category"        
         android:key="print_services_category"
         android:title="@string/print_settings_title"
         android:order="1" />

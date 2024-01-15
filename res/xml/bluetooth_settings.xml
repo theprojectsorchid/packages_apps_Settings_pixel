@@ -31,7 +31,8 @@
         android:key="device_name" />
 
     <PreferenceCategory
-        android:key="paired_devices"
+           settings:layout="@layout/afterlab_preference_category"
+       android:key="paired_devices"
         android:title="@string/bluetooth_paired_device_title" />
 
     <PreferenceCategory>

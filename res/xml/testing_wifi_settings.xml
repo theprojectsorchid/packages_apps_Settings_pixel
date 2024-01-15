@@ -14,9 +14,18 @@
      limitations under the License.
 -->
 <PreferenceScreen
-xmlns:android="http://schemas.android.com/apk/res/android"
-android:title="@string/testing_wifi_info"
-android:key="parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title=" " 
+    android:key="parent">
+
+
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="wifi_anim"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/wifi"/>
 
     <Preference
         android:title="@string/wifi_api_test" >

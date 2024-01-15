@@ -75,16 +75,20 @@
         settings:allowDividerAbove="true"/>
 
     <PreferenceCategory
+          settings:layout="@layout/afterlab_preference_category"
         android:key="device_companion_apps"/>
 
     <PreferenceCategory
-        android:key="spatial_audio_group"/>
+           settings:layout="@layout/afterlab_preference_category"
+       android:key="spatial_audio_group"/>
 
     <PreferenceCategory
-        android:key="bluetooth_profiles"/>
+           settings:layout="@layout/afterlab_preference_category"
+       android:key="bluetooth_profiles"/>
 
     <PreferenceCategory
-        android:key="bluetooth_related_tools"
+             settings:layout="@layout/afterlab_preference_category"
+     android:key="bluetooth_related_tools"
         android:title="@string/bluetooth_screen_related">
         <Preference
             android:key="live_caption"

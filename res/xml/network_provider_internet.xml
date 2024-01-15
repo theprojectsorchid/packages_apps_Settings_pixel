@@ -63,7 +63,8 @@
 
     <com.android.settingslib.RestrictedSwitchPreference
          settings:isPreferenceVisible="@bool/config_airplane_mode_info"
-       android:key="airplane_mode"
+           android:layout="@layout/SwitchPreferenceFull_Card"                
+      android:key="airplane_mode"
         android:title="@string/airplane_mode"
         android:order="-5"
         settings:controller="com.android.settings.network.AirplaneModePreferenceController"
@@ -92,7 +93,8 @@
     <com.android.settingslib.PrimarySwitchPreference
         android:fragment="com.android.settings.AllInOneTetherSettings"
         android:key="all_tether_settings"
-        android:title="@string/tether_settings_title_all"
+            android:layout="@layout/SwitchPreferenceFull_Card"                
+      android:title="@string/tether_settings_title_all"
         android:order="6"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.network.AllInOneTetherPreferenceController"

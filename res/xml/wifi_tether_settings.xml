@@ -23,10 +23,10 @@
 
 
     <com.android.settingslib.widget.IllustrationPreference
-        android:key="multiple_user_animation"
+        android:key="wifi_anim"
         settings:searchable="false"
         android:order="-999"
-        app:lottie_rawRes="@raw/multiple_user_animation"/>
+        app:lottie_rawRes="@raw/wifi"/>
 
 
     <com.android.settings.wifi.tether.WifiTetherSsidPreference

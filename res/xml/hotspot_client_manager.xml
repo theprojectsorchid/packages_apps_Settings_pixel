@@ -23,11 +23,13 @@
         android:title="@string/wifi_hotspot_client_limit_title" />
 
     <PreferenceCategory
+         settings:layout="@layout/afterlab_preference_category"        
         android:key="connected_client_list"
         android:title="@string/wifi_hotspot_connected_clients_list_title" />
 
     <PreferenceCategory
-        android:key="blocked_client_list"
+          settings:layout="@layout/afterlab_preference_category"        
+       android:key="blocked_client_list"
         android:title="@string/wifi_hotspot_blocked_clients_list_title" />
 
     <com.android.settingslib.widget.FooterPreference

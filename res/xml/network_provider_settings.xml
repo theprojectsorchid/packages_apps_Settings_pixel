@@ -74,6 +74,7 @@
         android:icon="@drawable/ic_settings_ethernet"/>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"        
         android:key="provider_model_mobile_network"
         android:title="@string/summary_placeholder"
         android:layout="@layout/preference_category_no_label"

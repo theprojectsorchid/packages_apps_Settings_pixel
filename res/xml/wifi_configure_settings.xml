@@ -20,6 +20,12 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title=" ">
 
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="wifi_anim"
+        settings:searchable="false"
+        android:order="-999"
+        app:lottie_rawRes="@raw/wifi"/>
+
     <SwitchPreference
         android:layout="@layout/SwitchPreferenceFull_Card"                
         android:key="enable_wifi_wakeup"
@@ -29,7 +35,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         settings:controller="com.android.settings.wifi.WifiWakeupPreferenceController"/>
 
     <SwitchPreference
-        android:key="notify_open_networks"
+             android:layout="@layout/SwitchPreferenceFull_Card"                
+     android:key="notify_open_networks"
         android:title="@string/wifi_notify_open_networks"
         android:icon="@drawable/ic_open_wifi_notifications"
         android:summary="@string/wifi_notify_open_networks_summary"

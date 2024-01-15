@@ -29,6 +29,7 @@
         android:order="-999"
         app:lottie_rawRes="@raw/display_accessibility"/> 
     <PreferenceCategory
+          settings:layout="@layout/afterlab_preference_category"
         android:key="wifi_tether_settings_group"
         android:title="@string/wifi_hotspot_checkbox_text"
         settings:searchable="false">
@@ -50,6 +51,7 @@
             android:entryValues="@array/wifi_tether_auto_turn_off_values" />
 
         <SwitchPreference
+            android:layout="@layout/SwitchPreferenceFull_Card"                
             android:key="wifi_tether_hidden_ssid_2"
             android:title="@string/wifi_hotspot_hidden_ssid_title"
             android:summary="@string/wifi_hotspot_hidden_ssid_summary" />
@@ -72,11 +74,13 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="tethering_options_group"
+           settings:layout="@layout/afterlab_preference_category"
+       android:key="tethering_options_group"
         android:title="@string/tethering_interface_options"
         settings:searchable="false">
         <SwitchPreference
-            android:key="enable_usb_tethering"
+           android:layout="@layout/SwitchPreferenceFull_Card"                
+           android:key="enable_usb_tethering"
             android:title="@string/usb_tethering_button_text"
             android:summary="@string/usb_tethering_subtext"
             settings:controller="com.android.settings.network.UsbTetherPreferenceController"
@@ -84,12 +88,14 @@
 
         <SwitchPreference
             android:key="enable_bluetooth_tethering_2"
-            android:title="@string/bluetooth_tether_checkbox_text"
+             android:layout="@layout/SwitchPreferenceFull_Card"                
+         android:title="@string/bluetooth_tether_checkbox_text"
             android:summary="@string/bluetooth_tethering_subtext"
             settings:controller="com.android.settings.network.BluetoothTetherPreferenceController"
             settings:keywords="@string/keywords_hotspot_tethering" />
 
         <SwitchPreference
+          android:layout="@layout/SwitchPreferenceFull_Card"                
             android:key="enable_ethernet_tethering_2"
             android:title="@string/ethernet_tether_checkbox_text"
             android:summary="@string/ethernet_tethering_subtext"
@@ -97,6 +103,7 @@
             settings:keywords="@string/keywords_hotspot_tethering"/>
 
         <SwitchPreference
+          android:layout="@layout/SwitchPreferenceFull_Card"                
             android:key="disable_wifi_tethering"
             android:title="@string/disable_wifi_hotspot_title"
             android:summary="@string/summary_placeholder"

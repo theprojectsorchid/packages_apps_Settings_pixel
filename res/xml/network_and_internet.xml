@@ -41,7 +41,8 @@
 
     <com.android.settingslib.PrimarySwitchPreference
         android:fragment="com.android.settings.wifi.WifiSettings"
-        android:key="main_toggle_wifi"
+             android:layout="@layout/SwitchPreferenceFull_Card"                
+     android:key="main_toggle_wifi"
         android:title="@string/wifi_settings"
         android:summary="@string/summary_placeholder"
         android:order="-30"
@@ -62,7 +63,8 @@
 
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="airplane_mode"
-        android:title="@string/airplane_mode"
+           android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:title="@string/airplane_mode"
         settings:isPreferenceVisible="@bool/config_airplane_mode_info"
         android:disableDependentsState="true"
         android:order="-5"
@@ -90,7 +92,8 @@
 
     <com.android.settingslib.PrimarySwitchPreference
         android:fragment="com.android.settings.AllInOneTetherSettings"
-        android:key="all_tether_settings"
+           android:layout="@layout/SwitchPreferenceFull_Card"                
+       android:key="all_tether_settings"
         android:title="@string/tether_settings_title_all"
         android:order="6"
         android:summary="@string/summary_placeholder"

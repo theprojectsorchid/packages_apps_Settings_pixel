@@ -22,7 +22,8 @@
   
 
     <PreferenceCategory
-        android:key="saved_device_list"
+           settings:layout="@layout/afterlab_preference_category"        
+      android:key="saved_device_list"
         settings:controller="com.android.settings.connecteddevice.SavedDeviceGroupController"/>
 
 </PreferenceScreen>

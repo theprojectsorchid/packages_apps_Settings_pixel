@@ -16,16 +16,20 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="data_usage_metered_prefs"
-    android:title="@string/network_restrictions">
+    android:title=" ">
 
     <PreferenceCategory
         android:key="mobile"
-        android:title="@string/data_usage_metered_mobile"
+            settings:layout="@layout/afterlab_preference_category"
+      android:title="@string/data_usage_metered_mobile"
         android:persistent="false" />
 
     <PreferenceCategory
-        android:key="wifi"
+           settings:layout="@layout/afterlab_preference_category"
+       android:key="wifi"
         android:title="@string/data_usage_metered_wifi"
         android:persistent="false">
 
