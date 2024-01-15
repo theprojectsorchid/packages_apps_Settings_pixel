@@ -46,6 +46,7 @@
         />
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"        
         android:key="provider_model_calling_category"
         android:title="@string/calls_and_sms_category"
         android:order="20"
@@ -55,6 +56,7 @@
 
     <PreferenceCategory
         android:key="provider_model_backup_calling_category"
+        settings:layout="@layout/afterlab_preference_category"        
         android:title="@string/backup_calling_settings_title"
         android:order="25"
         settings:controller="com.android.settings.network.telephony.NetworkProviderBackupCallingPreferenceController"

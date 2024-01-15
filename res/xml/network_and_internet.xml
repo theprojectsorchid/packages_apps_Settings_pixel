@@ -31,7 +31,8 @@
 
 
     <PreferenceCategory
-        android:key="multi_network_header"
+         settings:layout="@layout/afterlab_preference_category"        
+       android:key="multi_network_header"
         android:title="@string/summary_placeholder"
         android:layout="@layout/preference_category_no_label"
         settings:allowDividerBelow="true"

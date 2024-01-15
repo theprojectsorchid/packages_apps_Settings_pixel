@@ -19,17 +19,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="my_device_info_pref_screen"
-    android:title="@string/about_settings">
+    android:title=" ">
 
-    <com.android.settingslib.widget.LayoutPreference
+<!--    <com.android.settingslib.widget.LayoutPreference
         android:key="device_name"
         android:order="-1"
         android:selectable="false"
         android:layout="@layout/device_info_header"
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
-        settings:isPreferenceVisible="false" />
+        settings:isPreferenceVisible="false" /> -->
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"        
         android:key="basic_info_category"
         android:order="0"
         android:selectable="false"
@@ -81,6 +82,7 @@
     <!--/PreferenceCategory-->
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"        
         android:key="device_detail_category"
         android:selectable="false"
         android:title="@string/my_device_info_device_details_category_title">
@@ -128,6 +130,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"        
         android:title="@string/my_device_info_device_identifiers_category_title">
 
         <!--IP address -->
