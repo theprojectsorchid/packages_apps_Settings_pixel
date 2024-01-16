@@ -50,5 +50,11 @@
             android:title="@string/aboutus_title"
             android:summary="@string/aboutus_summary"
 	    android:fragment="com.epic.fragments.GestureSettings" />
-
+    <Preference
+        android:order="70"       
+        android:key="default_payment_app"
+        android:title="@string/nfc_payment_settings_title"
+        android:fragment="com.android.settings.nfc.PaymentSettings"
+        settings:keywords="@string/keywords_default_payment_app"
+        settings:controller="com.android.settings.applications.specialaccess.DefaultPaymentSettingsPreferenceController"/>
 </PreferenceScreen>
