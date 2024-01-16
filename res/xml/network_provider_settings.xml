@@ -45,28 +45,6 @@
         android:layout="@layout/airplane_mode_message_preference"
         settings:allowDividerBelow="true"/>
 
-  <com.android.settingslib.RestrictedPreference
-        android:fragment="com.android.settings.TetherSettings"
-        android:key="tether_settings"
-        settings:isPreferenceVisible="@bool/config_tether_settings_info"
-        android:title="@string/tether_settings_title_all"
-        android:order="5"
-        android:summary="@string/summary_placeholder"
-        settings:keywords="@string/keywords_hotspot_tethering"
-        settings:userRestriction="no_config_tethering"
-        settings:useAdminDisabledSummary="true" /> 
-
-  <com.android.settingslib.PrimarySwitchPreference
-           android:layout="@layout/SwitchPreferenceFull_Card"                
-       android:fragment="com.android.settings.AllInOneTetherSettings"
-        android:key="all_tether_settings"
-        android:title="@string/tether_settings_title_all"
-        android:order="6"
-        android:summary="@string/summary_placeholder"
-        settings:controller="com.android.settings.network.AllInOneTetherPreferenceController"
-        settings:keywords="@string/keywords_hotspot_tethering"
-        settings:userRestriction="no_config_tethering"
-        settings:useAdminDisabledSummary="true" />
     <Preference
         android:key="connected_ethernet_network"
         android:title="@string/ethernet"

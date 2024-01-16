@@ -51,6 +51,13 @@
             android:action="android.settings.WIFI_SETTINGS"
             android:targetClass="Settings$WifiSettingsActivity" />
     </com.android.settingslib.PrimarySwitchPreference>
+    
+    <Preference
+        android:fragment="com.android.settings.connecteddevice.BluetoothDashboardFragment"
+        android:key="bluetooth_switchbar_screen"
+        android:title="@string/bluetooth_settings_title"
+        android:icon="@*android:drawable/ic_settings_bluetooth"
+        android:order="-9"/>
 
     <com.android.settings.widget.AddPreference
         android:key="mobile_network_list"

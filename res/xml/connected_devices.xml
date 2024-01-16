@@ -36,11 +36,13 @@
         settings:allowDividerBelow="true"/>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"        
         android:key="available_device_list"
         android:title="@string/connected_device_media_device_title"
         settings:controller="com.android.settings.connecteddevice.AvailableMediaDeviceGroupController"/>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"        
         android:key="connected_device_list"
         android:title="@string/connected_device_other_device_title"
         settings:controller="com.android.settings.connecteddevice.ConnectedDeviceGroupController"/>
@@ -57,6 +59,7 @@
         settings:controller="com.android.settings.connecteddevice.AddDevicePreferenceController"/>
 
     <PreferenceCategory
+        settings:layout="@layout/afterlab_preference_category"        
         android:key="previously_connected_devices"
         android:title="@string/connected_device_saved_title"
         settings:controller="com.android.settings.connecteddevice.PreviouslyConnectedDevicePreferenceController">
