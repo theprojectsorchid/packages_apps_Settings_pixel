@@ -44,7 +44,7 @@
             android:title="@string/default_emergency_app"
             android:fragment="com.android.settings.emergency.EmergencyDashboardFragment"/>
         
-    <PreferenceScreen
+    <Preference
             android:order="60"       
             android:key="aboutus_category"
             android:title="@string/aboutus_title"

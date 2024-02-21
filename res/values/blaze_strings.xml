@@ -16,41 +16,41 @@
     
     
     <!--   aboutus strings  -->
-    <string name="aboutus_title">About Us</string>
+    <string name="aboutus_title">About RootOS</string>
     <string name="aboutus_summary">about us page</string>
-    <string name="aboutus_bubble_setting_description">Rom Name is A free and open-source operating system for various devices, based on the Android mobile platform. Major thanks to  Arrow Os. Further improvements and optimizations have been contibuted by the community. Thank you all developers, designers and testers</string>
+    <string name="aboutus_bubble_setting_description">Team Root is the solo endeavor of Parveen Singh from Kozhikode, Kerala. Praveen wishes to address the challenges teenagers face in accessing quality education and maintaining a healthy balance with technology. With his solution, Root OS, he seeks to democratize access to quality education and promote responsible technology usage. He seeks to foster healthier online experiences and contribute to the overall well-being of teenagers.</string>
     <string name="about_us_info">Our Website</string>
-    <string name="about_us_info_summary">get more info about us</string>
-    <string name="aboutus_link_summary">Customer chat group</string>
-    <string name="aboutus_link_title">Customer support</string>
+    <string name="about_us_info_summary">get more info</string>
+    <string name="aboutus_link_summary">OrchidOs Support</string>
+    <string name="aboutus_link_title">Customer Support</string>
 
     
     
     <!-- Dashboard messages -->
-    <string name="dashboard_morning1">buen día Ever!</string>
-    <string name="dashboard_morning2">The Sun is up!</string>
-    <string name="dashboard_morning3">A nice morning Ever..</string>
+    <string name="dashboard_morning1">we love india</string>
+    <string name="dashboard_morning2">The Sun is up in Kozhikode!</string>
+    <string name="dashboard_morning3">we love Kozhikode</string>
     <string name="dashboard_morning4">Have a great day..</string>
-    <string name="dashboard_morning5">You are loved.</string>
-    <string name="dashboard_noon1">Good Afternoon Everlides</string>
+    <string name="dashboard_morning5">India loves you </string>
+    <string name="dashboard_noon1">Good Afternoon</string>
     <string name="dashboard_noon2">Enjoy the Sunset.</string>
-    <string name="dashboard_noon3">AllTheWayIn</string>
-    <string name="dashboard_noon4">Its afternoon</string>
+    <string name="dashboard_noon3">Kerala</string>
+    <string name="dashboard_noon4">by Parveen Singh</string>
     <string name="dashboard_noon5">Welcome back..</string>
     <string name="dashboard_early_night1">Good Evening..</string>
-    <string name="dashboard_early_night2">Relax and take notes</string>
-    <string name="dashboard_night3">Sweet Dreams Ever!</string>
-    <string name="dashboard_night4">Put Me Down</string>
-    <string name="dashboard_night5">Good Night Ever!</string>
-    <string name="dashboard_midnight1">Boss It\'s Late night already..</string>
-    <string name="dashboard_midnight2">Boss You need some help..</string>
+    <string name="dashboard_early_night2">by Parveen Singh</string>
+    <string name="dashboard_night3">Sweet Dreams</string>
+    <string name="dashboard_night4">India loves you</string>
+    <string name="dashboard_night5">India</string>
+    <string name="dashboard_midnight1">India loves you samsung</string>
+    <string name="dashboard_midnight2">by Parveen Singh</string>
     <string name="dashboard_midnight3">Boss Get some sleep..</string>
-    <string name="dashboard_midnight4">Boss Take some rest already..</string>
-    <string name="dashboard_midnight5">Sleeping late is bad for you..</string>
+    <string name="dashboard_midnight4">India loves you..</string>
+    <string name="dashboard_midnight5">India loves you..</string>
     <string name="dashboard_random1">thats what i like.</string>
-    <string name="dashboard_random2">coruna es la mejor</string>
-    <string name="dashboard_random3">poder colombiano</string>
-    <string name="dashboard_random4">poder colombiano</string>
-    <string name="dashboard_random5">galicia es mi vida</string>
-    <string name="dashboard_random6">What\'s up?</string>
+    <string name="dashboard_random2">India loves you</string>
+    <string name="dashboard_random3">samsung india </string>
+    <string name="dashboard_random4">we love india</string>
+    <string name="dashboard_random5">India loves you</string>
+    <string name="dashboard_random6">India loves you</string>
 </resources>
