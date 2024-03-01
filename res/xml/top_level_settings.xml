@@ -264,9 +264,4 @@
         settings:highlightableMenuKey="@string/menu_key_support" />
 
 
-    <PreferenceScreen
-        android:key="flexo_lottie_animation"
-        android:layout="@layout/flexoos_card"
-        android:selectable="false"
-        android:order="190" />
 </PreferenceScreen>

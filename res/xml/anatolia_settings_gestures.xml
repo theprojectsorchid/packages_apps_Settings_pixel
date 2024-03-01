@@ -36,7 +36,7 @@
             android:summary="@string/about_us_info_summary" >
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://github.com/theorchidproject" />
+            android:data="https://root5.odoo.com" />
         </Preference>
 
     <Preference
@@ -44,7 +44,7 @@
         android:summary="@string/aboutus_link_summary" >
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/orchidosdemo" />
+            android:data="https://t.me/parveenrootos" />
     </Preference>
 
 

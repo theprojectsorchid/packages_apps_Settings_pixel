@@ -13,7 +13,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    
+      <!--   appstore strings  -->
+    <string name="apps_market_title">App Store</string>
     
     <!--   aboutus strings  -->
     <string name="aboutus_title">About RootOS</string>

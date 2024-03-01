@@ -51,4 +51,14 @@
             android:summary="@string/aboutus_summary"
 	    android:fragment="com.epic.fragments.GestureSettings" />
 
+ <Preference
+        android:key="app_market"
+        android:order="90"
+        android:title="@string/apps_market_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.indus.appstoreapplicationLayer.onboarding.activity.launcherActivity"
+            android:targetPackage="com.indus.appstore" />
+ </Preference>
+
 </PreferenceScreen>
